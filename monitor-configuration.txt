@@ -1,0 +1,40 @@
+Steps to create a custom screen resolution:
+
+Compute parameters for a screen of horizontal resolution, vertical resolution and refresh rate
+gtf 1366 768 60
+
+Output begins with Modeline.  Copy rest of information and paste after Modeline:
+xrandr --newmode INFO-FROM-ABOVE
+
+Add the newmode to display you wish to apply it
+xrandr --addmode <DISPLAY-ID> "NAME-FROM-INFO"
+
+Apply:
+xrandr --output <DISPLAY-ID> --mode "NAME-FROM-INFO"
+
+
+
+Something needed in this:
+xrandr --output HDMI1 --set audio force-dvi --mode 1280x720
+
+
+
+Script to be run at boot:
+xrandr --newmode "1368x768_60.00"  85.86  1368 1440 1584 1800  768 769 772 795  -HSync +Vsync
+xrandr --addmode HDMI-1 "1368x768_60.00"
+xrandr --output HDMI-1 --set audio force-dvi --mode "1368x768_60.00"
+
+
+
+xrandr --output HDMI2 --fb 1240x700 --transform 1,0,-20,0,1,-10,0,0,1
+
+
+
+
+
+
+Brodie Robertson video
+https://www.youtube.com/watch?v=wu2NWw2wPaA&list=WL&index=11&t=6s
+
+Panning example:
+https://www.youtube.com/watch?v=SCXlNlX4yds&list=WL&index=15

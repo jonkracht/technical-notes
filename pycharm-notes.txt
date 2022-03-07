@@ -1,0 +1,24 @@
+Plugins as of April 2020 (listed in File -> Settings -> Plugins)
+
+.env file support
+.ignore
+BashSupport
+CSV Plugin
+Docker Integration
+Flake8 support
+Ideolog
+Ini4Idea
+Makefile support
+Nyan Progress Bar
+Toml
+
+
+
+
+Run program through PyCharm with arguments set:
+In 'Run' menu, select 'Edit configurations'
+Add command-line style arguments in the 'Parameter's field
+
+
+
+Feb 2022:  Updated to version 2021.3.2 (do some using the JetBrains toolbox app)

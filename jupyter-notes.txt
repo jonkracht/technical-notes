@@ -1,0 +1,48 @@
+Command tools:
+
+Create an instance:  
+Navigate to located and enter:  jupyter notebook
+Can only navigate to children folders of location in which notebook is started
+Use root for access to all
+
+
+Saving notebook to another format:
+jupyter-nbconvert --to='[html, markdown, pdf, latex, etc]' [NOTEBOOK_NAME]
+
+
+
+Run a cell with Ctrl + Enter
+Run a cell and move down:  Shift + Enter
+
+Toggle between edit and command mode with Esc and Enter
+
+In command mode:
+A:  insert cell above
+B:  insert cell below
+
+M:  transform active cell to Markdown
+Y:  transform active cell to code
+
+D twice:  delete active cell
+Z:  undo cell deletion
+
+Shift + Up/Down:  Select multiple cells
+Shift + M:  Merge cells
+
+Ctrl + Shift + Minus:  Split active cell at cursor
+
+Mass comment/uncomment:
+Highlight code and CTRL + /
+
+
+Execute shell commands inside of notebook:
+Prepend any shell command with !
+Ex.  !ls prints contents of current directory
+
+
+Formatting can be accomplished with Markdown
+(bold, italics, list, links, etc.)
+
+Latex:  $math equations etc.$
+
+Centered text:  <center>some text<center>

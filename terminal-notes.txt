@@ -1,0 +1,324 @@
+Ctr + Alt + T: Open terminal window  (default in most Debian-based distributions)
+Ctrl + Shift + T:  Open new tabþ
+Ctrl + Shift + W:  Close tab
+Shift + Ctrl + Q  OR  exit:  Close terminal
+CTRL + L  OR clear:  Clears terminal screen
+
+
+Navigation:
+Navigate through words in a command:  CTRL + Left/Right Arrow
+Naviage to beginning/end of a line:  CTRL + A/E
+
+Delete:
+Delete entire line:  CTRL + U
+Cursor to end of line:  CTRL + K
+Cursor to end of word:  ALT + D
+Cursor to start of word:  ALT + Backspace
+
+Paste last cut text:  CTRL + Y
+
+
+
+Autocomplete:  Begin typing command and hit TAB for suggestions
+
+
+Open an application from terminal as a background task:
+Append an '&' to the end of the command
+ex: 'gedit FILENAME &' launches gedit and returns to allow terminal use
+
+Send a process to background with CTRL + Z
+Bring it back to foreground with 'fg'
+
+Enlarge/shrink terminal text size:
+CTRL + SHIFT + PLUS/MINUS
+
+cd stands for 'change directory'
+cd      navigate to user's home directory (ex. /home/USER/)
+cd /   navigate to root directory
+cd ..  navigate to parent directory
+cd -    navigates to previous directory
+
+pwd  print working directory
+./ : means current directory
+
+Absolute paths:
+Use / at the beginning of path means "start from root directory"
+Use ~ at the beginning of path means "start from home directory" 
+~ is an alias for /home/USER_NAME
+
+
+Create new directory:
+At a specific location:  mkdir /path/to/folder/new_folder_name
+In current folder:  mkdir dir1 dir2 ...
+Create nested folders:  mkdir -p dir4/dir5/dir6  (-p indicates create parent directories)
+Create filename with spaces:  mkdir "folder 1" or 'folder 1' or folder\ 3
+
+
+
+
+
+ls stands for 'list'
+ls:  lists folder contents
+ls > output.txt:  save output of ls command to output.txt
+ls 'subfolder_name':  lists contents of subfolder
+
+ls flags:
+-l  Show one file per line (a long list)
+-a  Show hidden files
+-h  Display file size in human-readable units (e.g. KiB, MiB, etc.)
+-S  Show files ordered by size
+
+See .bashrc for aliases:  ll, la, la, etc.
+
+Display contents of other directories (without changing current directory)
+ls subdirectory Show contents of subdirectory
+ls ..  Show directory contents in higher level
+ls ../.. Show directory contents in second higher level
+
+tree command present more detailed view
+
+
+
+
+
+File permission:
+u - user; g - groups; o - others/public
+chmod u-w demo.py  Removes write permission from user
+chmod u+w demo.py  Adds write permission to user
+
+To switch to root user so that sudo isn't required:  
+sudo su
+(su means switch user)
+
+Alternative method:
+chmod [THREE DIGIT NUMBER]
+First digit represent permissions of owner, second the group and third others.
+4 stands for read, 2 is write, 1 is execute and 0 is no permission.
+Sum desired permissions for each digit.
+
+Ex:  chmod 751  filename would grant r/w/e permissions for owner, r/e for groups, etc.
+
+Change owner of group:  
+use chown (CHange OWNership)
+sudo chown owner_name:group_name file_name.txt
+include -r tag to change all files in this manner
+
+Permission string:
+l stands for link
+d standrs for directory
+
+
+*** cat function ***
+cat (comes from conCATenate):  write one or more files to standard output
+copy contents of file1 to file2:  cat file1.txt > file2.txt  (if file2 DNE, created; otherwise, overwrite)
+Use double greater than (>>) to append contents
+Combine two files to new file:  cat file1.txt file2.txt > combinedfile.txt (or >> to append)
+Create new file:  cat > new_file_name.txt
+
+Wild card characters: ?, *
+cat test_?  prints all files whose names are test_ followed by any single character
+cat test_*  prints all files whose names test_ followed by zero or more characters
+
+
+
+Printing to standard output:
+
+echo 'Print some text to the standard out.  Yay.'
+Text with apostrophes need to be enclosed by double quotation marks; \" for double quotes
+Include variables:  Define my_var=VAL; echo "text1 $my_var"
+Include functions in a similar manner:  echo "Some text $A_FUNCTION"
+
+Various escape functions enabled with -e option
+
+Create new files with echo:
+echo "Some text." > new_file.txt
+Use '>>' to append to existing file
+
+printf is an improved version
+
+Head/tail commands prints to screen first/last portions of a text document
+
+Use less function to print larger text files.  Use Up/Down, Page Up/Down and Home/end to navigate.  'q' to exit
+
+
+
+
+*** File manipulation ***
+
+Moving files:
+mv filename.txt directory_name
+mv filename.txt .. Move to parent directory
+mv dir1/* . move everything from dir1 to current directory
+mv file1 file2 ... destination_file  Move multiple files to destination_file
+
+
+Rename a file:
+mv old_name.txt new_name.txt
+
+
+Create a copy of a file:
+cp path/to/file/filename .  Creates a copy of filename in current directory
+cp file.txt new_file_name.txt   Create a copy with new name in pwd
+
+
+Delete file: rm (standing for remove)
+rm FILENAME
+Flags:
+-i interactive; query user before removing
+-p parent; deletes parent directories
+-r recursively; deletes folders within desired folder
+-f:  force action; doesn't ask for permission
+
+Delete folder:
+rmdir removes an EMPTY directory
+rm -rf <DIR-NAME> removes a NON-EMPTY directory
+
+
+
+Searching for files:
+find {path/to/search}
+
+find "filepattern":  finds all files with specificied pattern
+find sample.* locates all files with sample
+
+Flags:
+name, iname:  Sensitive/insensitive search
+type:  f (file), d (directory)
+not:  return files not matching criteria
+delete:  Remove files matching criteria
+
+Do something to located files:
+find {some valid expression} -exec COMMAND {} +
+{} placeholder for located files
++ stands for end of command
+
+
+
+
+
+Perform multiple commands:  Separate with semi-colon ';'
+Perform command ONLY IF previous succeeds:  Separate with double ampersands (&&)
+
+
+
+
+Search terminal command history:  CTRL + R and begin typing command.  Hit CTRL + R repeatedly to cycle through search results.
+history | less :  only displays the first few, with the rest viewable with successive pressing of ENTER
+Execute a command returned in history list:  !commandnumber where commandnumber is returned by history
+
+To not save a command in history, insert a single space before the command
+
+
+
+Freeze/unfreeze terminal:  CTRL + S/Q
+
+
+
+Grep:  tool used to find a string in a file or group of files
+grep -c "Astring" filename:  counts instances of Astring
+
+
+Argument of previous command:  !$
+!! called a "bang bang":  previously entered command
+Use case:  Command fails because super user privilege is needed.  sudo !!
+
+Cycle between arguments or recent commands:  ALT + .
+
+
+Empty, but not delete, a text file:  > filename
+
+Kill a process:  CTRL + C
+OR locate process id (pid) with:  ps -ef; then sudo kill pid
+
+
+Print date:  date; format various ways - date +%D displays MM/DD/YY
+
+Count words:
+wc -l TEXT_FILE.txt
+
+Piping (vertical line is called a pipe)
+Use a previous command's output and input to a new function
+ex. ls ~ | wc -l     Save number of lines return by list files in home directory (~ refers to home directory)
+connects standard output (STDOUT) to standard input (STDIN)
+
+sudo - superuser/switch user do
+
+
+Show network information
+ip adr
+
+
+Environments (case-sensitive):
+echo $PATH  print path environment variable
+echo $USER  print current user
+echo $HOME  address of home and user
+env -OR- printenv     prints to debug all variables
+create new variables:  newVariable=123abc
+delete variables:  unset newVariable
+
+export a_variable   makes a_avariable a global variable
+unset a_variable    removes a_variable from being a global variable
+
+
+
+
+*** Text Editors ***
+gedit is the default graphical text editor in Ubuntu 20.04
+
+vim
+View file:  vim filename.txt
+Exit:  Press escape and then :q! (to exit w/o saving) or :wq to (to save) and then Enter
+OR
+Type "ZZ" t save and quit or "ZQ" to quit without saving
+
+nano is a terminal-based text editor
+
+
+
+touch:
+Used to update modification times of files.  Can be used to create new files.
+
+Create an empty file
+touch file.txt  
+
+Create multiple empty files
+touch file1.txt file2.txt
+
+
+
+
+Zip/unzip (or compress/decompress):
+
+Single file:
+gzip filename.txt  (.gz extension is appended to the filename)
+gunzip filename.txt.gz
+
+Multiple files zip/unzip:
+zip:  
+tar cvf new_folder_name.tar file1.txt file.c
+unzip:  
+tar xvf new_folder_name.tar
+
+
+
+which command returns the location of the binary for a certain software package
+whereis is similar but returns a bit more information
+
+
+
+Create new aliases in the .bashrc file located at ~/.bashrc
+
+Synchronize current shell to contents of bashrc:
+source ~./bashrc
+
+Display a list of aliases:
+Run 'alias' command in terminal
+
+df command shows disc usage for mounted drives
+
+
+fzf (FUzzy finder) commands:
+CTRL-T, CTRL-R, ALT-C
+
+
+

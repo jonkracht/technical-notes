@@ -1,0 +1,14 @@
+Find packages that are not up to date:
+pip list --outdated
+
+
+Install package into version:
+pip install [PACKAGE_NAME]
+
+
+Upgrade already-installed package:
+pip install --upgrade [PACKAGE_NAME]
+
+
+Get details of a package:
+pip show [PACKAGE_NAME]

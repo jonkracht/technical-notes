@@ -1,0 +1,71 @@
+Markdown examples:
+
+*Italicized text*       (single asterisk)
+**Bold text**           (double asterisk)
+~~Strikethrough text~~  (double tilde)
+
+
+Horizontal line across page width:  Three hyphens (---)
+
+
+Lists:
+
+Ordered:
+1.  Text
+2.  More text
+etc..
+
+
+Unordered:  Use hyphen, minus sign or plus sign
+
+
+Line breaks:
+
+Single-spaced break:  End line with two spaces or <br/>
+
+
+Including code:
+
+Inline:
+Surround with back ticks
+Ex. The command `sudo apt update` updates your repo lists
+
+Fenced block:
+```LANG 
+SOME CODE
+MORE CODE
+```
+where LANG provides syntax highlighting and can be Python, C, HTML, vim etc
+
+
+
+Links:
+[link text](link url)
+
+
+*** Insert image ***
+
+Local image:
+![image-name](/path/to/image/in/repo)
+
+External image:
+![image-name](https://www.domain.sthing/path/to/image.png)
+
+
+Scaling:  Probably have to do something with HTML tags and not in the manner below  
+
+Append something like
+
+{ width=50% height=50% }
+
+-- or --
+
+{ width="36px" height="36px"}
+
+
+
+Tables:
+|Header1 |Header2  | Header3|
+|--- | --- | ---|
+|**bold style**| `code block`|data3|
+|\|escape pipe|\`backtick|data13|

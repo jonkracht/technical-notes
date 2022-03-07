@@ -1,0 +1,230 @@
+(Probably) installed ubuntu restricted extras to obtain, among other things, proprietary codecs for music and video
+sudo apt install ubuntu-restricted-extras
+
+
+Address external speaker popping when audio begins to play:
+https://superuser.com/questions/1493096/linux-ubuntu-speakers-popping-every-few-seconds
+
+Added following command to the file
+/etc/modprobe.d/alsa-base.conf
+
+options snd-hda-intel power_save=0 power_save_controller=N
+
+
+
+Chess engine:
+installed polyglot package to allow use of Stockfish in Xboard
+
+
+Flash player for Firefox:
+https://linuxconfig.org/enable-adobe-flash-for-firefox-on-ubuntu-20-04-focal-fossa-linux
+
+sudo apt install flashplugin-installer
+
+
+Equalizer:
+pulseeffects
+and also plugins lsp-plugins
+
+Added git.
+
+9/24/2020:  Installed Xournal++ to modify pdfs
+
+9/26/2020:  Installed TexMaths to allow Latex formulae in Libreoffice
+
+10/2/2020:  Allow monitor to use custom resolutions
+https://www.tecmint.com/set-display-screen-resolution-in-ubuntu/
+
+10/3/2020:  Installed gnome-tweaks and gnome-shell-extensions.  GNOME shell integration extension into Firefox
+
+Extensions installed: Hide Activities Button
+
+10/5/2020:  Added query to execute text files (in order to setup external monitor).  Files -> three lines -> Behavior -> Executables text files
+
+10/14/2020:  Removed bashtop.  Installed bpytop (Python version) via snap.  Connected to system processes  via "snap connect"
+https://snapcraft.io/install/bpytop/ubuntu
+
+10/16:  Attempting to install StopAfterCurrentTrack plugin to Rhythmbox.  Nixed because couldn't get working.
+
+10/18:  Installed Steam.
+
+10/31:  Installed qjoypad to try to get joystick working
+Installed Arandr to address external monitor resolution problems.  Removed quickly.
+
+11/2/2020:  Added PocketTube addon to Firefox to manage Youtube subscriptions
+
+11/4:  Installed python3-tk to address plots not rendering with Matplotlib (using 'agg' which is non-GUI)
+
+11/5:  Added Mobile View Switcher to firefox to post on Instagram
+
+11/7:  Create SSH key pair (public and private) to authenticate Github communication.  Stored in ~/.ssh.  Passphrase is "cat"
+Instructions:  https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Installed KDE connect to communicate with Android phone.
+
+12/12:  Installed Gimp (using snap), Stacer (using apt), notepadqq (apt), app-outlet (via .deb download)
+
+12/31:  Installed Audacity to record from audio through microphone to examine high frequency buzz.
+
+1/5:  In "Software & Updates" > "Other Software", enabled "Canonical Partners" option
+
+1/5:  Created shortcuts:  Super + (B = new browser), (H = new home folder), (T = new terminal)
+
+1/5:  Enabled hardware acceleration in Firefox to use GPU to help render websites.  Set layers.acceleration.force-enabled and gfx.webrender.all to TRUE (preset to False)
+
+1/5:  Turned off Night Light (in Settings -> Displays)
+
+1/6:  Installed gparted to reformat old HD
+
+1/26:  Installed Brave browser
+
+2/8/21:  Installed default-jre  and libreoffice-java-common  to quiet LibreOffice
+https://www.libreofficehelp.com/how-to-fix-libreoffice-requires-a-java-runtime-environment-error/
+
+2/10:  Implemented echo cancel module into pulseaudio to address high frequency hum
+https://askubuntu.com/questions/18958/realtime-noise-removal-with-pulseaudio
+
+2/17:  Installed Alacritty and Kitty terminal emulators
+
+2/17:  Installed font-manager
+
+3/1:  Commented out pulseaudio module-switch-on-connect in /etc/pulse/default.pa to ease use of PulseEffects.  May have effect on Bluetooth headphone pairing.
+
+2/17:  Installed tree command for better display of file heirarchies
+
+2/19:  Installed alacritty terminal emulator via ppa from 'aslatter'
+
+3/1:  Commented out module-switch-on-connect in /etc/pulse/default.pa to ease use of Pulse effects.  May have effects on bluetooth headphone pairing.
+
+3/1:  Installed NerdSaucePro font.
+
+3/1:  Copied pulseaudio config from /etc/pulse into ~/.config/pulse
+
+3/1:  Modifying Alacritty config file
+
+3/10:  Installed dmenu and suckless-tools.  Put custom scripts in ./usr/local/bin.
+
+3/29:  Installed neofetch to display system information in terminal
+
+3/31:  Added neofetch to .bashrc.  Edited neofetch config.
+
+4/3:  Installed Awesome window manager
+
+4/7:  Installed nitrogen to set background in AwesomeWM.  Compton to allow transparency.
+
+4/10:  Installed Chrome for COVID registration
+
+4/13:  Commented-out echo cancellation module in /etc/pulse/default.pa
+
+4/26:  Installed pcmanfm to try as alternative file manager to nautilus
+
+4/27:  (Re-)installed arandr
+
+5/1:  Editted /etc/gtk-3.0 to yield dark theme when using awesomwm https://wiki.archlinux.org/title/GTK#GTK_and_Qt
+
+5/2:  Installed Nordic GTK theme in /usr/share/themes
+
+5/3:  Created custom compton config file based on sample at /usr/share/doc/compton/examples
+
+5/10:  Created monitor-setup.sh in /usr/local/bin to configure monitors
+
+5/10:  Created config file to fix screen brightness according to:
+https://itsfoss.com/fix-brightness-ubuntu-1310/
+
+5/19:  Installed speedtest-cli to map WIFI speed.  Editted /usr/lib/python3/dist-packages/speedtest.py according to https://unix.stackexchange.com/questions/644442/speedtest-cli-valueerror-invalid-literal-for-int-with-base-10
+
+5/19:  Installed mpv media player
+
+6/3:  Editting compton config (window opacity)
+
+6/7:  Configuring screenshots in Awesomewm.  Can use gnome-screenshot pre-installed on Ubuntu.  Downloaded flameshot to try as well.  
+Config located at ~/.config/Dharkael/flameshot.ini
+
+6/7:  Adding alias into ~/.bashrc   ..  means cd ..
+6/11:  Installed neovim
+
+7/21:  Installed putty to communicate with Opus Two hardware.  Also minicom for comparison
+
+7/26:  Added -h flag to ll alias to display file size in units of bytes not blocks
+
+8/1:  Commenting out pyenv/virtualenv parts of .bashrc.  
+Added ~/scripts to .profile to allow dmenu to find them
+
+8/13:  Creating a vimrc at ~/.config/nvim/init.vim based on /usr/share/vim/vim81/vimrc_example.vim
+
+8/15:  Installing vim-plug.  Adding plug language into init.vim.  Created folder for plugins at ~/.vim/plugged as per github instructions
+
+8/23: Installed tldr (a community curated collection of examples for typical Linux software)
+
+8/26:  Added alias in bashrc to call neovim with 'v'
+
+9/8:  Installed a transparent topbar extension into Gnome.  Config file at ~/.local/share/ghome-shell/extensions/transparent...
+
+9/20:  Removed bpytop snap package and reinstalled with apt via 
+https://www.atlantic.net/vps-hosting/how-to-install-and-use-bpytop-resource-monitoring-tool-on-ubuntu-20-04/
+
+9/21:  Installed zathura to read documents (pdfs)
+
+9/23:  Installed plugin for Rhythmbox to import/export playlists more easily
+https://github.com/fusion-a/rhythmbox-plugin-playlists-import-export
+
+Clone github repo which create playlists files from rhythmbox-created .xml file
+https://github.com/adrienverge/rhythmbox_playlist_to_m3u
+
+
+9/25:  Turned off window decorations for kitty by toggling 'hide-window-decoration' variable to 'yes' in kitty.conf
+
+Create crontab file to automate playlist backup.  Enabled cron to run on boot via sudo systemctl enable cron.  Set to run Wednesdays at 11am.  Job will not run in machine is not 'on'; examine 'anacron' package if desired.
+
+9/29:  Begin compiling a repo of local config files which are synced to Github
+
+10/18:  Installed "Tray Icon" plugin for Rhythmbox plugin
+https://github.com/palfrey/rhythmbox-tray-icon
+
+10/26:  Cloned themes from aristocratos/bpytop into ~/.config/bpytop/themes
+
+Added kitty theming from https://github.com/dexpota/kitty-themes
+
+10/27:  Installed blueman package to provide a Bluetooth tray option in awesomewm.  Added awful.util.spawn entry into rc.lua
+
+10/29:  Investigating screen lockers:  i3lock, xsecurelock
+
+11/2:  Attempt to remap CAPS to ESC as per https://thesynack.com/posts/persistent-capslock-behavior/
+
+11/4:  Installed pavucontrol, pasystray.  Added pasystray in rc.lua so that it's automatically launched in awesomewm
+
+11/6:  Addressed screen brightness via https://itsfoss.com/fix-brightness-ubuntu-1310/
+
+11/17:  Installed ratbagd and piper packages to configure Logitech mouse.  Also added a ppa for a piper-specific version of libratbag.  Undid and re-examined jan 2022. 
+
+Added line X-GNOME-Autostart-enabled=false into /etc/xdg/autostart/ for utilities used in flushing out AwesomeWM (pasystray, nm-applet, blueman) so that they don't autostart when using GNOME
+
+11/23:  Installed pywal for setting system colors
+Installed colortest package to display colors of the terminal
+
+2022
+
+1/5:  Implemented automatic spell checking in Texmaker by pointing ot the Hunspell directory at /usr/share/hunspell
+
+1/6:  Looking into configuring Logitech mouse with Piper
+
+1/9:  Install hypnotix internet TV player via downloaded .deb package and using apt install FILE_NAME.deb
+
+1/25:  Installing markdown-preview plug into nvim to preview markdown files in a browser while editting
+https://github.com/iamcco/markdown-preview.nvim
+
+1/27:  Moved some bash aliases into a newly-created .bash_aliases file.  Unmodified .bashrc exists in /etc/skel/  ('skel' stands for skeleton; contains files copied to home directory of a newly-created user).
+
+Looking into fzf, a command-line fuzzy finder, which was (accidently) installed while examining vim plugins.  Adding section into ~/Documents/technical-notes/terminal-notes.txt
+
+Downloaded pcmanfm, spacefm, and thunar filemanagers to test.
+
+Installed Nuclear music player via snap package.
+
+1/29:  Creating a bootable USB of Manjaro.  Using Gnome disks utility.
+
+2/15:  Installing rust so as to install 'exa' utility (ls improvement).  Since not available in 20.04 repos, building from source.  Need cmake and libgit2 packages.
+
+https://www.rust-lang.org/tools/install
+
+Failed.  Trying this instead:  https://lindevs.com/install-exa-on-ubuntu/

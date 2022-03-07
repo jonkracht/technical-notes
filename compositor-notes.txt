@@ -1,0 +1,24 @@
+Brodie Robertson YouTube on compositors (compton and picom)
+
+Compositor allows window transitions
+
+xprop function can be used to find window class.
+Start xprop and click window whose class information is to be determined.
+Properties printed to stdout
+
+picom has difficulty rendering blur
+tryone144 fork uses Kawase blur to achieve more efficiently
+Installation details on github page
+https://github.com/tryone144/compton
+
+Create opacity-rules based on window class (ex. class_g)
+opacity-rule = [
+	"90:class_g = 'kitty',
+	...
+]
+
+where opacity is to be set to 0.9
+
+switch 'backend' to glx
+
+dual_kawase

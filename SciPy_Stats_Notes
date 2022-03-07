@@ -1,0 +1,23 @@
+From documentation for scipy.stats:
+
+Import packages:
+from scipy import stats
+
+Get list of available methods for an object (a distribution for example):
+dir(random_variable_name)
+
+Common methods:
+- rvs:  random variates (pull samples from a distribution)
+- pdf:  probability density function
+- cdf:  cumulative density function
+- (isf or) sf:  (inverse) survival function (defined as one minus cdf)
+- ppf:  percent point function (inverse of CDF; find value for which distribution area to left is some value )
+- common statistical measures:  mean, variance, Fisher's skew, Fisher's kurtosis
+- moment:  non-central moments of the distribution
+
+Some examples: 
+scipy.stats.norm.cdf(0)  Return cumulative distribution of the standard normal distribution between negative infinity and 0; can pass arrays as well
+
+Continuous distributions take 'loc' and 'scale' arguments.  For a normal distribution, they specify mean and standard deviation, respectively.
+
+

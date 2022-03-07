@@ -1,0 +1,116 @@
+On Linux systems, the Super key is generally the button with the Windows logo.
+
+Commands involving the Super key (Gnome specific):
+Super:  Shows active applications
+Super + A:  Shows Applications menu
+Super + D or Ctrl + Alt + D:  Minimizes all applications so you can see desktop
+Super + L  -or-  Ctrl + Alt + L:  Locks screen
+Super + M / V:  Open/close the notifications window
+Super + Tab or Alt + Tab:  Scrolls through active programs (program icon vs. current screenshot of program)
+Super + Arrow keys:  Sets current window to left half, right half, maximize, restore.
+Super + H:  Hide current window
+
+
+
+Ctrl + Alt + T:  Opens Gnome Terminal
+Ctrl + Alt + Up/Down OR select from right side panel in Super menu:  Switch between work spaces
+Super + Shift + Pg UP/DOWN:  Moves window to next/previous workspace
+Super + Shift + Left/Right arrow:  Move window to monitor left/right
+Right-click titlebar and select "Move to Workspace Up/Down" :  Move program to another workspace
+Ctrl + Alt + Del:  Log out
+Ctrl + Q / W OR Alt + F4:  Close window
+Ctrl + Shift + N:  While in file manager (probably nautilus), create new folder
+
+
+
+Can create custom shortcuts by:
+Settings -> Keyboard Shortcuts -> Scroll towards bottom and click '+'
+
+
+
+
+
+
+Print screen functions:
+
+Save image (by default to ~/Pictures)
+Prt Scr:  Save fullscreen image
+Shift + Prt Scr:  Save screenshot of an area
+Alt + Prt Scr:  Save screenshot of active window
+
+Save to clipboard (for use in another program):
+Ctrl + Prt Scr:  Fullscreen image
+Shift + Ctrl + Prt Scr:  Screenshot of an area
+Alt + Ctrl + Prt Scr:  Screenshot of a window
+
+
+
+
+Firefox:
+Alt + <- or ->:  Navigate back or forward one page
+Ctrl + B:  Open/close bookmarks toolbar
+F11 to toggle menubar on/off
+Ctrl + Tab (+ Shift):  Cycle forward/backward through open browser tabs
+
+
+View/kill processes:
+top:  view active processes
+If you know process name:  killall PROCESS_NAME
+Kill processes with string in it:  pkill PARTIAL_STRING
+Kill process with process ID (PID):  kill PROCESS_ID
+In top command:  Press 'k', enter PID  
+
+Ctrl + D:  Delete entire line in a text file
+
+
+
+
+
+
+Turn off from the terminal:
+
+Immdiately shutdown computer - 
+power off
+poweroff (requires password)
+shutdown -h now
+
+Wait some time to shut down -
+shutdown -h <time-in-minutes>
+
+Shut down at a desired time -
+shutdown -h 20:3  (occurs at 8:03pm) 
+
+Cancel a scheduled shutdown
+shutdown -c
+
+Differences between power off and shutdown?
+
+
+
+
+Application names:
+Document Viewer (for pdf's): Evince (also can use zathura)
+Image viewer:  eog (eye of gnome; LOTR?)
+
+
+
+Bash shell config files:
+
+References:  man bash
+https://www.baeldung.com/linux/bashrc-vs-bash-profile-vs-profile
+https://linuxize.com/post/bashrc-vs-bash-profile/
+
+Different files run for login/non-login and non/interactive shells:
+
+
+Interactive login shells:
+/etc/profile is run for all users
+
+Then, first existing, readable file among these is executed:
+~/.bash_profile, ~/.bash_login, ~/.profile are executed
+
+When login shell executes, executes contents of ~/.bash_logout
+
+
+Interactive non-login shells:
+/etc/bash.bashrc and ~/.bashrc

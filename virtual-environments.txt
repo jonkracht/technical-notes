@@ -1,0 +1,64 @@
+Explanation of virtual env and Jupyter notebooks
+https://towardsdatascience.com/create-virtual-environment-using-virtualenv-and-add-it-to-jupyter-notebook-6e1bf4e03415
+
+
+Works by appending virtual environment files to the beginning of PATH so executables in the virtual environment are found before those of the main system
+
+
+Create a virtual environment
+
+Navigate to desired folder
+Create with:  virtualenv --python=[PYTHON_VERSION] ENVNAME
+
+Acivate:  
+source [ENVNAME]/bin/activate
+
+Deactivate virtualenv:
+deactivate
+
+Display information about an environment:
+Print packages:  pip list --OR-- pip freeze
+Print outdated packages:  pip list --outdated
+Print details of specific package:  pip show PACKAGE_NAME
+
+
+
+Use a virtual environment in a Jupyter notebook:
+
+Activate virtual environment
+
+Install IPython kernel:  pip install ipykernel
+
+Add virtual environment to Jupyter:
+python -m ipykernel install --user --name=Insight-Env
+p
+
+-----
+
+List environment availabe to Jupyter:
+jupyter kernelspec list
+
+Alternatively, details of environments are located at:
+~/.local/share/jupyter/kernerls/
+
+
+To delete an environment:
+First deactivate.  Then:
+sudo rm -rf <env_name>
+
+
+
+Install specific package versions:
+pip install requests==2.18.4
+
+
+Save current environment (e.g. python packages and specific versions) to a text file
+pip freeze > requirements.txt
+
+
+Create a virtual environment using a requirement file (a text file containing desired packages and version numbers):
+pip install -r requirements.txt
+
+
+
+

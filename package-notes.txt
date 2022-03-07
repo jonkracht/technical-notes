@@ -1,0 +1,51 @@
+Distro repos - defined in /etc/apt/sources.list
+
+.deb
+PPA
+Snap, Flatpak, 
+
+
+
+List enabled repos:
+apt policy
+-or-
+ls /etc/apt/sources.list.d
+
+
+
+.deb
+
+Install using apt:
+Navigate in terminal to location of file and run:
+sudo apt install ./filename.deb
+
+
+Snap is a packaging system use to bundle software.
+
+Find snaps:
+-online at https://snapcraft.io/store
+-using terminal  snap find <search_text>
+-folder in Home directory displays
+
+Install snap packages
+sudo snap install <package_name>
+
+Display snaps installed on system:
+snap list
+
+Remove:  sudo snap remove <package_name>
+
+
+
+
+
+PPA:
+
+Adding a PPA to your system:
+sudo add-apt-repository ppa:ppa_name
+Then:
+sudo apt install ppa_name
+
+Remove PPA:
+sudo add-apt-repository --remove ppa:ppa_name
+

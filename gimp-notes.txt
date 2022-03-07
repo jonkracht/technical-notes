@@ -1,0 +1,16 @@
+Gimp notes:
+
+CTRL + Mousewheel zooms in/out
+Holding mousewheel and dragging moves image
+
+Working to create a JK logo based on Headhunters album cover
+
+
+
+Separating an object from the image background:
+
+Encircle the object to-be-separated using the Foreground Select Tool
+
+Hit enter
+
+Paint out foreground image with tool

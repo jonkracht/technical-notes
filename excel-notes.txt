@@ -1,0 +1,30 @@
+Keyboard shortcuts for LibreOffice Sheets (Excel clone):
+
+
+
+Move to extreme locations of worksheet:
+CTRL + L/R/U/D
+
+Move one screen L/R in current worksheet:
+ALT + Page U/D
+
+Move worksheets:
+CTRL + Page U/D
+
+Select a region:
+SHIFT + arrow keys
+
+Select entire row:
+SHIFT + SPACE
+
+Select entire column:
+CTRL + SPACE
+
+Select entire worksheet:
+CTRL + SHIFT + SPACE
+
+Access toolbar:
+Hold ALT and navigate
+
+Resize column width:
+HOLD ALT + L/R

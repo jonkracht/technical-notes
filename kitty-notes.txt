@@ -1,0 +1,74 @@
+
+Notes from kitty.conf
+
+Sections of kitty.conf:
+Fonts
+Cursor customization
+Scrollback
+Mouse
+Performance tuning
+Terminal bell
+Window layout
+Tab bar
+Color scheme
+Advanced
+OS specific tweaks
+Keyboard shortcuts
+Clipboard
+Scrolling
+Window management
+Tab management
+Layout management
+Font sizes
+Select and act on visible text
+Miscellaneous
+
+
+Parameters changed by JK:
+initial_window_width
+initial_window_height
+enabled_layouts  reordered list of layouts through which to cycle
+
+Difference between these two?
+window_margin_width
+window_padding_width
+
+Border color of active/inactive window
+active_border_color
+inactive_border_color
+
+inactive_text_alpha fade text in inactive windows
+
+hide_window_decorations
+Hides title-bar and window borders.  Interaction with awesomewm
+
+foreground/background colors; what are these?
+
+background_opacity [1 is opaque and 0 is transparent]
+
+Background image for kitty
+
+Dull and bright versions of eight basic colors
+
+kitty_mod:  set to ctrl+shift
+
+
+
+Previous/next window:
+kitty_mod + [ or ]
+
+Previous/next tab:
+kitty_mod + left/right
+
+
+Change layout:  kitty_mod + l
+
+Change font size:  kitty_mod + minus/plus
+
+Edit config file:  kitty_mod + f2
+
+Change window sizing:  kitty_momd + r
+
+
+Create new window inside of existing kitty session:
+kitty_mod + ENTER

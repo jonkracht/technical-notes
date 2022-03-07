@@ -1,0 +1,24 @@
+Based on LearnLinux YouTube video
+
+Show scheduled jobs for current user:
+crontab -l
+
+Edit crontab file:
+crontab -e
+
+Specify which user's crontab is to be editted:
+sudo crontab -u USER_NAME -e
+
+Format in crontab:
+minute hour dayofmonth month dayofweek command
+
+Use asterisk to represent "any"
+
+Command is something like a shell script or terminal application.  Use full path to any custom scripts.
+
+
+
+
+
+Scheduled playlist backup script to be run weekly.
+
