@@ -202,12 +202,15 @@ Perform command ONLY IF previous succeeds:  Separate with double ampersands (&&)
 
 
 
-Search terminal command history:  CTRL + R and begin typing command.  Hit CTRL + R repeatedly to cycle through search results.
+Search terminal command history:  
+Press CTRL + R and input command to search for.  
+Pressing CTRL + R iterate through matches.
+
 history | less :  only displays the first few, with the rest viewable with successive pressing of ENTER
-Execute a command returned in history list:  !commandnumber where commandnumber is returned by history
+Execute a command returned in history list:  ![commandnumber] where [commandnumber] is returned by history
 
 To not save a command in history, insert a single space before the command
-
+(Also HISTCONTROL must be set appropriately in .bashrc or elsewhere)
 
 
 Freeze/unfreeze terminal:  CTRL + S/Q

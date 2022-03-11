@@ -228,3 +228,5 @@ Installed Nuclear music player via snap package.
 https://www.rust-lang.org/tools/install
 
 Failed.  Trying this instead:  https://lindevs.com/install-exa-on-ubuntu/
+
+3/9:  Installed graphviz using apt since pip-installed version was not able to be found.  Probably a pathing problem...

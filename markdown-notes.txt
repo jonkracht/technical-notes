@@ -51,6 +51,9 @@ Local image:
 External image:
 ![image-name](https://www.domain.sthing/path/to/image.png)
 
+Can use html syntax:
+<img src = '/path/to/image'>
+
 
 Scaling:  Probably have to do something with HTML tags and not in the manner below  
 

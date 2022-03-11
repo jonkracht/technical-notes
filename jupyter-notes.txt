@@ -46,3 +46,13 @@ Formatting can be accomplished with Markdown
 Latex:  $math equations etc.$
 
 Centered text:  <center>some text<center>
+
+
+Get documentation on a function:
+Hold SHIFT + TAB or ?[FUNCT_NAME]  
+
+
+Color:
+<font color='green'>Enter text here</font>i
+
+Tabbing can be done by including '\t' in markdown
