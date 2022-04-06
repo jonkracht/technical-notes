@@ -73,7 +73,9 @@ Examine relationships between two or more features/variables/columns
 
 * `corr_matrix = df.[[QUANT_COLS]].corr(); sns.heatmap(corr_matrix)`
 * Flags for `corr()`:  method="Pearson","", ...
-
+* Use a mask to only show lower triangle
+    * mask = np.zeros_like(corr, dtype=np.bool); mask[np.triu_indices_from(mask)] = True
+    * sns.heatmap(corr, mask=mask, vmax=1, center=0, annot=True, fmt=".1f", square=True, linewidths=0.5, cbar_kws={"shrink": 0.5});
 
 #### Scatter plot
 Cartesian (2D) representation
@@ -81,7 +83,7 @@ Cartesian (2D) representation
 * Include variable histograms:  `sns.countplot(data=[df], x='[COL1]', y='[COL2]', kind="scatter")`
 * Density version:  `sns.jointplot(data=[df], x='[COL1]', y='[COL2]', kind='kde', color='g')`
 * Matrix of scatterplots:  `sns.pairplot(data=df[[QUANT_COLS]])`
-    * Helpful to use 'png' backend for prompt rendering (`%config InlineBackend.figure_format = 'png'`)
+    * Helpful to use 'png' backend for speedier rendering (`%config InlineBackend.figure_format = 'png' or 'svg' or 'retina'`)
 
 
 ### Quantitative/categorical
@@ -142,3 +144,4 @@ Compute a projection onto a lower-dimensional plane
 
 ### Miscellaneous
 * Save file with `plt.savefig('[FILENAME]', dpi=[DPI])`
+* Default plot settings:  `plt.rcParams["image.cmap"] = "viridis"`

@@ -230,3 +230,14 @@ https://www.rust-lang.org/tools/install
 Failed.  Trying this instead:  https://lindevs.com/install-exa-on-ubuntu/
 
 3/9:  Installed graphviz using apt since pip-installed version was not able to be found.  Probably a pathing problem...
+
+3/21:  Installing VGrive to try to sync local files to GoogleDrive.  Removed because didn't work.
+
+3/25:  Installing ncdu to monitor disk usage.
+
+3/31:  Installing palemoon, a lightweight web browser.
+https://software.opensuse.org/download.html?project=home:stevenpusser&package=palemoon
+
+4/2:  Installing gensound via pip to play sounds using Python code
+
+4/6:  Installing rclone to setup automatic Google Drive sync

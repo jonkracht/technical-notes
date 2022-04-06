@@ -70,7 +70,7 @@ Merging:
 | Various mathematical functions |`df.add()`, `df.sub()`, `df.div()`, `df.mul()` |
 | Apply function `FUNCT` to elements of column `COL` | `df[[COL]].apply([FUNCT])` |
 | Apply "simple" (i.e. lambda-able) function to elements of column `COL` | `df[[COL]].apply([LAMBDA_FUNCTION] )`|
-| Transform row/column using key/value pairs of a dictionary|  `df[[COL]].map(i[DICT])`|
+| Transform row/column using key/value pairs of a dictionary|  `df[[COL]].map([DICT])`|
 | Add a column| `df.insert(['[NEW_COL]'])` |
 | Remove column(s) |  `df.drop([[COL1], [COL2],...], axis=1, inplace=True)`|
 | Remove row | `df.drop([[ROW_IDX], [COL_IDX])` |
@@ -128,3 +128,4 @@ In general, operations exclude missing values.
 ## Other methods
 * `query`
 * `pivot_table`
+* `melt`

@@ -56,3 +56,5 @@ Color:
 <font color='green'>Enter text here</font>i
 
 Tabbing can be done by including '\t' in markdown
+
+Help:  Type [Command_NAME] followed by ?

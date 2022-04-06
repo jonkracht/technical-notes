@@ -109,9 +109,14 @@ d standrs for directory
 
 
 *** cat function ***
-cat (comes from conCATenate):  write one or more files to standard output
-copy contents of file1 to file2:  cat file1.txt > file2.txt  (if file2 DNE, created; otherwise, overwrite)
+cat (comes from conCATenate):
+Default behavior is to write to stdout but can be selected elsewhere
+
+copy contents of file1 to file2:  
+cat file1.txt > file2.txt  (if file2 DNE, created; otherwise, overwrite)
+
 Use double greater than (>>) to append contents
+
 Combine two files to new file:  cat file1.txt file2.txt > combinedfile.txt (or >> to append)
 Create new file:  cat > new_file_name.txt
 
@@ -119,7 +124,7 @@ Wild card characters: ?, *
 cat test_?  prints all files whose names are test_ followed by any single character
 cat test_*  prints all files whose names test_ followed by zero or more characters
 
-
+'tac' function concatenates/prints in reverse order
 
 Printing to standard output:
 
@@ -140,6 +145,7 @@ Head/tail commands prints to screen first/last portions of a text document
 
 Use less function to print larger text files.  Use Up/Down, Page Up/Down and Home/end to navigate.  'q' to exit
 
+tee command reads from standard input and both to stdout and file
 
 
 
@@ -255,14 +261,20 @@ Environments (case-sensitive):
 echo $PATH  print path environment variable
 echo $USER  print current user
 echo $HOME  address of home and user
-env -OR- printenv     prints to debug all variables
 create new variables:  newVariable=123abc
 delete variables:  unset newVariable
 
-export a_variable   makes a_avariable a global variable
+
+Create a global variable; can be string, int, etc.
+export [VAR]=[SOME_VAL]
 unset a_variable    removes a_variable from being a global variable
 
+To create variables that are saved across sessions/users:
+For user:  include definition in ~/.bashrc
+For all users:  include definition in /etc/environment 
 
+Display environment variables
+env -OR- printenv
 
 
 *** Text Editors ***
