@@ -114,3 +114,25 @@ When login shell executes, executes contents of ~/.bash_logout
 
 Interactive non-login shells:
 /etc/bash.bashrc and ~/.bashrc
+
+
+
+
+
+
+
+# Information on memory/disk usage
+
+** df ** 
+Gives overview of filesystem disk usage.  Defaults to all mounted filesystems but can be tailored by passing in a path.
+
+Entries include size, used/available space, mount point
+
+Flags:
+h - output is presented in human-readable units
+
+
+** du **
+Disk usage for individual directories
+
+ncdu command provides a nice display

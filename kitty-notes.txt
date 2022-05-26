@@ -72,3 +72,7 @@ Change window sizing:  kitty_momd + r
 
 Create new window inside of existing kitty session:
 kitty_mod + ENTER
+
+
+Move window position earlier/later in stack:
+kitty_mod + f/b

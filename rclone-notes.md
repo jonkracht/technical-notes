@@ -14,5 +14,5 @@ Config file of remote locations at `~/.config/rclone/rclone.conf`
 
 Example:
 
-`rclone sync [/path/to/local/folder] JonsGoogleDrive[Folder/in/drive]
 
+`rclone sync /data/organ/chester-pa-st-pauls/ JonsGoogleDrive:organ/chester-pa-st-pauls-episcopal`

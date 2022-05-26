@@ -1,213 +1,282 @@
-** TLDR section **
+# vim
 
-Saving:  'w:' to save and continue working; 'ZZ' to save and exit
-Exit:  
-Search:  Type '/' and characters of interest; 'n' advances through matches; 'N' reverses through matches
-Cut (d), copy (y for a word; yy for an entire line), paste (p)
+## References
+* vimtutor
+* 
+
+
+## TLDR (or most commonly-used  commands)
+
+* Navigation
+  * Move to beginning/end of line:  `0` / `$`
+  * Move backward one word:  `b`
+* Writing (eg. saving file)
+    * `:w` to save and continue working
+    * `:w [FILENAME]` to specify a new file name
+    * `ZZ` to save and exit
+* Exit
+* Search:  Type '/' and characters of interest; 'n' advances through matches; 'N' reverses through matches
+* Cut (d), copy (y for a word; yy for an entire line), paste (p)
 
 Sync vim with settings in config file (init.vim): 
 Type ':' and then:  source $MYVIMRC
 
 
+* Begin a new paragraph above/below: `o` / `O`
 
 
 
-Chapter 1:
 
-Navigating with hjkl:
-   ^
-   k
-<h   l>
-   j
-   v
 
-Jump up/down half a page:  CTRL + u / d
+## Notes from `vimtutor` tutorial
 
-Jump up/down a paragraph:  { or }
+All commands below must be input while in Normal mode which may be entered into by pressing ESC.
 
+### Lesson 1
 
+#### Cursor navigation
 
-Enter NORMAL mode by pressing ESC
 
-Exit vim:
-Discard changes :q! or Z then Q
-Save changes :wq or Z then Z
+* Navigate left/down/up/right with hjkl keys
 
+* Navigate up/down by one half of a page:  `CTRL` + `u` / `d`
 
-Save while editting (i.e. don't exit):  :w
+* Navigate up/down a paragraph:  `{` or `}`
 
-Delete a character:  x
-Move cursor over the character to be deleted and press x
 
-Insert character mid line:  i
-Navigate cursor to desired location of new text
-Press 'i' and type additions
 
 
-Insert character end of line (appending):  A  (Shift + a)
-Navigate cursor anywhere in line of which additions are to be added
-Press SHIFT + a (e.g. capital A) and type additions
+#### Exit vim
+* Exit without saving changes:  `:q!`
+* Save changes and exit:  `:wq` or `ZZ`
 
---- OR ---
 
-Navigate to end of line and press 'a'
+#### Text editing
 
+* Delete a character  
+    * Move cursor over the character to be deleted and press `x`
 
+* Insert character mid-line
+    * Navigate cursor to desired location of new text.  Press `i` and type begin adding text.
 
-Start new paragraph below/above:  o or O
 
+* Insert character(s) at the end of a line (appending)  
+    * From anywhere in desired line:  `A`  (SHIFT + a)
 
 
-Lesson 2 - Deletion commands
 
-Delete a word:
-Navigate to first character of word to be deleted and type 'dw'
 
-Delete to end of line:
-Navigate to left-most character to be deleted and type 'd$' or simply 'D' 
 
-Delete from cursor to end of word:
-Type 'de'
+### Lesson 2
 
 
-Typing a number with an operator repeats it that many times
 
+| Action | Command|
+| --- | ---| 
+| Delete entire word under cursor (see footnote) | `daw`|
+| Delete from cursor to end of word| `de` |
+|Delete three consecutive words (see additional description below) | `d3w`|
+| Delete from cursor to end of line| `d$` or `D` (SHIFT + d)|
+| Delete entire line| `dd` |
 
-Navigating by count and motions:
+* vimtutor's description of the command does not match its behvaior in curret install
 
-Move two words forward:  2w
-Move end of third word forward:  3e
-Move to start of line:  0
 
-Move backward a word: b
 
-Delete consecutive words:
-Navigate to beginning of first word to be deleted and type d3w
+#### Compound commands
 
-Delete an entire line:
-dd  -OR- 2dd to delete two lines etc.
+Composed of an operator, a motion and an optional number of repititions.
 
+Some operators include:
+| Operator| Description|
+|--- | ---|
+|d| Delete|
 
 
-Undo and redo actions:
-u undoes last command
-U returns line to its original state
-CTRL + R to undo previous undo's
 
+Some motions include: 
+| Motion| Description|
+|---| --- |
+|w| Until start of next word excluding its first character|
+|e | Until the end of currect word including the last character|
+|$| Until the end of line including last character|
 
 
+**Prepending a command with a number repeats it that many times**
 
-Lesson 3
+Commands are of the form:
 
-Paste a deleted segment with 'p'
+`[OPERATOR]` `[REPITITIONS]` `[MOTION]`
 
-Copy text to system clipboard:  
-Highlight and press 'y'
+where `[REPITITIONS]` is an optional modifier.
 
-Replace a character with 'r' and new character
+Examples of navigating by count and motions:
 
-Replace end parts of a word:  Type 'ce' and then characters to be added
+| Action| Command|
+|---| ---|
+|Move cursor forward by two words |  `2w` |
+|Move cursor backward by three words| `3b`|
+|Move cursor to end of third word forward|  `3e`|
 
-Change til end of word:  cw
-Change til end of line:  c$
 
-Delete til end of line and insert:  C
 
 
 
 
 
-Lesson 4
 
-Cursor Location:
-CTRL + g gives filename and line number within file
-G navigates to bottom of the file
-gg navigates to start of the file
-LINE_NUM + G navigates to LINE_NUM
+#### Undo and redo
+| Action | Command|
+|---|---|
+| Undo last command | `u`|
+| Return entire line to previous state| `U` (SHIFT + u)|
+| "Undo" previous undo's (i.e. redo) | CTRL + R|
 
 
-SEARCH:
 
-Typing  /  followed by a phrase searches FORWARD for the phrase.
-Typing  ?  followed by a phrase searches BACKWARD for the phrase.
 
-After a search type  n  to find the next occurrence in the same direction
-or  N  to search in the opposite direction.
 
-CTRL-O takes you back to older positions, CTRL-I to newer positions.
 
-Navigate to parentheses mate:  %
 
 
-Subsitution:
 
-To substitute new for the first old in a line 	:s/old/new
-To substitute new for all 'old's on a line 	:s/old/new/g
-To substitute phrases between two line #'s 	:#,#s/old/new/g
-To substitute all occurrences in the file 	:%s/old/new/g
-To ask for confirmation each time add 'c'       :%s/old/new/gc
 
+### Lesson 3
 
+Various editing commands
 
-Lesson 5
+|Action| Command|
+|---|---|
+|Put (i.e. paste) previously deleted text (stored in Vim register) to location of cursor| `p`|
+|Copy text to system clipboard| Highlight text and press `y`|
+|Replace (or substitute) individual character under cursor| `r` and enter new character|
+|Delete to end of word and edit| `ce` and edit as desired|
+| Delete to edit of line and edit |`c$` or `C`| 
 
-Execute external (shell?) commands by :![SHELL_CMD]
-Ex.  :!ls displays contents of current directory
 
-Save file:  
-:w FILE_NAME
 
-Select a block of text with 'v'
 
-Save block of text to file:
-Highlight using 'v'
-Type ':' and then w FILE_NAME
 
-Insert text from a file:
-:r FILENAME
 
 
 
-LESSON 6
 
-  1. Type  o  to open a line BELOW the cursor and start Insert mode.
-     Type  O  to open a line ABOVE the cursor.
 
-  2. Type  a  to insert text AFTER the cursor.
-     Type  A  to insert text after the end of the line.
+### Lesson 4
 
-  3. The  e  command moves to the end of a word.
+#### Additional cursor navigation
 
-  4. The  y  operator yanks (copies) text,  p  puts (pastes) it.
+| Action| Command|
+|---| ---|
+|Navigate to bottom of file| `G` (SHIFT + g)|
+|Navigate to top of file| `gg`|
+|Navigate to specific line | Enter line number followe by `G`|
 
-  5. Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
 
-  6. Typing ":set xxx" sets the option "xxx".  Some options are:
-        'ic' 'ignorecase'       ignore upper/lower case when searching
-        'is' 'incsearch'        show partial matches for a search phrase
-        'hls' 'hlsearch'        highlight all matching phrases
-     You can either use the long or the short option name.
+#### Searching
 
-  7. Prepend "no" to switch an option off:   :set noic
 
+| Action| Command|
+|---| ---|
+|Search forward/backward in document| `/` / `?` |
+|Cycle forward/backward through matches| `n` / `N` |
 
+When finished searching, `CTRL + O` returns cursor to its pre-search location.
 
 
+#### Navigate to matching parenthesis
 
-Alternative method:
-Select text in Visual mode (mode or keyboard)
-Enter 'y' to yank (copy) text
-Move to new location and enter 'p'
+When cursor is over a parenthesis, `%` will navigate cursor to the matching parenthesis.
 
 
+#### Substitution
 
+Substitute one piece of text for another.  In the example snippets below, text to be removed is `old` will be replaced by `new`.
 
+|Action | Command|
+|---|---|
+| First instance in current line|`:s/old/new`|
+| All instances in current line| `:s/old/new/g`|
+| All instances between two line numbers defined by #'s| `:#,#s/old/new/g`|
+| All instances in the document | `:%s/old/new/g`|
 
-LESSON 7
+
+
+
+
+
+
+
+
+
+
+
+
+### Lesson 5
+
+#### Execute external (shell) commands
+* `:![COMMAND]` 
+* Ex:  `:!ls` executes the list command in the current directory
+
+#### Insert contents of file
+`:r [FILENAME]`
+
+#### Insert output of a shell comand
+`:r ![COMMAND]`  
+Ex:  `:r !ls` inserts the directory contents into the active file
+
+
+#### Write block of text to file
+* Select desired textblock with cursor (will have entered Visual mode)
+* Type `:w [FILENAME]`
+
+
+
+
+
+
+
+### Lesson 6
+
+
+|Action | Command|
+|---|---|
+| Insert new line below/above cursor and begin editing | `o` / `O` |
+|Insert text after position of cursor| `a`|
+|Insert text at end of line| `A`|
+|Enter replace mode where new existing text is ovewritten | `R`|
+
+
+#### Copy ('yank') and paste ('put')
+* Highlight text to be copied via mouse or Visual mode
+* `y` yanks/copies the highlighted text
+* `p` puts/pastes
+
+
+
+
+#### Set options
+* Of the form `:set [FLAG]`
+* Some common flags
+  * `ic` or `ignorecase`:  Ignore upper/lower case where searching
+  * `is` or `incsearch`:  Show partial matches for a search phrase
+  * `hls` or `hlsearch`:  High all matching phrases
+* Prepend 'no' to turn off (ex. `:set noic`)
+* Can make these preferences default by including into `vimrc`/`init.vim`
+
+
+
+
+
+### Chapter 7
 
 7.1:  Getting Help
 7.2:  Create a Startup Script (making a vimrc file)
-7.3:  Autocompletion
+
+#### Autocompletion
+* When entering a command, can type `CTRL + D` to see commands that match input letters
+* Press `TAB` to autcomplete command (if multiple matches, chooses first alphabetically)
+
 
 
 
@@ -222,8 +291,9 @@ Reload neovim with newly-edited vimrc:
 
 
 
-Plugins:
+## Plugins:
 
+### vim-plug
 nerdtree:  CTRL-O to toggle ON/OFF nerd tree (file manager)
 
 
@@ -231,3 +301,9 @@ nerdtree:  CTRL-O to toggle ON/OFF nerd tree (file manager)
 How to install new plugs into neovim:
 Add new plug definition into vimrc (init.vim)
 In vim, run :PlugInstall
+
+
+## References
+
+* `vimtutor`
+* 

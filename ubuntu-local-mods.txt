@@ -241,3 +241,5 @@ https://software.opensuse.org/download.html?project=home:stevenpusser&package=pa
 4/2:  Installing gensound via pip to play sounds using Python code
 
 4/6:  Installing rclone to setup automatic Google Drive sync
+
+4/27:  Creating 22.04 PopOS USB to try on Phil's ASUS Laptop with dual NVidia/Intel cards

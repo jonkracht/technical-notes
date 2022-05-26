@@ -32,3 +32,10 @@ Network manager - addressed with nm-applet
 Bluetooth - addressed with blueman-applet
 Increase volume max above 100% - achievable via pasystray (pulse audio system tray utility)
 
+
+
+Some keyboard shortcuts (generally defaults)
+* Alt j/K:  Toggle focus between windows on workspace
+* CTRL + Super + Space:  Toggle floating
+* Alt + Super + j/k:  Change horizontal spacing of windows
+* Shift + Super + j/k:  Move window to previous/next index
