@@ -243,3 +243,9 @@ https://software.opensuse.org/download.html?project=home:stevenpusser&package=pa
 4/6:  Installing rclone to setup automatic Google Drive sync
 
 4/27:  Creating 22.04 PopOS USB to try on Phil's ASUS Laptop with dual NVidia/Intel cards
+
+5/30:  Reformating 4TB drive via https://www.youtube.com/watch?v=1tuHle1UEQE .  Used ext4 for filesystem.
+
+6/1:  Reinstalling vlc via apt rather than snap to allow access to files outside of the home directory.  Repo installed 3.0.9.2
+https://askubuntu.com/questions/875421/vlc-wont-open-video-files-from-a-secondary-inteinal-hard-disk
+
