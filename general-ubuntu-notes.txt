@@ -129,10 +129,14 @@ Gives overview of filesystem disk usage.  Defaults to all mounted filesystems bu
 Entries include size, used/available space, mount point
 
 Flags:
-h - output is presented in human-readable units
+h - print output in human-readable units
+T - include drive type in output
+x - followed by a filesystem type, exclude drives of that type from output
 
 
 ** du **
 Disk usage for individual directories
 
 ncdu command provides a nice display
+
+

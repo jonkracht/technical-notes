@@ -57,7 +57,7 @@ Installed Arandr to address external monitor resolution problems.  Removed quick
 
 11/5:  Added Mobile View Switcher to firefox to post on Instagram
 
-11/7:  Create SSH key pair (public and private) to authenticate Github communication.  Stored in ~/.ssh.  Passphrase is "cat"
+11/7:  Create SSH key pair (public and private) to authenticate Github communication.  Stored in ~/.ssh
 Instructions:  https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 Installed KDE connect to communicate with Android phone.
@@ -102,7 +102,7 @@ https://askubuntu.com/questions/18958/realtime-noise-removal-with-pulseaudio
 
 3/1:  Modifying Alacritty config file
 
-3/10:  Installed dmenu and suckless-tools.  Put custom scripts in ./usr/local/bin.
+3/10:  Installed dmenu and suckless-tools.  Put custom scripts in /usr/local/bin
 
 3/29:  Installed neofetch to display system information in terminal
 
@@ -112,7 +112,7 @@ https://askubuntu.com/questions/18958/realtime-noise-removal-with-pulseaudio
 
 4/7:  Installed nitrogen to set background in AwesomeWM.  Compton to allow transparency.
 
-4/10:  Installed Chrome for COVID registration
+4/10:  Installed Chrome
 
 4/13:  Commented-out echo cancellation module in /etc/pulse/default.pa
 
@@ -204,7 +204,7 @@ Installed colortest package to display colors of the terminal
 
 2022
 
-1/5:  Implemented automatic spell checking in Texmaker by pointing ot the Hunspell directory at /usr/share/hunspell
+1/5:  Implemented automatic spell checking in Texmaker by pointing ot the Hunspell dictionary at /usr/share/hunspell
 
 1/6:  Looking into configuring Logitech mouse with Piper
 

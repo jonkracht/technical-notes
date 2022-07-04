@@ -23,9 +23,7 @@ For removable drives, trash folder is something like:
 
 lsblk
 
-Trash-[UID]
-
-Can find location and file system types of drives with
+Find available drives and their locations
 `sudo fdisk -l`
 
 Mount with
