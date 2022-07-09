@@ -100,7 +100,7 @@ References:  man bash
 https://www.baeldung.com/linux/bashrc-vs-bash-profile-vs-profile
 https://linuxize.com/post/bashrc-vs-bash-profile/
 
-Different files run for login/non-login and non/interactive shells:
+Different config files are executed for various shell types (login/non-login, non/interactive shells)
 
 
 Interactive login shells:

@@ -105,7 +105,7 @@ include -r tag to change all files in this manner
 
 Permission string:
 l stands for link
-d standrs for directory
+d standr for directory
 
 
 *** cat function ***

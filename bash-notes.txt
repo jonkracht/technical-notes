@@ -5,7 +5,7 @@ Create a text document with .sh extension
 
 First line of script defines interpreter
 #!/bin/bash
-list of available shells are contained in ./etc/shells
+list of available shells are contained in /etc/shells
 
 Allow document to be executable to file:
 chmod a+x /path/to/file.sh

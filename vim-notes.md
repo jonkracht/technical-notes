@@ -306,4 +306,4 @@ In vim, run :PlugInstall
 ## References
 
 * `vimtutor`
-* 
+* (Vim-plug)[https://github.com/junegunn/vim-plug] 

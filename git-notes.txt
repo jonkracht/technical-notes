@@ -143,6 +143,8 @@ git clone https://some.url.com
 or
 via ssh
 
+Note: To use ssh key rather than password validation, clone using SSH rather than HTTPS
+Ex.  git clone  git@github.com:[USER_NAME]/[REPO_NAME].git
 
 
 

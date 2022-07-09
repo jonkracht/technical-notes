@@ -1,0 +1,34 @@
+nvim
+kitty
+exa
+brave-browser
+lutris
+speedtest
+rhythmbox
+ubuntu-restricted-extras (mp3 plugins etc.)
+awesome  (and lain via git clone https://github.com/lcpz/lain.git ~/.config/awesome/lain
+)
+jetbrains toolbox and pycharm (propropietary software so no package manager version; installed to /opt)
+tldr (Haskell implementation)
+btop (themes are located at /usr/share/btop/themes/)
+vlc
+mpv
+neofetch
+texmaker
+lyx
+vim-plug
+suckless-tools for dmenu, slock, etc.
+zsh shell
+fish shell
+
+
+
+Brave-browser plugins:
+bitwarden
+dark reader
+
+
+Remapped Caps Locks key to Escape
+Adding ssh key from previous Ubuntu install to ssh agent to facilitate Github communication
+Enabling firewall (ufw:  uncomplicated firewall) via systemctl enable ufw
+Fixing speakers cracking via https://superuser.com/questions/1493096/linux-ubuntu-speakers-popping-every-few-seconds
