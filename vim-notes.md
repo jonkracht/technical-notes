@@ -1,8 +1,5 @@
-# vim
+# Notes on vim/neovim
 
-## References
-* vimtutor
-* 
 
 
 ## TLDR (or most commonly-used  commands)
@@ -270,8 +267,8 @@ Ex:  `:r !ls` inserts the directory contents into the active file
 
 ### Chapter 7
 
-7.1:  Getting Help
-7.2:  Create a Startup Script (making a vimrc file)
+#### 7.1:  Getting Help
+#### 7.2:  Create a Startup Script (making a vimrc file)
 
 #### Autocompletion
 * When entering a command, can type `CTRL + D` to see commands that match input letters
@@ -293,14 +290,28 @@ Reload neovim with newly-edited vimrc:
 
 ## Plugins:
 
-### vim-plug
-nerdtree:  CTRL-O to toggle ON/OFF nerd tree (file manager)
+Currently managed (installed) with vim-plug
+
+### NERDTree
+CTRL-O to toggle ON/OFF nerd tree (file manager)
+
+
+|Action | Command|
+|---|---|
+| Enter into NERDTree from vim | `CTRL + O` |
+| Enter into Quick Help | `?`|
+| Close window | `q` |
 
 
 
 How to install new plugs into neovim:
 Add new plug definition into vimrc (init.vim)
 In vim, run :PlugInstall
+
+
+
+
+
 
 
 ## References

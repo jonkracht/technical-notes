@@ -70,3 +70,17 @@ Entries of the form:
 [USER_NAME]:x:1000:1000:[FULL_USER_NAME]:[/PATH/TO/USER/HOME]:[/PATH/TO/SHELL]
 
 Locate user of entry for the desired user and edit `[/PATH/TO/SHELL]`
+
+
+
+
+### Power management
+
+Controlled by gsettings
+
+Get values of all gsettings:  `gsettings list-recursively`
+
+
+Set:  `gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'shutdown'`
+
+For power, can set inactive timeout period, lid close action, function to perform when timedout, can choose different actions for times when computer is on AC power or battery

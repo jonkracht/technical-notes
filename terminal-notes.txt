@@ -141,6 +141,8 @@ Use '>>' to append to existing file
 
 printf is an improved version
 
+`column -t` prints are columnated form of text/file
+
 Head/tail commands prints to screen first/last portions of a text document
 
 Use less function to print larger text files.  Use Up/Down, Page Up/Down and Home/end to navigate.  'q' to exit
@@ -336,4 +338,5 @@ fzf (FUzzy finder) commands:
 CTRL-T, CTRL-R, ALT-C
 
 
-
+Navigate to beginning/end of line:
+CTRL + a/e

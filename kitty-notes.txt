@@ -1,3 +1,6 @@
+Template config file located at:
+`/usr/share/doc/kitty/examples/kitty.conf`
+
 
 Notes from kitty.conf
 
