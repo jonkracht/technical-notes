@@ -1,0 +1,72 @@
+nvim
+kitty
+exa
+brave-browser
+lutris:  installing via pop shop rather than apt as recommended
+speedtest
+rhythmbox
+ubuntu-restricted-extras (mp3 plugins etc.)
+awesome  (and lain via git clone https://github.com/lcpz/lain.git ~/.config/awesome/lain
+)
+jetbrains toolbox and pycharm (propropietary software so no package manager version; installed to /opt; executable below ~/.local/share/Jetbrains/... ; creating symlink in /usr/bin to allow dmenu to execute it)
+tldr (Haskell implementation)
+btop (themes are located at /usr/share/btop/themes/)
+vlc
+mpv
+neofetch
+texmaker
+lyx
+vim-plug
+dmenu:  initially using `apt install suckless-tools` but removed and cloned source for dmenu only in order to apply patches; installed libx11-dev, libxft-dev to make; cloned distro-tube's build
+zsh shell
+fish shell
+zoom via downloaded .deb file
+cheese
+bash scripts for previewing terminal colorschemes (https://github.com/stark/Color-Scripts; https://gitlab.com/dwt1/shell-color-scripts)
+zathura
+ncdu
+gnome-tweaks, gnome-shell-extensions (to customize desktop environment)
+Cloned awesome themes from https://github.com/lcpz/awesome-copycats
+compton
+Installed blueman package for bluetooth applet in awesome
+Editted /etc/gtk-3.0/settings.ini to use Adwaita-dark theming
+Ungoogled chromium (via Flatpak)
+Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)
+Qutebrowser via apt
+pcmanfm
+i3lock (screen locker)
+gimp
+easyeffects (audio effects for pipewire; used to be PulseEffects; flatpak used; config located in `~/.var/app/...`)
+texlive-full (get all Latex packages; via apt)
+ubuntu-wallpapers-jammy via apt; stored in /usr/share/backgrounds/
+flameshot
+mpd, mpc and cantata for awesome music listening
+xbacklight, brightnessctl to provide screen brightness control in awesomewm
+nuclear music player via flatpak
+
+
+
+## Brave-browser plugins:
+bitwarden
+dark reader
+tabliss
+Great Suspender (halts inactive browser tabs so as not to consume system resources)
+
+
+
+
+
+
+Remapped Caps Locks key to Escape
+Adding ssh key from previous Ubuntu install to ssh agent to facilitate Github communication
+Enabling firewall (ufw:  uncomplicated firewall) via systemctl enable ufw
+Fixing speakers cracking via https://superuser.com/questions/1493096/linux-ubuntu-speakers-popping-every-few-seconds
+Disabling autostart for awesome-only packages (e.g. blueman) by adding `X-GNOME-Autostart-enabled=false`
+
+Easy effects presets:
+https://github.com/JackHack96/EasyEffects-Presets
+
+
+
+Gnome extensions:
+Improved workspace indicator

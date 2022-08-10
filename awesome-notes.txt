@@ -24,8 +24,7 @@ To do in AWM:
 Layout icon color
 Screen Brightness
 Xorg.conf
-Volume controlled by F11, F12 rather than Alt + UP/DOWN
-
+Awful.spawn.once working properly
 
 Screen Lock - installed i3lock
 Network manager - addressed with nm-applet
