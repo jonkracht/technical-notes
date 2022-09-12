@@ -25,6 +25,11 @@ Layout icon color
 Screen Brightness
 Xorg.conf
 Awful.spawn.once working properly
+Standardize theming (pcman, flameshot using light theme)
+Remove clock, power, and volume widgets from secondary monitor
+
+
+
 
 Screen Lock - installed i3lock
 Network manager - addressed with nm-applet

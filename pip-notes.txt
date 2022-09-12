@@ -1,3 +1,10 @@
+Difference between pip and pip3:
+pip is used to manage packages for Python 2; pip3 is for Python 3
+
+On Pop 22.04, only Python 3 is natively installed.
+Also, pip and pip3 are linked to the same executable so should be interchangeable
+
+
 Find packages that are not up to date:
 pip list --outdated
 

@@ -1,35 +1,36 @@
 Command tools:
 
 Create an instance:  
-Navigate to located and enter:  jupyter notebook
-Can only navigate to children folders of location in which notebook is started
-Use root for access to all
+jupyter notebook
+
+Can only navigate to children folders of location from which notebook was started (start from root to allow access to entire filesystem)
 
 
-Saving notebook to another format:
+Exporting notebook to another format:
 jupyter-nbconvert --to='[html, markdown, pdf, latex, etc]' [NOTEBOOK_NAME]
 
 
 
 Run a cell with Ctrl + Enter
-Run a cell and move down:  Shift + Enter
+Run a cell and move cursor to cell below:  Shift + Enter
 
 Toggle between edit and command mode with Esc and Enter
 
-In command mode:
-A:  insert cell above
-B:  insert cell below
 
-M:  transform active cell to Markdown
-Y:  transform active cell to code
+Command-mode actions
+a  insert cell above
+b  insert cell below
 
-D twice:  delete active cell
-Z:  undo cell deletion
+m  transform active cell to Markdown
+y  transform active cell to code
 
-Shift + Up/Down:  Select multiple cells
-Shift + M:  Merge cells
+dd  delete active cell
+z  undo cell deletion
 
-Ctrl + Shift + Minus:  Split active cell at cursor
+SHIFT + Up/Down  Select multiple cells
+SHIFT + M  Merge cells
+
+CTRL + SHIFT + MINUS:  Split active cell at cursor
 
 Mass comment/uncomment:
 Highlight code and CTRL + /
@@ -58,3 +59,13 @@ Color:
 Tabbing can be done by including '\t' in markdown
 
 Help:  Type [Command_NAME] followed by ?
+
+
+
+Insert images:
+
+Local (must be in subpath of notebook i.e. can't be "above" the notebook in the filesystem)
+<img src "[/PATH/TO/IMAGE]" />
+
+From URL:
+!([/URL/TO/IMAGE])

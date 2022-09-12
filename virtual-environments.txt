@@ -35,11 +35,11 @@ p
 
 -----
 
-List environment availabe to Jupyter:
+List environment available to Jupyter:
 jupyter kernelspec list
 
 Alternatively, details of environments are located at:
-~/.local/share/jupyter/kernerls/
+~/.local/share/jupyter/kernels/
 
 
 To delete an environment:
@@ -49,7 +49,7 @@ sudo rm -rf <env_name>
 
 
 Install specific package versions:
-pip install requests==2.18.4
+pip install [PACKAGE_NAME]==[PACKAGE_VERSION]
 
 
 Save current environment (e.g. python packages and specific versions) to a text file

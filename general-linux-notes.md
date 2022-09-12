@@ -27,7 +27,7 @@ Find available drives and their locations
 `sudo fdisk -l`
 
 Mount with
-`sudo mount [\PATH\TO\DEVICE] [\PATH\TO\MOUNT\POINT]`
+`sudo mount [/PATH/TO/DEVICE] [/PATH/TO/MOUNT/POINT]`
 
 May need to specify filesystem type of drive as well.
 
@@ -66,8 +66,8 @@ Three methods:
 
 3.)  Edit `/etc/passwd` file
 
-Entries of the form:
-[USER_NAME]:x:1000:1000:[FULL_USER_NAME]:[/PATH/TO/USER/HOME]:[/PATH/TO/SHELL]
+Entries are of the form:
+`[USER_NAME]:x:1000:1000:[FULL_USER_NAME]:[/PATH/TO/USER/HOME]:[/PATH/TO/SHELL]`
 
 Locate user of entry for the desired user and edit `[/PATH/TO/SHELL]`
 

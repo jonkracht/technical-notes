@@ -1,18 +1,50 @@
 # Rclone
 
-## Installation
+Communicate (sync, copy, move) between local and cloud storage from the terminal
 
-Setup to JK's google drive named `JonsGoogleDrive`
+[Documentation](https://rclone.org/docs/)
 
-Config file of remote locations at `~/.config/rclone/rclone.conf`
+## Configuration
+
+Run `rclone config` and follow steps detailed:
+https://rclone.org/drive/
+
+Optional:  Create client ID detailed to accelerate communication speed
+
+[Detailed Here](https://rclone.org/drive/#making-your-own-client-id)
+
+Config file created at `~/.config/rclone/rclone.conf`
 
 ## Usage
 
-### Syncing
+### List all files in remote (recursive option?)
 
-`rclone sync [source] [dest]`
+`rclone lsf [REMOTE_NAME]:`
 
-Example:
+### List files in directory of remote
+
+`rclone lsf [REMOTE_NAME]:[DIR_NAME]`
 
 
-`rclone sync /data/organ/chester-pa-st-pauls/ JonsGoogleDrive:organ/chester-pa-st-pauls-episcopal`
+
+### Copy local files to remote
+
+`rclone copy [/PATH/TO/LOCAL/DIR] [REMOTE_NAME]:[/PATH/TO/REMOTE_DIR]`
+
+### Copy remote files to local
+
+`rclone copy [REMOTE_NAME]:[/PATH/TO/FILE_OR_DIR] [/PATH/TO/LOCAL/DIR]`
+
+
+
+### Sync local and remote (only changing destination)
+
+`rclone sync [/PATH/TO/LOCAL/DIR] [REMOTE_NAME]:[DIR_NAME]`
+
+
+Useful flags:
+* `--track-renames` renames files on remote rather than upload duplicate copies of files that have been renamed; succesfully removes deleted local files from remote
+*  `--exclude` ignores listed files or directories from operation
+
+### TODO
+* Is there .gitignore-type functionality?  i.e. files to be excluded can be listed in a text file

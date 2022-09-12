@@ -33,7 +33,7 @@ Editted /etc/gtk-3.0/settings.ini to use Adwaita-dark theming
 Ungoogled chromium (via Flatpak)
 Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)
 Qutebrowser via apt
-pcmanfm
+pcmanfm (find gtk3 version to provide consistent theming)
 i3lock (screen locker)
 gimp
 easyeffects (audio effects for pipewire; used to be PulseEffects; flatpak used; config located in `~/.var/app/...`)
@@ -43,7 +43,14 @@ flameshot
 mpd, mpc and cantata for awesome music listening
 xbacklight, brightnessctl to provide screen brightness control in awesomewm
 nuclear music player via flatpak
-
+steam
+scummvm via apt to get DOTT working in Lutris
+rclone (to interface with Google Drive)
+pandoc (to convert markdown documents)
+minicom (for potential future Opus Two dealings)
+wavemon (to monitor wireless connection properties)
+installed polyglot (via apt) to allow downloaded Stockfish binary to interact with xboard
+Installing jupyter notebook via instructions https://itslinuxfoss.com/install-jupyter-notebook-ubuntu-22-04/ (required python3-pip, virtualenv)
 
 
 ## Brave-browser plugins:

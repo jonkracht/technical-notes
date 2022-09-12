@@ -47,7 +47,15 @@ Hides title-bar and window borders.  Interaction with awesomewm
 
 foreground/background colors; what are these?
 
+
+
 background_opacity [1 is opaque and 0 is transparent]
+
+Change transparency during session:
+dynamic_background_opacity must be set to 'yes' (some performance loss, apparently)
+kitty_mod + a then m increases opacity by 0.1
+kitty_mod + a then l decreases opacity by 0.1
+kitty_mod + a then 1 sets to completely opaque
 
 Background image for kitty
 
