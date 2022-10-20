@@ -45,6 +45,7 @@ Config file created at `~/.config/rclone/rclone.conf`
 Useful flags:
 * `--track-renames` renames files on remote rather than upload duplicate copies of files that have been renamed; succesfully removes deleted local files from remote
 *  `--exclude` ignores listed files or directories from operation
+* `--exclude-from` flag takes a text file listing files/directories to be excluded from an rclone action
 
 ### TODO
 * Is there .gitignore-type functionality?  i.e. files to be excluded can be listed in a text file

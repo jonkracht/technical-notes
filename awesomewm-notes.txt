@@ -1,0 +1,52 @@
+** Changing awesome theme:
+
+Themes stored in /usr/share/awesome/themes
+
+Change things by editting:
+beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
+ex. replace zenburn with default, gtk, etc.
+
+Themes:
+* default: gray/black 
+* gtk: orange 
+* sky: light blue; 
+* xresources: purple black
+* zenburn:  gray/green
+
+Can rename tag names (from 1 ... 9) by awful.tag region in rc.lua
+
+Git-pulled awesome themes from https://github.com/lcpz/awesome-copycats
+
+Added gnome-screenshot to rc.lua.  Also tried Flameshot and scrot.
+
+
+
+** Future work
+Layout icon color
+Screen Brightness
+Xorg.conf
+Awful.spawn.once working properly
+Standardize theming (pcman, flameshot using light theme)
+Remove clock, power, and volume widgets from secondary monitor
+
+
+
+** Solved issues (lol)
+Screen Lock - installed i3lock
+Network manager - addressed with nm-applet
+Bluetooth - addressed with blueman-applet
+Increase volume max above 100% - achievable via pasystray (pulse audio system tray utility)
+
+
+
+** Keyboard shortcuts (generally defaults)
+
+* Alt j/K:  Toggle focus between windows on workspace
+* CTRL + Super + Space:  Toggle floating
+* Alt + Super + j/k:  Change horizontal spacing of windows
+* Shift + Super + j/k:  Move window to previous/next index
+
+
+** References
+
+* (Chris Titus' awesome)[https://github.com/ChrisTitusTech/titus-awesome]

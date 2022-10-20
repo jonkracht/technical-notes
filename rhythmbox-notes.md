@@ -38,10 +38,12 @@ Stored at `${HOME}/.local/share/rhythmbox/`
 
 
 ## Export playlist to a file
-In the hamburger-looking ic View -> Show Source Toolbar.  New toolbar appear.  Playlist -> Save to File...
+In the hamburger-looking icon: View -> Show Source Toolbar.  
+New toolbar appear.  Playlist -> Save to File...
 
 Three formats available:  m3u, pls, xspf
 Use pls to retain playlist name when re-loading
+
 
 ## Plugins
 

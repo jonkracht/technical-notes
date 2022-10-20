@@ -87,3 +87,24 @@ kitty_mod + ENTER
 
 Move window position earlier/later in stack:
 kitty_mod + f/b
+
+
+See environment variables:  CTRL + ALT + a
+
+Adding a new icon via instructions at https://github.com/k0nserv/kitty-icon
+Edited kitty.desktop to use 128 pixel icon for launcher and dock
+
+
+See effective config with `debug_config` or `CTRL + SHIFT + F6`
+Reload config `CTRL + SHIFT + F5`
+
+kitty can be only rendered using a monospace font (something about how the graphics are rendered in the GPU).
+Execute commmand `kitty list-fonts` to print compatible fonts.
+Include `--psnames` to get PostScript name of font which is required for some software
+
+Some available fonts as of 10/2022:
+Courier
+Courier10PitchBT-Roman
+FreeMono
+UbuntuMono-Regular
+

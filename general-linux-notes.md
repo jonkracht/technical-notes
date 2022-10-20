@@ -73,6 +73,12 @@ Locate user of entry for the desired user and edit `[/PATH/TO/SHELL]`
 
 
 
+### User groups
+
+In the terminal, `groups` will list groups the current user is in.
+To see the groups of another user:  `groups [USER_NAME]`
+
+
 
 ### Power management
 

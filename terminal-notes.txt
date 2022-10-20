@@ -110,19 +110,20 @@ d standr for directory
 
 *** cat function ***
 cat (comes from conCATenate):
-Default behavior is to write to stdout but can be selected elsewhere
+Default behavior is to write to stdout but can be directed elsewhere
 
 copy contents of file1 to file2:  
 cat file1.txt > file2.txt  (if file2 DNE, created; otherwise, overwrite)
 
-Use double greater than (>>) to append contents
+Use double greater than (>>) to append contents to EOF
 
-Combine two files to new file:  cat file1.txt file2.txt > combinedfile.txt (or >> to append)
-Create new file:  cat > new_file_name.txt
+Create new file by appending two files together:  cat file1.txt file2.txt > combinedfile.txt (or >> to append)
 
 Wild card characters: ?, *
 cat test_?  prints all files whose names are test_ followed by any single character
 cat test_*  prints all files whose names test_ followed by zero or more characters
+
+'n' flag will display line numbers in output
 
 'tac' function concatenates/prints in reverse order
 
