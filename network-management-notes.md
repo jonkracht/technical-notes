@@ -18,4 +18,7 @@ Show all past connections:  nmcli c show
 Include the --active flag to show presently available
 Edit current connection parameters:  nmcli c modify <connect_id> <param> <val> 
 
-Show available wireless networks:  nmcli dev wifi
+Show available wireless networks  
+`nmcli dev wifi`
+
+Tool for mapping network strength?

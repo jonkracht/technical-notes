@@ -1,73 +1,75 @@
-Markdown examples:
+# Text styling
 
 *Italicized text*       (single asterisk)
 **Bold text**           (double asterisk)
 ~~Strikethrough text~~  (double tilde)
 
 
-Horizontal line across page width:  Three hyphens (---)
+# Horizontal line across page width  
+Three hyphens (---)
 
 
-Lists:
+# Lists
 
-Ordered:
+## Ordered
 1.  Text
 2.  More text
-etc..
+3.  Etc
 
 
-Unordered:  Use hyphen, minus sign or plus sign
+## Unordered
+Use hyphen, minus sign or plus sign
 
 
-Line breaks:
+# Line breaks
 
-Single-spaced break:  End line with two spaces or <br/>
+## Single-spaced break  
+End line with two spaces or <br/>
 
 
-Including code:
+# Code segments
 
-Inline:
+## Inline
 Surround with back ticks
-Ex. The command `sudo apt update` updates your repo lists
+Ex. `sudo apt update` updates your repo lists
 
-Fenced block:
-```LANG 
+## Fenced block
+```[LANG] 
 SOME CODE
 MORE CODE
 ```
-where LANG provides syntax highlighting and can be Python, C, HTML, vim etc
+where [LANG] provides syntax highlighting and can be Python, C, HTML, vim etc
 
 
 
-Links:
-[link text](link url)
+# Links
+[link text][www.link.url)
 
 
-*** Insert image ***
 
-Local image:
+
+# Images
+
+## Local
 ![image-name](/path/to/image/in/repo)
 
-External image:
+## External
 ![image-name](https://www.domain.sthing/path/to/image.png)
 
 Can use html syntax:
 <img src = '/path/to/image'>
 
 
-Scaling:  Probably have to do something with HTML tags and not in the manner below  
+## Resizing 
 
-Append something like
-
-{ width=50% height=50% }
-
--- or --
-
-{ width="36px" height="36px"}
+<p align="center">
+<img src="[/PATH/TO/IMAGE]" width=600>
+</p>
 
 
 
-Tables:
+# Tables
+
 |Header1 |Header2  | Header3|
 |--- | --- | ---|
 |**bold style**| `code block`|data3|

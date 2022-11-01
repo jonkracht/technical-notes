@@ -1,4 +1,7 @@
-Command tools:
+Jupyter
+name chosen as a combination of Julia, Python, and R, a few of its first languages
+
+Current flavors include notebook, lab and hub
 
 Create an instance:  
 jupyter notebook

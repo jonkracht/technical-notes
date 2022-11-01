@@ -72,6 +72,9 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * Awesome themes from https://github.com/lcpz/awesome-copycats
 
 
+## Python packages via pip
+* jupyterlab
+
 
 
 ## Other means

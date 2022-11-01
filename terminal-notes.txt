@@ -7,9 +7,9 @@ CTRL + L  OR clear:  Clears terminal screen
 
 Navigation:
 Navigate through words in a command:  CTRL + Left/Right Arrow
-Naviage to beginning/end of a line:  CTRL + A/E
+Navigate to beginning/end of a line:  CTRL + A/E
 
-Delete:
+Deletion:
 Delete entire line:  CTRL + U
 Cursor to end of line:  CTRL + K
 Cursor to end of word:  ALT + D
@@ -341,3 +341,22 @@ CTRL-T, CTRL-R, ALT-C
 
 Navigate to beginning/end of line:
 CTRL + a/e
+
+Print return code of previously executed command:
+echo $?
+
+Value of 0 is no error
+A non-zero code indicates an error occured
+
+Suppress errors from output by sending to null directory (a black hole of sorts)
+[SOME_CODE_HERE] 2> /dev/null
+
+Number 0 represent standin, 1 standout, and 2 stderr
+
+
+
+
+Getting help or documentation while in the terminal:
+* Run `man [COMMAND_NAME]` to view official documentation
+* tldr [COMMAND_NAME]
+* View cheat sheet curated by cht.sh website:  `curl cht.sh [COMMAND_NAME]`
