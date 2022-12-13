@@ -42,17 +42,17 @@ Mergin:
 ## Summary methods
 
 
-|Description |Code  |
-|--- | --- |
-| Get column variable type| df.dtypes|
-| Display column/feature names | `df.columns` |
-| Print first `N` rows (default is 5) | `df.head([N])`|
-| Print last `N` rows (default is 5)| `df.tail([N])` |
-| Display summary | `df.info`,  `df.describe` |
-| Display dimensinos | `df.shape`  |
-| Get row names | `df.index` |
-| Get unique values in a column | `df[[COL]].nunique()`|
-| Show frequency counts of two features| `pd.crosstab(df['[COL_1]'], df['[COL_2]'], values=[], aggfunc=[])`|
+| Description                           | Code                                                               |
+| ---                                   | ---                                                                |
+| Get column variable type              | `df.dtypes`                                                        |
+| Display column/feature names          | `df.columns`                                                       |
+| Print first `N` rows (default is 5)   | `df.head([N])`                                                     |
+| Print last `N` rows (default is 5)    | `df.tail([N])`                                                     |
+| Display summary of the dataframe      | `df.info`,  `df.describe`                                          |
+| Display dimensions                    | `df.shape`                                                         |
+| Get row names                         | `df.index`                                                         |
+| Get unique values in a column         | `df[[COL]].nunique()`                                              |
+| Show frequency counts of two features | `pd.crosstab(df['[COL_1]'], df['[COL_2]'], values=[], aggfunc=[])` |
 
 
 
@@ -118,7 +118,7 @@ In general, operations exclude missing values.
 | Save to Excel file| `df.to_excel('[FILENAME].xlsx', sheet_name='[SHEET_NAME]')|
 
 
-## Miscellanous
+## [Miscellaneous](Miscellaneous)
 |Description |Code  |
 |--- | --- |
 | Set number of decimal places displayed in output | `df.to_csv('pd.set('display.precision', [N_DEC_POINTS])')`|

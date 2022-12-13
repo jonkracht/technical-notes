@@ -313,7 +313,6 @@ In vim, run :PlugInstall
 
 
 
-
 ## References
 
 * `vimtutor`

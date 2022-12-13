@@ -108,3 +108,7 @@ Courier10PitchBT-Roman
 FreeMono
 UbuntuMono-Regular
 
+
+Scroll up/down in the terminal:
+Increment by line:  CTRL + SHIFT + UP/DOWN
+Increment by page:  CTRL + SHIFT + PAGEUP/PAGEDOWN

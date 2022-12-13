@@ -4,7 +4,8 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 
 
 
-## APT
+## apt
+
 * nvim
 * kitty  - removed and installing via source from Github to get a newer version than packaged in default repos, pre-built binary method
 * exa
@@ -52,6 +53,15 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * Installing default-jre and libreoffice-java-common packages to silence libreoffice warnings
 * obsession for logout, shutdown, suspend, etc management in awesome
 * (https://github.com/haikarainen/light)[light] package to control screen brightness in awesome; adding user to 'video' group to make light work
+* black (aesthetic styling of Python)
+* octave (to work with Matlab scripts)
+* gnome-books for reading .epub files (untested if successful)
+* dmg2img to create a MacOS USB installer
+* pavucontrol to have a volume control gui
+* gparted disc formatting utility to create a macos installer
+* xscreensaver to play around with screensavers (configure through GUI of xscreensaver-demo); installing rss-glx, xscreensaver-data-extra, xscreensaver-gl-extra package for complete screensaver set
+
+
 
 
 
@@ -62,7 +72,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * EasyEffects (audio effects for pipewire; used to be PulseEffects; flatpak used; config located in `~/.var/app/...`)
 * nuclear music player
 * spotify
-
+* vscodium
 
 ## Github repos
 * EasyEffects-Presets (sensible presets for equalization, reverb, etc:  https://github.com/JackHack96/EasyEffects-Presets )
@@ -74,7 +84,8 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 
 ## Python packages via pip
 * jupyterlab
-
+* yfinance
+* nbterm:  to interactive with jupyter from the terminal
 
 
 ## Other means
@@ -89,7 +100,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * tabliss (new browser tabs display pictures)
 * Great Suspender (halts inactive browser tabs to conserve system resources)
 * Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)
-
+* Bypass paywalls (for select website)  https://github.com/iamadamdev/bypass-paywalls-chrome
 
 
 

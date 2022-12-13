@@ -305,17 +305,22 @@ touch file1.txt file2.txt
 
 
 
-Zip/unzip (or compress/decompress):
+Zip/unzip (compress/decompress):
 
 Single file:
-gzip filename.txt  (.gz extension is appended to the filename)
+gzip [FILE_NAME.EXT]  
+Compressed file will have a .gz extension is appended to the original file name)
+
 gunzip filename.txt.gz
 
-Multiple files zip/unzip:
+Multiple files zip/unzip or archive:
 zip:  
 tar cvf new_folder_name.tar file1.txt file.c
 unzip:  
 tar xvf new_folder_name.tar
+
+View contents of a tar file verbosely
+tar tvf [FILE_NAME.tar]
 
 
 
@@ -356,7 +361,29 @@ Number 0 represent standin, 1 standout, and 2 stderr
 
 
 
-Getting help or documentation while in the terminal:
+## Getting help or documentation while in the terminal
+
+### man
 * Run `man [COMMAND_NAME]` to view official documentation
+
+### cheat.sh
+
+[Documentation](https://github.com/chubin/cheat.sh)
+
+View cheat sheet curated by cht.sh website
+
+Info on a UNIX/Linux command:  `curl cht.sh [COMMAND_NAME]`
+
+#### Programming language specific
+
+Use `curl cht.sh/[LANG_NAME]/[FLAG]` where `[FLAG]` is
+
+* Basic description of programming language:  `:learn`  
+* List all sheets for language:  `:list`  
+* Cheat sheet for a function:  `[FUNCTION_NAME]` ex. tar, curl, cat, etc.
+
+
+
+### tldr
 * tldr [COMMAND_NAME]
-* View cheat sheet curated by cht.sh website:  `curl cht.sh [COMMAND_NAME]`
+

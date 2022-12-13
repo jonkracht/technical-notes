@@ -1,26 +1,38 @@
 Primarily a scripting language
 Commands used in a text editor NOT directly in terminal
 
-Create a text document with .sh extension
+Convention is to give bash scripts a .sh extension so as to indicate that it's a shell script
+The !# (shebang) at the beginning of the file confirms that the file is a shell script and indicates with which shell it is to be executed.
 
-First line of script defines interpreter
-Most common is:  #!/bin/bash
+
+First line of script defines shell to be used
+Most common is `#!/bin/bash`
 Available shells are listed in `/etc/shells`
 
-Allow document to be executable:
-chmod a+x `/path/to/file.sh`
-Alternatively, use three digit syntax:  `chmod 666 /path/to/file`
+Make file executable:
+`chmod a+x [/path/to/file.sh]`
+May need to execute with sudo privileges
+
+Alternatively, use three digit syntax:  `chmod 666 [/path/to/file]`
 Can also use three-digit syntax to alter permissions
 
 
 
-Variables are accessed by prefacing their name with $
-ex.  $HOME
+## Variables
 
-Create a new read-only variable:
-declare newVar = 'This is a new variable'
+* Create a variable
+myvar='Monkies'     (no spaces allowed)
 
-Arrays:  1 dimensional data structures
+Convention is to use lowercase for variable names so as not to conflict with system variables
+
+Variable contents are accessed by prepending their name with $
+ex.  $myvar
+
+
+
+
+Arrays:  
+1 dimensional data structure
 Create array with newArr=('thing1' 'thing2')
 (BASH is fairly picky about spaces before/after equals sign)
 
@@ -33,10 +45,10 @@ All elements (@ represents all):  echo "${newArr[@]}"
 Print indices:  echo "${!newArr[@]}"
 Print length of array (#):  echo ""${#newArr[@]}
 
-Use "read" function to query user.
+Use "read" function to query user for input.
 Syntax:  `read variable_name`
 
-Include a prompt:
+Include a prompt in the query:
 read -p "Text to input a variable: " variable_name
 
 
@@ -50,10 +62,12 @@ else
     a final action
 fi
 
+
 Logical operators:  -eq, -neq, -gt, -lt  when surrounded by []
-Can use traditional operators when expression is surrounded by ()
-Use && for logical AND  ( if [ condition1 ]  && [ condition2 ]
-OR is implemented using ||
+Can use traditional operators (<, >, =) when expression is surrounded by ()
+
+Use && for logical AND  (ex. if [ condition1 ]  && [ condition2 ]
+OR is achieved using ||
 
 
 
@@ -88,13 +102,15 @@ some_variable=$(some_application)
 ex. fooVar=$(who)
 
 
-Defining a function:
+Function definition:
 someFunction() {
     actions
 }
 
-Call function
+Function call:
 someFunction;
+
+
 
 Debugging bash script: Include -x flag
 bash -x ./path/to/scipt.sh
@@ -105,68 +121,76 @@ include -x flag after shell declaration in script
 ex. #! /bin/bash -x
 
 Can debug only a portion of code with:
-set -x
-CODE TO DEBUG
+ex:  set -x
+[CODE 
+TO 
+DEBUG]
 set +x
 
 
-Inputing arguments into a bash script via "standard in" (STDIN):
+Inputing arguments into a bash script via standard in (STDIN):
 In the terminal:
-/path/to/script.sh input1 input2
+/path/to/script.sh input1 input2 [etc]
 
-Within the script, these inputs may be accessed by referencing $1, $2.
+Within the script, these inputs may be accessed by referencing $1, $2, etc.
 $0 is the script name
 
 Allow for arbitrary number of inputs:
 Within script:
 args=("$@")
 
-Number of arguments input is:
+Number of arguments input:
 $#
 
 
 
 
 Data streams:
-ls -al 1>file1.txt 2>file2.txt
 
 '0' refers to standard input
 '1' refers to standard output
 '2' refers to standard error
+
+ls -al 1>file1.txt 2>file2.txt
 Above snippet, saves std output/error to file1/2
 
-Send both to same file:
+Send both output/error to same file
 ls -al >file1.txt 2>$1
-OR: ls -al >& file1.txt
+-- OR -- 
+ls -al >& file1.txt
+
 
 
 Transmitting information between scripts:
-Use export command (ex.  message = 'hi'; export message)
-Call second script and access variable via `$message`
+
+Use export command 
+message = 'hi'; export message
+
+Variable maybe accessed in another script via `$message`
 
 
-Arithmetic:
-Define variables
-echo $(( $var1 + $var2 ))
-spaces surrounding expression are necessary
-alternatively:  echo $(expr $var1 + $var2)
+## Math in BASH
 
+$(( $var1 + $var2 ))
+(spaces surrounding math expression are required)
 
+alternatively:
+$(expr $var1 + $var2)
 
-
-Other scripting languages related to Bash:
-tr
-awk
-sed
-
-
-Comments:
-single line - prepend with #
-multiline - : '  some text - over many lines'
+Multiplication is achieved via \* 
+(single asterisk refers to the wildcard symbol)
 
 
 
-Check if a directory with desired name exists:
+## Comments
+* single line - prepend with #
+* multiline - : '  some text - over many lines'
+
+
+## Miscellaneous
+
+* Check if file directory exists
+Check if a directory with desired name exists
 if [ -d "$DIRNAME" ]
 then
   SOME ACTIONS

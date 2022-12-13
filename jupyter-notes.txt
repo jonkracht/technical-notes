@@ -1,50 +1,67 @@
-Jupyter
+# Jupyter
 name chosen as a combination of Julia, Python, and R, a few of its first languages
+
+Successor to IPython (i is for interactive)
 
 Current flavors include notebook, lab and hub
 
-Create an instance:  
-jupyter notebook
 
-Can only navigate to children folders of location from which notebook was started (start from root to allow access to entire filesystem)
+## Basics
+
+Create an instance:  
+`jupyter notebook`
+
+Can only navigate to children folders of location from which notebook was started.
+To have access to files across entire file system, first navigate to root directory and launch jupyter notebook.
 
 
 Exporting notebook to another format:
-jupyter-nbconvert --to='[html, markdown, pdf, latex, etc]' [NOTEBOOK_NAME]
+`jupyter-nbconvert --to='[html, markdown, pdf, latex, etc]' [NOTEBOOK_NAME]`
+
+Alternatively, within notebook, File -> Download As
 
 
+Run current cell:  CTRL + ENTER
+Run current cell and move cursor next cell:  SHIFT + ENTER
 
-Run a cell with Ctrl + Enter
-Run a cell and move cursor to cell below:  Shift + Enter
-
-Toggle between edit and command mode with Esc and Enter
+ENTER:  enters into edit mode so as to modify a cell
+ESC:  enters into command mode so as to modify notebook
 
 
-Command-mode actions
+## Command-mode actions
+
+### Insert a new cell
 a  insert cell above
 b  insert cell below
 
-m  transform active cell to Markdown
-y  transform active cell to code
+### Convert a cell's type
+m  converts active cell to Markdown
+y  converts active cell to code
 
+### Deletion
 dd  delete active cell
 z  undo cell deletion
 
-SHIFT + Up/Down  Select multiple cells
-SHIFT + M  Merge cells
+### Selection
+SHIFT + Up/Down  Select multiple cellsi
 
+
+### Grouping
+SHIFT + M  Merge cells
 CTRL + SHIFT + MINUS:  Split active cell at cursor
 
 Mass comment/uncomment:
 Highlight code and CTRL + /
 
 
-Execute shell commands inside of notebook:
+## Misc
+
+### Execute shell commands
 Prepend any shell command with !
 Ex.  !ls prints contents of current directory
 
 
-Formatting can be accomplished with Markdown
+Formatting can be accomplished via Markdown syntax
 (bold, italics, list, links, etc.)
 
 Latex:  $math equations etc.$
@@ -57,7 +74,7 @@ Hold SHIFT + TAB or ?[FUNCT_NAME]
 
 
 Color:
-<font color='green'>Enter text here</font>i
+<font color='green'>Enter text here</font>
 
 Tabbing can be done by including '\t' in markdown
 
