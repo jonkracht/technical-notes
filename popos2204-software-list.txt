@@ -64,6 +64,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 
 
 
+## Apt repository
 
 
 ## Flatpak (likely installed via Pop! Shop which is labeled as io.elementary.appcenter in system processes)
@@ -92,6 +93,12 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 
 * jetbrains toolbox and pycharm (propropietary software so not in repos; installed to /opt; executable below ~/.local/share/Jetbrains/... ; creating symlink in /usr/bin to allow dmenu to find and run it)
 * zoom via downloaded .deb file
+* Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
+* Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
+
+
+
+
 
 
 ## Browser plugins

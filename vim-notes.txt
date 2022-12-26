@@ -280,11 +280,23 @@ Ex:  `:r !ls` inserts the directory contents into the active file
 
 
 
-Notes form Luke Smith's Vim Diesel Youtube Video:
-.  reruns previous command
 
-Reload neovim with newly-edited vimrc:
-:source $MYVIMRC
+
+
+
+
+## Splits
+
+Splitting vim windows into subsections
+
+* close split               `:q`
+* new horizontal split      `:split` or `:sp`
+* new vertical split        `:vsplit` or `:vs`
+* flip positions of splits  CTRL + W then R
+
+Vimrc settings:
+Create new splits below/right of existing
+`set splitbelow splitright`
 
 
 
@@ -292,21 +304,39 @@ Reload neovim with newly-edited vimrc:
 
 Currently managed (installed) with vim-plug
 
-### NERDTree
-CTRL-O to toggle ON/OFF nerd tree (file manager)
+Install new plugs into neovim:
+Add new plug definition into vimrc (init.vim)
+In vim, run :PlugInstall
 
+
+
+
+### NERDTree
+CTRL-F to toggle ON/OFF (can be set in vimrc)
+
+
+Commands while navigating NERDTree (complete listing in :help NERDTree)
 
 |Action | Command|
 |---|---|
-| Enter into NERDTree from vim | `CTRL + O` |
-| Enter into Quick Help | `?`|
-| Close window | `q` |
+| Toggle quick help menu | `?`|
+| Close NT window | `q` |
+| Open file | `o` |
+| Open file but leave cursor in NT| `go`|
+| Open file in a new tab | `t` |
+| Open file in new tab but keep focus in NT| `T` |
+| Open selected file in a split window| `i` |
+| Open in split but leave cursor in NT| `gi`|
+| Open in vsplit | `s`|
+| Open in vsplit but keep cursor in NT| `gs` |
+| Edit current directory | `e` |
+| Toggle display of hidden files ON/OFF | `I` |
+| Display NT menu | `m` |
+| Maximize/minimize window |`A` |
 
 
 
-How to install new plugs into neovim:
-Add new plug definition into vimrc (init.vim)
-In vim, run :PlugInstall
+
 
 
 

@@ -22,9 +22,9 @@ Paste last cut text:  CTRL + Y
 Autocomplete:  Begin typing command and hit TAB for suggestions
 
 
-Open an application from terminal as a background task:
+Open an application as a background task:
 Append an '&' to the end of the command
-ex: 'gedit FILENAME &' launches gedit and returns to allow terminal use
+ex: 'gedit &' launches gedit while leaving terminal functional
 
 Send a process to background with CTRL + Z
 Bring it back to foreground with 'fg'
@@ -127,7 +127,10 @@ cat test_*  prints all files whose names test_ followed by zero or more characte
 
 'tac' function concatenates/prints in reverse order
 
-Printing to standard output:
+
+
+
+## Printing to standard output
 
 echo 'Print some text to the standard out.  Yay.'
 Text with apostrophes need to be enclosed by double quotation marks; \" for double quotes
@@ -204,9 +207,10 @@ find {some valid expression} -exec COMMAND {} +
 
 
 
-
-Perform multiple commands:  Separate with semi-colon ';'
-Perform command ONLY IF previous succeeds:  Separate with double ampersands (&&)
+## Chaining commands
+* Separate with semi-colon ';'
+* Perform command ONLY IF previous succeeds:  Separate with double ampersands &&
+* Perform command ONLY IF previous FAIL:  Separate with double pipe symbols ||
 
 
 
