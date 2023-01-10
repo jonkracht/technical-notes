@@ -1,6 +1,6 @@
 #### Autostart
 
-Programs that will execute when systems boots
+Programs to be ran when systems boots
 * Specific user: `~/.config/autostart/` directory
 * All users:  `/etc/xdg/autostart/`
 
@@ -9,17 +9,18 @@ Programs that will execute when systems boots
 
 Trashed files go to `~/.local/share/Trash/`
 
-Can empty via most graphical file managers (eg. nautilus) or by in the terminal with something like:
-`rm -rf ~/.local/share/Trash/*`
-
-`trash-cli` is an often-recommended command line utility for trash management.
-
-For removable drives, trash folder is something like:
+Empty trash:
+* Graphical file managers (like nautilus) often have an option to do so
+* Command line:  `rm -rf ~/.local/share/Trash/*`
 
 
+`trash-cli` is a command line utility for trash management.
 
 
-### Drive mounting
+
+
+
+### Drive management (mounting, information, etc.)
 
 lsblk
 
@@ -75,8 +76,8 @@ Locate user of entry for the desired user and edit `[/PATH/TO/SHELL]`
 
 ### User groups
 
-In the terminal, `groups` will list groups the current user is in.
-To see the groups of another user:  `groups [USER_NAME]`
+In the terminal, the `groups` command will list groups the current user is in.
+Get the groups of another user:  `groups [USER_NAME]`
 
 
 
@@ -90,3 +91,12 @@ Get values of all gsettings:  `gsettings list-recursively`
 Set:  `gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'shutdown'`
 
 For power, can set inactive timeout period, lid close action, function to perform when timedout, can choose different actions for times when computer is on AC power or battery
+
+
+
+
+### Creation of the bashrc
+
+Template bashrc is contained in `/etc/skel`
+All files in this directory are copied to a new user's home directory when the account is created.
+These template files are somewhat distribution specific.

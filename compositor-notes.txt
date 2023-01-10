@@ -1,24 +1,46 @@
-Brodie Robertson YouTube on compositors (compton and picom)
 
-Compositor allows window transitions
+Compositor interacts with window system to produce
+* Transparency
+* Transition animations
+* Drop shadows behind windows
 
-xprop function can be used to find window class.
-Start xprop and click window whose class information is to be determined.
-Properties printed to stdout
+Some window manages perform their own compositing (ex. Mutter)
+
+Consumes some amount of system resources so not ideal for gaming
+
+Some Linux compositors
+* Compton
+* Picom
+
+Configuration is done via a .conf file
+
+
 
 picom has difficulty rendering blur
 tryone144 fork uses Kawase blur to achieve more efficiently
 Installation details on github page
 https://github.com/tryone144/compton
 
-Create opacity-rules based on window class (ex. class_g)
+Create opacity-rules based on window class (ex. class_g):
+```
 opacity-rule = [
 	"90:class_g = 'kitty',
 	...
 ]
+```
 
 where opacity is to be set to 0.9
 
+
+
+## Find window type for rule creation
+xprop function can be used to find window class.
+Start xprop and click window whose class information is to be determined.
+Properties printed to stdout
+
+
+
+## Misc
 switch 'backend' to glx
 
 dual_kawase

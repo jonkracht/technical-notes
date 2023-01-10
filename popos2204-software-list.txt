@@ -60,7 +60,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * pavucontrol to have a volume control gui
 * gparted disc formatting utility to create a macos installer
 * xscreensaver to play around with screensavers (configure through GUI of xscreensaver-demo); installing rss-glx, xscreensaver-data-extra, xscreensaver-gl-extra package for complete screensaver set
-
+* picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx
 
 
 
@@ -120,7 +120,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * Disabling autostart in Gnome sessions for awesome-only packages (e.g. blueman) by adding `X-GNOME-Autostart-enabled=false` to files located in `/etc/xdg/autostart`
 * Modified /etc/gtk-3.0/settings.ini to use Adwaita-dark theming for gtk software
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
-
+* Adding user to 'dialout' and 'uucp' groups to ease minicom usage
 
 ## Gnome extensions
 Improved workspace indicator (icon displaying current workspace number)

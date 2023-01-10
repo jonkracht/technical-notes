@@ -1,52 +1,67 @@
-** Changing awesome theme:
+# Awesome window manager
 
-Themes stored in /usr/share/awesome/themes
+## Theming
 
-Change things by editting:
-beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
-ex. replace zenburn with default, gtk, etc.
-
-Themes:
+Default themes stored in `/usr/share/awesome/themes`
 * default: gray/black 
 * gtk: orange 
 * sky: light blue; 
 * xresources: purple black
 * zenburn:  gray/green
 
-Can rename tag names (from 1 ... 9) by awful.tag region in rc.lua
 
-Git-pulled awesome themes from https://github.com/lcpz/awesome-copycats
-
-Added gnome-screenshot to rc.lua.  Also tried Flameshot and scrot.
+Some other themes:
+https://github.com/lcpz/awesome-copycats
 
 
 
-** Future work
-Layout icon color
-Screen Brightness
-Xorg.conf
-Awful.spawn.once working properly
-Standardize theming (pcman, flameshot using light theme)
-Remove clock, power, and volume widgets from secondary monitor
 
 
 
-** Solved issues (lol)
-Screen Lock - installed i3lock
-Network manager - addressed with nm-applet
-Bluetooth - addressed with blueman-applet
-Increase volume max above 100% - achievable via pasystray (pulse audio system tray utility)
-
-
-
-** Keyboard shortcuts (generally defaults)
-
-* Alt j/K:  Toggle focus between windows on workspace
-* CTRL + Super + Space:  Toggle floating
+## Shortcuts
+Some useful, default keyboard shortcuts; can be almost arbitrarily re-bound
+* Alt j/K:  Toggle focus between windows on a workspace (screen)
+* CTRL + Super + Space:  Toggle window floating mode
 * Alt + Super + j/k:  Change horizontal spacing of windows
 * Shift + Super + j/k:  Move window to previous/next index
 
 
-** References
+## Major libraries used by awesome
+Overview here:  https://awesomewm.org/apidoc/index.html
 
-* (Chris Titus' awesome)[https://github.com/ChrisTitusTech/titus-awesome]
+### awful
+Controls window management
+
+
+
+### naughty
+notifications
+
+
+
+
+## "Solved" issues
+
+* Screenshot shortcut (PrtSc key):  flameshot but also tried gnome tool and scrot
+* Screen locking: i3lock
+* Easily managing WIFI:  nm-applet
+* Easy bluetooth management:  blueman-applet
+* Increase volume above "100%":  pasystray (pulse audio system tray utility)
+* Control screen brightness:  fixed using "light" package
+
+
+
+
+
+
+## TODO
+* Layout icon color
+* Xorg.conf
+* Awful.spawn.once working properly
+* Standardize theming (pcman, flameshot using light theme)
+* Remove clock, power, and volume widgets from secondary monitor
+* With window toolbar turned off, how to move window when in floating mode?
+
+
+## References
+* (Chris Titus' build)[https://github.com/ChrisTitusTech/titus-awesome]

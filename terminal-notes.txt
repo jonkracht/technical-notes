@@ -42,9 +42,9 @@ pwd  print working directory
 ./ : means current directory
 
 Absolute paths:
-Use / at the beginning of path means "start from root directory"
-Use ~ at the beginning of path means "start from home directory" 
-~ is an alias for /home/USER_NAME
+Use of `/` means "start from root directory"
+Use of `~` means "start from user's home directory" 
+(~ is an alias for /home/[USER_NAME])
 
 
 Create new directory:
@@ -56,26 +56,32 @@ Create filename with spaces:  mkdir "folder 1" or 'folder 1' or folder\ 3
 
 
 
-
-ls stands for 'list'
+## ls command
+Stands for 'list'
 ls:  lists folder contents
-ls > output.txt:  save output of ls command to output.txt
-ls 'subfolder_name':  lists contents of subfolder
+ls > output.txt  saves output of ls command to output.txt
+ls [/PATH/TO/FOLDER]  lists contents of FOLDER
 
-ls flags:
+Some ls flags:
 -l  Show one file per line (a long list)
 -a  Show hidden files
 -h  Display file size in human-readable units (e.g. KiB, MiB, etc.)
--S  Show files ordered by size
+-S  Print files in order of size
+-t  Print files by time modified
+--time-style
 
-See .bashrc for aliases:  ll, la, la, etc.
+Aliases including ls are often contained in ~/.bashrc (ex. ll, la, lf)
 
-Display contents of other directories (without changing current directory)
-ls subdirectory Show contents of subdirectory
-ls ..  Show directory contents in higher level
-ls ../.. Show directory contents in second higher level
+Display contents of other directories without changing working directory:
+ls [/PATH/TO/SUB/DIR] Prints contents of SUB_DIR below working directory in filesystem
+ls ..  Show directory contents one level higher in filesystem
+ls ../.. Show directory contents two levels higher in the filesystem
 
-tree command present more detailed view
+
+Similar, but more modern utilities:
+* exa
+* tree
+
 
 
 
@@ -216,10 +222,13 @@ find {some valid expression} -exec COMMAND {} +
 
 
 Search terminal command history:  
-Press CTRL + R and input command to search for.  
-Pressing CTRL + R iterate through matches.
+* CTRL + R to enter search
+* Type text for which to search
+* CTRL + R iterates through matches
+
 
 history | less :  only displays the first few, with the rest viewable with successive pressing of ENTER
+
 Execute a command returned in history list:  ![commandnumber] where [commandnumber] is returned by history
 
 To not save a command in history, insert a single space before the command
@@ -336,7 +345,7 @@ whereis is similar but returns a bit more information
 Create new aliases in the .bashrc file located at ~/.bashrc
 
 Synchronize current shell to contents of bashrc:
-source ~./bashrc
+`source ~./bashrc`
 
 Display a list of aliases:
 Run 'alias' command in terminal

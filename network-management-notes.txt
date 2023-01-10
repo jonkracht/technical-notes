@@ -1,0 +1,42 @@
+# network management notes
+
+On Pop 22.04, uses NetworkManager to configuring/operating connections.
+(Alternatives include systemd-network and ifupdown)
+
+Can turn on/off by editting /etc/NetworkManager/NetworkManager.conf
+Turn on by setting managed parameter to false (`managed=false`)
+And vice versa for OFF
+
+Only one networking service should be enabled at a time
+
+
+## Tools included with NetworkManager
+* nmcli command line tool for controlling NM
+* nmtui - a terminal user interface (TUI)
+* nm-applet - applet for GNOME desktop environments
+
+
+### nmcli
+
+* Show available WiFI `nmcli device wifi`
+
+* Show recent (all?) past connections:  `nmcli connection show`
+Include the --active flag to show available
+
+Edit current connection parameters:  `nmcli connection modify <connect_id> <param> <val>`
+* Show available wireless networks:  `nmcli device wifi`
+
+Can abbreviate the 'connection' and 'device' flag families with 'c' and 'dev', respectively.  Abbreviations must be unique among possible flags.
+
+
+### nm-applet
+
+Automatically started by Gnome desktop.  Need to manually initialize in awesome.
+
+
+
+## TODO
+
+* Tool for mapping network strength spatially
+
+

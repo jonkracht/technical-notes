@@ -1,8 +1,10 @@
 # Rclone
 
-Communicate (sync, copy, move) between local and cloud storage from the terminal
+Enables communication (sync, copy, move) between local and cloud storage from the terminal
 
 [Documentation](https://rclone.org/docs/)
+
+
 
 ## Configuration
 
@@ -14,6 +16,8 @@ Optional:  Create client ID detailed to accelerate communication speed
 [Detailed Here](https://rclone.org/drive/#making-your-own-client-id)
 
 Config file created at `~/.config/rclone/rclone.conf`
+
+
 
 ## Usage
 
@@ -42,10 +46,15 @@ Config file created at `~/.config/rclone/rclone.conf`
 `rclone sync [/PATH/TO/LOCAL/DIR] [REMOTE_NAME]:[DIR_NAME]`
 
 
-Useful flags:
-* `--track-renames` renames files on remote rather than upload duplicate copies of files that have been renamed; succesfully removes deleted local files from remote
+#### Useful flags:
+* `--track-renames` renames files on remote rather than upload duplicate copies of files that have been renamed; successfully removes deleted local files from remote
 *  `--exclude` ignores listed files or directories from operation
 * `--exclude-from` flag takes a text file listing files/directories to be excluded from an rclone action
+* `--verbose` or `-v` gives prints details to stdout
 
-### TODO
-* Is there .gitignore-type functionality?  i.e. files to be excluded can be listed in a text file
+
+## Most-used command
+* `rclone sync [/LOCAL/PATH/TO/ROOT/FOLDER] [GOOGLE-DRIVE-NICKNAME] --track-renames --exclude-from=.rclone-ignore --verbose`
+
+## TODO
+*
