@@ -1,5 +1,5 @@
 Ctr + Alt + T: Open terminal window  (default in most Debian-based distributions)
-Ctrl + Shift + T:  Open new tabþ
+Ctrl + Shift + T:  Open new tab
 Ctrl + Shift + W:  Close tab
 Shift + Ctrl + Q  OR  exit:  Close terminal
 CTRL + L  OR clear:  Clears terminal screen
@@ -24,7 +24,7 @@ Autocomplete:  Begin typing command and hit TAB for suggestions
 
 Open an application as a background task:
 Append an '&' to the end of the command
-ex: 'gedit &' launches gedit while leaving terminal functional
+ex: 'gedit &' launches gedit as a background task leaving terminal functional
 
 Send a process to background with CTRL + Z
 Bring it back to foreground with 'fg'
@@ -41,44 +41,42 @@ cd -    navigates to previous directory
 pwd  print working directory
 ./ : means current directory
 
-Absolute paths:
-Use of `/` means "start from root directory"
-Use of `~` means "start from user's home directory" 
+Paths:
+`/` means "start from root directory"
+`~` means "start from user's home directory" 
 (~ is an alias for /home/[USER_NAME])
 
 
-Create new directory:
-At a specific location:  mkdir /path/to/folder/new_folder_name
+## Create new directory
 In current folder:  mkdir dir1 dir2 ...
+At a specific location:  mkdir /path/to/folder/new_folder_name
 Create nested folders:  mkdir -p dir4/dir5/dir6  (-p indicates create parent directories)
-Create filename with spaces:  mkdir "folder 1" or 'folder 1' or folder\ 3
+Create file with spaces in its name:  mkdir "folder 1" or 'folder 1' or folder\ 3
 
 
 
 
 ## ls command
 Stands for 'list'
-ls:  lists folder contents
+ls:  lists current directory's contents
 ls > output.txt  saves output of ls command to output.txt
 ls [/PATH/TO/FOLDER]  lists contents of FOLDER
-
-Some ls flags:
--l  Show one file per line (a long list)
--a  Show hidden files
--h  Display file size in human-readable units (e.g. KiB, MiB, etc.)
--S  Print files in order of size
--t  Print files by time modified
---time-style
-
-Aliases including ls are often contained in ~/.bashrc (ex. ll, la, lf)
-
-Display contents of other directories without changing working directory:
-ls [/PATH/TO/SUB/DIR] Prints contents of SUB_DIR below working directory in filesystem
 ls ..  Show directory contents one level higher in filesystem
 ls ../.. Show directory contents two levels higher in the filesystem
 
 
-Similar, but more modern utilities:
+Selected ls flags:
+-l  Print one file per line (a long list)
+-a  Show hidden files (file name start with a period)
+-h  Display file size in human-readable units (e.g. KiB, MiB, etc.)
+-S  Order output by size
+-t  Print files by time modified
+--time-style
+
+Several aliases utilizing ls are often defined in ~/.bashrc (ll, la, lf)
+
+
+Similar utilities:
 * exa
 * tree
 
@@ -379,24 +377,35 @@ Number 0 represent standin, 1 standout, and 2 stderr
 ### man
 * Run `man [COMMAND_NAME]` to view official documentation
 
+
+
 ### cheat.sh
 
+View software cheat sheets curated by cht.sh website
 [Documentation](https://github.com/chubin/cheat.sh)
 
-View cheat sheet curated by cht.sh website
 
-Info on a UNIX/Linux command:  `curl cht.sh [COMMAND_NAME]`
+#### General commands
+* Info on a UNIX/Linux command:  `curl cht.sh [COMMAND_NAME]`
+* May use https protocol if desired
+* Retrieve documentation for a keyword:  `curl cht.sh/~[KEYWORD+STRING]`
+
+
 
 #### Programming language specific
 
-Use `curl cht.sh/[LANG_NAME]/[FLAG]` where `[FLAG]` is
-
-* Basic description of programming language:  `:learn`  
-* List all sheets for language:  `:list`  
-* Cheat sheet for a function:  `[FUNCTION_NAME]` ex. tar, curl, cat, etc.
-
+Use `curl cht.sh/[LANG_NAME]/[FLAG]` where `[FLAG]` can be
+* Basic description of programming language:  `curl cht.sh/[LANG_NAME]/:learn`  
+* Cheat sheet for a function (like above):  `curl cht.sh/[LANG_NAME]/[FUNCTION_NAME]` ex. tar, curl, cd, etc.
+* List all cheat sheets for language:  `curl/cht.sh/[LANG_NAME]/:list`  
 
 
+
+
+
 ### tldr
-* tldr [COMMAND_NAME]
+
+* Usage:  `tldr [COMMAND_NAME]`
+* Periodically run `tldr -u` to sync local install to database
+
 

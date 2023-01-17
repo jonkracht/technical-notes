@@ -9,6 +9,7 @@
   * Move to beginning of line:  `0`
   * Move to end of line:    `$`
   * Move backward one word:  `b`
+  * Move to next occurrence of a character on a line:  `f [CHAR]`
 
 
 ### Writing (e.g. saving a file)
@@ -16,8 +17,8 @@
     * `:w [FILENAME]` to specify a new file name
 
 ### Quit
-    * With saving:  `:wq` (write and quite) or `ZZ`
-    * Without saving:  `:q!`
+    * Save and quit:  `:wq` (write and quit), `:x` or `ZZ`
+    * Quit Without saving:  `:q!` or `QZ`
 
     
 ### Search 
@@ -26,7 +27,7 @@
 
 
 * Cut (d), copy (y for a word; yy for an entire line), paste (p)
-
+* cc:  Delete current line and enter insert mode
 
 * Sync current vim session to settings in config file (init.vim): 
 `source $MYVIMRC`
@@ -262,7 +263,9 @@ Ex:  `:r !ls` inserts the directory contents into the active file
 
 
 #### Copy ('yank') and paste ('put')
-* Highlight text to be copied via mouse or Visual mode
+* Highlight text
+    * Via mouse highlight
+    * Via visual mode:  Enter visual mode, type number of lines to be copied, type direction (k for up, j for down)
 * `y` yanks/copies the highlighted text
 * `p` puts/pastes
 
@@ -323,6 +326,10 @@ Vimrc settings:
 `set splitbelow splitright`
 
 
+## Tabs
+:tabedit [FILE] Edit file in new tab
+:tabclose
+:tabn or tabp Go to next/previous tab
 
 
 ## Plugins
@@ -367,9 +374,13 @@ CTRL-F to toggle ON/OFF (shortcut set in vimrc)
 
 
 
-
+## TODO
+* Fix GOYO messing with transparency and colorscheme upon exit
 
 
 ## References
 
 * `vimtutor`
+* [MIT Lecture and notes](https://missing.csail.mit.edu/2020/editors/)
+* [Cheat sheet](https://devhints.io/vim)
+* [Comprehensive cheat sheet](https://vim.rtorr.com/)

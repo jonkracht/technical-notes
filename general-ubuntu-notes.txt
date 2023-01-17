@@ -101,26 +101,6 @@ Interactive non-login shells:
 
 
 
-
-# Information on memory/disk usage
-
-** df ** 
-Gives overview of filesystem disk usage.  Defaults to all mounted filesystems but can be tailored by passing in a path.
-
-Entries include size, used/available space, mount point
-
-Flags:
-h - print output in human-readable units
-T - include drive type in output
-x - followed by a filesystem type, exclude drives of that type from output
-
-
-** du **
-Disk usage for individual directories
-
-ncdu command provides a nice display
-
-
-
 Right-click new document creation in Nautilus
  - Can create new files of the types stored in ~/Templates
+

@@ -98,8 +98,8 @@ Edited kitty.desktop to use 128 pixel icon for launcher and dock
 See effective config with `debug_config` or `CTRL + SHIFT + F6`
 Reload config `CTRL + SHIFT + F5`
 
-kitty can be only rendered using a monospace font (something about how the graphics are rendered in the GPU).
-Execute commmand `kitty list-fonts` to print compatible fonts.
+kitty can be only rendered using a monospace font (something about how the graphics are rendered by the GPU).
+Execute command `kitty list-fonts` to print compatible fonts.
 Include `--psnames` to get PostScript name of font which is required for some software
 
 Some available fonts as of 10/2022:
@@ -112,3 +112,6 @@ UbuntuMono-Regular
 Scroll up/down in the terminal:
 Increment by line:  CTRL + SHIFT + UP/DOWN
 Increment by page:  CTRL + SHIFT + PAGEUP/PAGEDOWN
+
+
+## Shortcuts

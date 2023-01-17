@@ -10,7 +10,7 @@ Default themes stored in `/usr/share/awesome/themes`
 * zenburn:  gray/green
 
 
-Some other themes:
+Other themes:
 https://github.com/lcpz/awesome-copycats
 
 
@@ -18,38 +18,31 @@ https://github.com/lcpz/awesome-copycats
 
 
 
-## Shortcuts
-Some useful, default keyboard shortcuts; can be almost arbitrarily re-bound
+## Hotkeys
+
+May be (almost?) arbitrarily re-bound.
+* Modkey + s:  Show current shortcuts
 * Alt j/K:  Toggle focus between windows on a workspace (screen)
 * CTRL + Super + Space:  Toggle window floating mode
 * Alt + Super + j/k:  Change horizontal spacing of windows
 * Shift + Super + j/k:  Move window to previous/next index
 
+### Floating windows
+* Modkey + Left click to move window
+* Modkey + Right click to resize window
+
+
 
 ## Major libraries used by awesome
-Overview here:  https://awesomewm.org/apidoc/index.html
+[Libraries overview](https://awesomewm.org/apidoc/index.html)
 
 ### awful
 Controls window management
 
-
+### beautiful
 
 ### naughty
 notifications
-
-
-
-
-## "Solved" issues
-
-* Screenshot shortcut (PrtSc key):  flameshot but also tried gnome tool and scrot
-* Screen locking: i3lock
-* Easily managing WIFI:  nm-applet
-* Easy bluetooth management:  blueman-applet
-* Increase volume above "100%":  pasystray (pulse audio system tray utility)
-* Control screen brightness:  fixed using "light" package
-
-
 
 
 
@@ -60,7 +53,19 @@ notifications
 * Awful.spawn.once working properly
 * Standardize theming (pcman, flameshot using light theme)
 * Remove clock, power, and volume widgets from secondary monitor
-* With window toolbar turned off, how to move window when in floating mode?
+* Autosuspend
+
+
+
+## TODone ("solved" issues)
+
+* Screenshot (PrtSc key):  using flameshot but also tried gnome tool and scrot
+* Screen locking: i3lock
+* Manage WIFI:  nm-applet
+* Facilitate bluetooth usage:  blueman-applet
+* Increase volume above 100% (distortion?):  Possible via Volume Control in pasystray (pulse audio system tray utility)
+* Control screen brightness:  Controlled with "light" package
+* Remap switching between monitors (called screens) to something more ergonomic
 
 
 ## References

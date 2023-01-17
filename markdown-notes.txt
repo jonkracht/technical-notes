@@ -43,7 +43,7 @@ where [LANG] provides syntax highlighting and can be Python, C, HTML, vim etc
 
 
 # Links
-[link text][www.link.url)
+[link text](www.link.url)
 
 
 

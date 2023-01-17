@@ -6,7 +6,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 
 ## apt
 
-* nvim
+* nvim (jan 2023: removing and installing from source on github)
 * kitty  - removed and installing via source from Github to get a newer version than packaged in default repos, pre-built binary method
 * exa
 * brave-browser
@@ -61,7 +61,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * gparted disc formatting utility to create a macos installer
 * xscreensaver to play around with screensavers (configure through GUI of xscreensaver-demo); installing rss-glx, xscreensaver-data-extra, xscreensaver-gl-extra package for complete screensaver set
 * picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx
-
+* alacritty, konsole for a few additional terminals
 
 
 ## Apt repository
@@ -75,13 +75,17 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * spotify
 * vscodium
 
+
+
+
+
 ## Github repos
 * EasyEffects-Presets (sensible presets for equalization, reverb, etc:  https://github.com/JackHack96/EasyEffects-Presets )
 * lain (widgets for awesome; `git clone https://github.com/lcpz/lain.git ~/.config/awesome/lain`)
 * btop (latest-greatest bashtop update; themes located at `/usr/share/btop/themes/`)
 * bash scripts for previewing terminal colorschemes (https://github.com/stark/Color-Scripts; https://gitlab.com/dwt1/shell-color-scripts)
 * Awesome themes from https://github.com/lcpz/awesome-copycats
-
+* neovim (old version in pop repo)
 
 ## Python packages via pip
 * jupyterlab
@@ -120,7 +124,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * Disabling autostart in Gnome sessions for awesome-only packages (e.g. blueman) by adding `X-GNOME-Autostart-enabled=false` to files located in `/etc/xdg/autostart`
 * Modified /etc/gtk-3.0/settings.ini to use Adwaita-dark theming for gtk software
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
-* Adding user to 'dialout' and 'uucp' groups to ease minicom usage
+* Adding user to 'dialout' group for easier minicom use
 
 ## Gnome extensions
 Improved workspace indicator (icon displaying current workspace number)

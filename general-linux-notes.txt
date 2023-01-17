@@ -1,11 +1,11 @@
-#### Autostart
+## Autostart
 
 Programs to be ran when systems boots
 * Specific user: `~/.config/autostart/` directory
 * All users:  `/etc/xdg/autostart/`
 
 
-#### Trash
+## Trash
 
 Trashed files go to `~/.local/share/Trash/`
 
@@ -20,7 +20,7 @@ Empty trash:
 
 
 
-### Drive management (mounting, information, etc.)
+## Drive management (mounting, information, etc.)
 
 lsblk
 
@@ -35,7 +35,7 @@ May need to specify filesystem type of drive as well.
 
 
 
-### Get computer hardware information
+## Get computer hardware information
 
 Hardware overview:	`lshw`
 
@@ -48,7 +48,7 @@ Alternatively:	`lshw -C video`
 
 
 
-### Change user shell
+## Change user shell
 
 First, determine available shells:
 `cat /etc/shells` or `chsh -l`
@@ -74,14 +74,23 @@ Locate user of entry for the desired user and edit `[/PATH/TO/SHELL]`
 
 
 
-### User groups
+## Group Management
 
-In the terminal, the `groups` command will list groups the current user is in.
-Get the groups of another user:  `groups [USER_NAME]`
+### Display groups of which user is a member
+* `groups [USER_NAME]`
+* `id -nG [USER_NAME]`
+
+### Add user to a group
+sudo usermod -a -G [GROUP_NAME] [USER_NAME]
+
+### Remove user from a group
+`gpasswd -d [USER_NAME] [GROUP_NAME]`
 
 
 
-### Power management
+
+
+## Power management
 
 Controlled by gsettings
 
@@ -95,8 +104,39 @@ For power, can set inactive timeout period, lid close action, function to perfor
 
 
 
-### Creation of the bashrc
+## Creation of the bashrc
 
 Template bashrc is contained in `/etc/skel`
 All files in this directory are copied to a new user's home directory when the account is created.
 These template files are somewhat distribution specific.
+
+
+
+
+
+## Disk usage
+
+### df (stands for Disc Free) 
+Gives overview of file system disk usage.  Defaults to all mounted file systems but can be tailored by passing a path.
+
+Entries include size, used/available space, mount point
+
+Some flags:
+* h: drives sizes shown in human-readable units
+* T: include drive type in output
+* x: exclude file systems of specified type from output
+
+
+
+### du (stands for Disc Used)
+Disk usage for individual directories
+
+Some flags:
+* h for human-readable units
+* --max-depth 
+* s for a summary
+
+
+### ncdu
+Front-end to `du`
+
