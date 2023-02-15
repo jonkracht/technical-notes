@@ -1,6 +1,6 @@
 ## Autostart
 
-Programs to be ran when systems boots
+Programs executed on system boot
 * Specific user: `~/.config/autostart/` directory
 * All users:  `/etc/xdg/autostart/`
 
@@ -22,7 +22,7 @@ Empty trash:
 
 ## Drive management (mounting, information, etc.)
 
-lsblk
+lsblk:  List information about block devices
 
 Find available drives and their locations
 `sudo fdisk -l`
@@ -70,7 +70,7 @@ Three methods:
 Entries are of the form:
 `[USER_NAME]:x:1000:1000:[FULL_USER_NAME]:[/PATH/TO/USER/HOME]:[/PATH/TO/SHELL]`
 
-Locate user of entry for the desired user and edit `[/PATH/TO/SHELL]`
+Locate entry for the desired user and edit `[/PATH/TO/SHELL]`
 
 
 
@@ -138,5 +138,5 @@ Some flags:
 
 
 ### ncdu
-Front-end to `du`
+Pretty front-end to `du`
 

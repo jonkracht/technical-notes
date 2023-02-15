@@ -385,6 +385,12 @@ Open index file `<Leader>ww`
 [[dir/linkName]]  Use folder hierarchy
 [[/path/to/link|Description of link]]  Give link a different name than its path 
 
+Tab key navigates to next link; SHIFT + TAB navigates to previous link
+Backspace navigates to index file
+
+CTRL/SHIFT + Enter open link in a split
+
+Rename file <Leader>wr
 
 
 
