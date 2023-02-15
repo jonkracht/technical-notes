@@ -31,7 +31,7 @@ Load from file:
 * From csv:  `df = pd.read_csv([PATH/TO/CSV])`
 * From excel:  `df = pd.read_excel('[FILENAME]')`
 
-Mergin:
+Merging:
 |Description |Code  |
 |--- | --- |
 | Concatenate smaller dataframes | `df=pd.concat([SUB_DF1], [SUB_DF2], ...)`|

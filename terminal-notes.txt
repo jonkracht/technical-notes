@@ -109,12 +109,12 @@ include -r tag to change all files in this manner
 
 Permission string:
 l stands for link
-d standr for directory
+d stands for directory
 
 
-*** cat function ***
+### cat function
 cat (comes from conCATenate):
-Default behavior is to write to stdout but can be directed elsewhere
+Default behavior is to write to stdout but can be redirected elsewhere
 
 copy contents of file1 to file2:  
 cat file1.txt > file2.txt  (if file2 DNE, created; otherwise, overwrite)
@@ -129,7 +129,8 @@ cat test_*  prints all files whose names test_ followed by zero or more characte
 
 'n' flag will display line numbers in output
 
-'tac' function concatenates/prints in reverse order
+`tac` function concatenates/prints in reverse order
+`bat` cat clone with syntax highlighting and git integration
 
 
 
@@ -389,7 +390,7 @@ View software cheat sheets curated by cht.sh website
 * Info on a UNIX/Linux command:  `curl cht.sh [COMMAND_NAME]`
 * May use https protocol if desired
 * Retrieve documentation for a keyword:  `curl cht.sh/~[KEYWORD+STRING]`
-
+* Including the `\?T` flag turns off syntax highlight which is useful for exporting to plain text
 
 
 #### Programming language specific

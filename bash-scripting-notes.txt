@@ -45,11 +45,13 @@ All elements (@ represents all):  echo "${newArr[@]}"
 Print indices:  echo "${!newArr[@]}"
 Print length of array (#):  echo ""${#newArr[@]}
 
+
+## Input
 Use "read" function to query user for input.
 Syntax:  `read variable_name`
 
 Include a prompt in the query:
-read -p "Text to input a variable: " variable_name
+`read -p "Text to input a variable: " [variable_name]`
 
 
 IF/THEN syntax:

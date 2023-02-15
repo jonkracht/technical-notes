@@ -1,6 +1,7 @@
 # pop-software
 
-List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in chronological order.
+List of software and system mods in a Pop.OS 22.04 system.  
+Entries in each category are in roughly chronological order.
 
 
 
@@ -34,7 +35,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * compton
 * blueman (bluetooth applet to use in awesome)
 * Qutebrowser
-* pcmanfm (find gtk3 version to guarantee consistent theming)
+* pcmanfm-qt (find gtk3 version to guarantee consistent theming)
 * i3lock (screen locker)
 * gimp
 * texlive-full (so as to have all Latex packages)
@@ -44,7 +45,8 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * xbacklight & brightnessctl (provide screen brightness control in awesome)
 * steam
 * scummvm (retro game engine)
-* rclone (to backup/sync local file directory to Google Drive)
+* rclone (to backup/sync files)
+* zoom via downloaded .deb file
 * pandoc (to convert markdown files to other formats)
 * minicom (terminal emulator for potential future Opus Two dealings)
 * wavemon (to monitor wireless connection properties)
@@ -62,6 +64,12 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * xscreensaver to play around with screensavers (configure through GUI of xscreensaver-demo); installing rss-glx, xscreensaver-data-extra, xscreensaver-gl-extra package for complete screensaver set
 * picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx
 * alacritty, konsole for a few additional terminals
+* Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
+* Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
+* Trying JetBrains DataSpell, IDE for data science
+* lilypond for music notation in latex
+
+
 
 
 ## Apt repository
@@ -99,11 +107,7 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * zoom via downloaded .deb file
 * Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
 * Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
-
-
-
-
-
+* Downloaded swift tarball; needed to some finagling to get it run error-free https://github.com/llvm/llvm-project/issues/55575
 
 ## Browser plugins
 * bitwarden (password manager)
@@ -111,8 +115,8 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * tabliss (new browser tabs display pictures)
 * Great Suspender (halts inactive browser tabs to conserve system resources)
 * Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)
-* Bypass paywalls (for select website)  https://github.com/iamadamdev/bypass-paywalls-chrome
-
+* Bypass paywalls (for select websites)  https://github.com/iamadamdev/bypass-paywalls-chrome
+* Trying starship prompt; install via curl-ed installer
 
 
 
@@ -124,7 +128,9 @@ List of software and system mods in a Pop.OS 22.04 system.  Entries roughly in c
 * Disabling autostart in Gnome sessions for awesome-only packages (e.g. blueman) by adding `X-GNOME-Autostart-enabled=false` to files located in `/etc/xdg/autostart`
 * Modified /etc/gtk-3.0/settings.ini to use Adwaita-dark theming for gtk software
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
-* Adding user to 'dialout' group for easier minicom use
+* Adding user to 'dialout' group to facilitate minicom use
+
+
 
 ## Gnome extensions
 Improved workspace indicator (icon displaying current workspace number)

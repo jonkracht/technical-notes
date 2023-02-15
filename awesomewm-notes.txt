@@ -48,24 +48,28 @@ notifications
 
 
 ## TODO
-* Layout icon color
 * Xorg.conf
 * Awful.spawn.once working properly
-* Standardize theming (pcman, flameshot using light theme)
 * Remove clock, power, and volume widgets from secondary monitor
 * Autosuspend
+* Menu displays are transparent
+* Send audio through HDMI port when connecting to other monitors
+* Layout icon color (less/not important since current config only uses one layout and hides icons)
+* Exclude screen saver windows from picom rounded frames
 
 
 
 ## TODone ("solved" issues)
 
-* Screenshot (PrtSc key):  using flameshot but also tried gnome tool and scrot
+* Screenshot (PrtScr mapped to flameshot but also tried gnome tool and scrot)
 * Screen locking: i3lock
 * Manage WIFI:  nm-applet
 * Facilitate bluetooth usage:  blueman-applet
 * Increase volume above 100% (distortion?):  Possible via Volume Control in pasystray (pulse audio system tray utility)
 * Control screen brightness:  Controlled with "light" package
 * Remap switching between monitors (called screens) to something more ergonomic
+* Unmute audio with volume up key (addressed using amixer output to check if audio output is on)
+* Standardize theming (pcman, flameshot using light theme; all QT apps?, anything else) installed kvantum to set QT theming to something consistent with other system components
 
 
 ## References

@@ -1,6 +1,6 @@
 # Rclone
 
-Enables communication (sync, copy, move) between local and cloud storage from the terminal
+    Enables cbarommunication (sync, copy, move) between local and cloud storage
 
 [Documentation](https://rclone.org/docs/)
 
@@ -15,7 +15,7 @@ Optional:  Create client ID detailed to accelerate communication speed
 
 [Detailed Here](https://rclone.org/drive/#making-your-own-client-id)
 
-Config file created at `~/.config/rclone/rclone.conf`
+Config file (by default) located at `~/.config/rclone/rclone.conf`
 
 
 

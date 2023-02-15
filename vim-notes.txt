@@ -159,8 +159,8 @@ Various editing commands
 |Action| Command|
 |---|---|
 | "Put" (i.e. paste) previously deleted text to location of cursor| `p`|
-|Copy text to system clipboard| Highlight text and press `y`|
-|Replace (or substitute) individual character under cursor| `r` and enter new character|
+| Copy text to system clipboard| Highlight text and press `y`|
+| Replace (or substitute) individual character under cursor| `r` and enter new character|
 | Delete to end of word and edit| `ce` and edit as desired|
 | Delete to edit of line and edit |`c$` or `C`| 
 
@@ -327,9 +327,11 @@ Vimrc settings:
 
 
 ## Tabs
+`:tab help foo` open help for `foo in a new tab
 :tabedit [FILE] Edit file in new tab
 :tabclose
-:tabn or tabp Go to next/previous tab
+:tabn or tabp Go to next/previous tab OR `gt` or `gT`
+Navigate to tab numbered 'n':  ngt 
 
 
 ## Plugins
@@ -370,6 +372,18 @@ CTRL-F to toggle ON/OFF (shortcut set in vimrc)
 | Toggle display of hidden files ON/OFF | `I` |
 | Display NT menu | `m` |
 | Maximize/minimize window |`A` |
+
+
+
+
+### vimwiki
+
+Open index file `<Leader>ww`
+
+#### Links
+[[linkName]]  Creates a file named `linkName`
+[[dir/linkName]]  Use folder hierarchy
+[[/path/to/link|Description of link]]  Give link a different name than its path 
 
 
 
