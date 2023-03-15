@@ -31,7 +31,7 @@ CTRL + SHIFT + PLUS/MINUS
 
 
 
-## Navigation
+## Navigating the filesystem
 cd stands for 'change directory'
 `cd`      navigate to user's home directory (ex. /home/USER/)
 `cd /`   navigate to root directory
@@ -41,14 +41,37 @@ cd stands for 'change directory'
 pwd  print working directory
 ./ : means current directory
 
-Paths:
+
+## Navigate filesystem using a list of locations
+pushd, popd, dirs commands
+
+### Add current location to list
+`pushd`
+
+### Add location to list
+`pushd [/PATH/TO/DIR]`
+
+### Navigate to entry in list
+`pushd +1` 
+
+### Print list of tagged locations
+`dirs -v`
+
+### Remove item from list
+`popd +1`
+
+### Clear entire list
+`dirs -c`
+
+
+### Path nomenclature
 `/` means "start from root directory"
 `~` means "start from user's home directory" 
 (~ is an alias for /home/[USER_NAME])
 
 
 ## Create new directory
-In current folder:  mkdir dir1 dir2 ...
+In current folder:  `mkdir dir1 dir2 ...`
 At a specific location:  mkdir /path/to/folder/new_folder_name
 Create nested folders (recursively):  mkdir -p dir4/dir5/dir6  (-p indicates create parent directories)
 Create file with spaces in its name:  mkdir "folder 1" or 'folder 1' or folder\ 3
@@ -117,7 +140,9 @@ Sum desired permissions for each digit.
 Ex:  `chmod 751 [FILE]` would grant r/w/x permissions for owner, r/x for groups, etc.
 
 
-Ownership:
+
+
+## Ownership
 chown (CHange OWNership)
 `sudo chown [owner_name]:[group_name] [file_name.txt]`
 include -r flag to change all files in this manner
@@ -127,7 +152,9 @@ l stands for link
 d stands for directory
 
 
-### cat function
+
+
+## cat function
 cat (comes from conCATenate):
 Default behavior is to write to stdout but can be redirected elsewhere
 
@@ -149,7 +176,8 @@ Wild card characters: ?, *
 
 'n' flag will display line numbers in output
 
-`tac` function concatenates/prints in reverse order
+### Related functions
+`tac` concatenates/prints in reverse order
 `bat` cat clone with syntax highlighting and git integration
 
 
@@ -388,6 +416,10 @@ df command shows disc usage for mounted drives
 
 fzf (FUzzy finder) commands:
 CTRL-T, CTRL-R, ALT-C
+
+
+## Calculator
+`bc` basic calculator
 
 
 Navigate to beginning/end of line:

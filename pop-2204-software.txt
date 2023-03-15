@@ -46,7 +46,6 @@ Entries in each category are in roughly chronological order.
 * steam
 * scummvm (retro game engine)
 * rclone (to backup/sync files)
-* zoom via downloaded .deb file
 * pandoc (to convert markdown files to other formats)
 * minicom (terminal emulator for Opus Two work)
 * wavemon (to monitor wireless connection properties)
@@ -56,8 +55,8 @@ Entries in each category are in roughly chronological order.
 * obsession for logout, shutdown, suspend, etc management in awesome
 * [light](https://github.com/haikarainen/light) package to control screen brightness in awesome; adding user to 'video' group to make light work
 * black (aesthetic styling of Python)
-* octave (to work with Matlab scripts)
-* gnome-books for reading .epub files (untested if successful)
+* octave (Matlab scripts)
+* gnome-books for reading epub files (untested if successful)
 * dmg2img to create a MacOS USB installer
 * pavucontrol volume control gui
 * gparted disc formatting utility to create a macos installer
@@ -66,13 +65,23 @@ Entries in each category are in roughly chronological order.
 * alacritty, konsole for a few additional terminals
 * Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
 * Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
-* Trying JetBrains DataSpell, IDE for data science
+* Trying JetBrains DataSpell, IDE for data science; non-free so uninstalled
 * lilypond for music notation in latex
-* deluge torrent client
+* deluge torrent client (previously used transmission)
+* timeshift for system snapshots
+* fzf fuzzy finder for both command line and vim
+
+
+
+
+
 
 
 
 ## Apt repository
+
+
+
 
 
 ## Flatpak (likely installed via Pop! Shop which is labeled as io.elementary.appcenter in system processes)
@@ -93,26 +102,26 @@ Entries in each category are in roughly chronological order.
 * btop (latest-greatest bashtop update; themes located at `/usr/share/btop/themes/`)
 * bash scripts for previewing terminal colorschemes (https://github.com/stark/Color-Scripts; https://gitlab.com/dwt1/shell-color-scripts)
 * Awesome themes from https://github.com/lcpz/awesome-copycats
-* neovim (old version in pop repo)
+* neovim (pop repo has an old version)
 
 
 
 
 ## Python packages via pip
 * jupyterlab
-* yfinance
-* nbterm:  to interactive with jupyter from the terminal
+* yfinance pulling stock data
+* nbterm interact with jupyter from the terminal
 
 
 ## Other means
 
-* jetbrains toolbox and pycharm (proprietary software so not in repos; installed to /opt; executable below ~/.local/share/Jetbrains/... ; creating symlink in /usr/bin to allow dmenu to find and run it)
+* jetbrains toolbox and pycharm (proprietary software so not in repos; installed to /opt; executable below ~/.local/share/Jetbrains/... ; creating symlink in /usr/bin to allow dmenu to find and run it; later removing since it seems no longer necessary)
 * zoom via downloaded .deb file
 * Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
 * Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
 * Swift as a tarball; needed to some finagling to get it run error-free https://github.com/llvm/llvm-project/issues/55575
 * Starship terminal prompt; install via curl-ed installer
-
+* zoom via downloaded .deb file
 
 ## Browser plugins
 * bitwarden (password manager)
@@ -121,14 +130,15 @@ Entries in each category are in roughly chronological order.
 * Great Suspender (halts inactive browser tabs to conserve system resources)
 * Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)
 * Bypass paywalls (for select websites)  https://github.com/iamadamdev/bypass-paywalls-chrome
-
+# vimium to allow vim-style navigation of web pages
+# Cookie Remover for paywall bypass
 
 
 ## System mods
 * Remapped Caps Locks key to an additional Escape (instructions at https://thesynack.com/posts/persistent-capslock-behavior/)
 * Adding ssh key from previous Ubuntu install to ssh agent to ease Github communication
 * Enabling ufw (uncomplicated firewall) via `systemctl enable ufw`; check if starting on boot
-* Fixing speakers cracking via https://superuser.com/questions/1493096/linux-ubuntu-speakers-popping-every-few-seconds
+* Fix speakers cracking via https://superuser.com/questions/1493096/linux-ubuntu-speakers-popping-every-few-seconds
 * Disabling autostart in Gnome sessions for awesome-only packages (e.g. blueman) by adding `X-GNOME-Autostart-enabled=false` to files located in `/etc/xdg/autostart`
 * Modified /etc/gtk-3.0/settings.ini to use Adwaita-dark theming for gtk software
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software

@@ -1,6 +1,6 @@
 # Rclone
 
-    Enables cbarommunication (sync, copy, move) between local and cloud storage
+Enables communication (sync, copy, move) between local and cloud storage
 
 [Documentation](https://rclone.org/docs/)
 

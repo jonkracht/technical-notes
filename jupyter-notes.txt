@@ -9,7 +9,7 @@ Current flavors include notebook, lab and hub
 ## Basics
 
 Create an instance:  
-`jupyter notebook`
+`jupyter notebook`  or `jupyter-notebook`
 
 Can only navigate to children folders of location from which notebook was started.
 To have access to files across entire file system, first navigate to root directory and launch jupyter notebook.

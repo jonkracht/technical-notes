@@ -6,11 +6,10 @@
 ## Most-used commands (i.e. TLDR)
 
 ### Navigation
-  * Move to beginning of line:  `0`
-  * Move to end of line:    `$`
-  * Move backward one word:  `b`
-  * Move to next occurrence of a character on a line:  `f [CHAR]`
-
+* Words:  'w' (next word), 'b' (beginning of word), 'e' (end of word)
+* Lines:  '0' (beginning of line), '^' (first non-blank character), '$' (end of line)
+* Screen:  'H' (top of screen), 'M' (middle of screen), 'L' (bottom of screen)
+* File:  'gg' (beginning of file), 'G' (end of file)
 
 ### Writing (e.g. saving a file)
     * `:w` to save and continue working
@@ -48,14 +47,8 @@ All commands below must be input while in Normal mode which may be entered into 
 
 #### Cursor navigation
 
-
-* Navigate left/down/up/right with hjkl keys
-
 * Navigate up/down by one half of a page:  `CTRL` + `u` / `d`
-
 * Navigate up/down a paragraph:  `{` or `}`
-
-
 
 
 #### Exit vim
@@ -113,11 +106,11 @@ Some motions include:
 | $| Until the end of line including last character|
 
 
-**Prepending a command with a number repeats it that many times**
+**Prepending a command with a number repeats the command that many times**
 
 Commands are of the form:
 
-`[OPERATOR]` `[REPETITIONS]` `[MOTION]`
+[OPERATOR] [REPETITIONS] [MOTION]
 
 where `[REPETITIONS]` is an optional modifier.
 
@@ -186,7 +179,6 @@ Various editing commands
 
 #### Searching
 
-
 | Action| Command|
 |---| ---|
 | Search forward| `/` |
@@ -216,14 +208,6 @@ Substitute one piece of text for another.  In the example snippets below, text t
 
 
 
-
-
-
-
-
-
-
-
 ### Lesson 5
 
 #### Execute external (shell) commands in Vim
@@ -231,7 +215,7 @@ Substitute one piece of text for another.  In the example snippets below, text t
 * Ex:  `:!ls` executes the list command in the current directory
 
 
-#### Insert contents of file into current vim session
+#### Insert file contents into current buffer
 `:r [FILENAME]`
 
 #### Insert output of a shell command
@@ -239,13 +223,13 @@ Substitute one piece of text for another.  In the example snippets below, text t
 Ex:  `:r !ls` inserts the directory contents into the active file
 
 
-#### Write block of text to file
+#### Write text block to file
 * Use cursor to highlight desired block of text (will have entered Visual mode)
 * Type `:w [FILENAME]`
 
 
 
-
+Here is a sentence
 
 
 
@@ -256,6 +240,7 @@ Ex:  `:r !ls` inserts the directory contents into the active file
 |---|---|
 | Insert new line below/above cursor and begin editing | `o` |
 | Insert new line above cursor and begin editing | `O`|
+| Insert text before cursor | `i`|
 | Insert text after cursor| `a`|
 | Insert text at end of line| `A`|
 | Enter replace mode where new existing text is overwritten | `R`|
@@ -264,8 +249,10 @@ Ex:  `:r !ls` inserts the directory contents into the active file
 
 #### Copy ('yank') and paste ('put')
 * Highlight text
-    * Via mouse highlight
-    * Via visual mode:  Enter visual mode, type number of lines to be copied, type direction (k for up, j for down)
+    * Via mouse drag highlight
+    * Via Visual Mode:  Enter visual mode (type 'v') and either
+        * Type number of lines to be copied, type direction (k for up, j for down)
+        * Use 'j' and 'k' to drag highlight
 * `y` yanks/copies the highlighted text
 * `p` puts/pastes
 
@@ -283,7 +270,7 @@ Ex:  `:r !ls` inserts the directory contents into the active file
 * Full list available at:
 https://neovim.io/doc/user/options.html
 
-Can autoload preferences by including into `vimrc`/`init.vim`
+Can auto include preference in config (vimrc or init.vim)
 
 
 
@@ -304,12 +291,9 @@ Can autoload preferences by including into `vimrc`/`init.vim`
 
 
 
+## Multiple concurrent sessions
 
-
-
-
-
-## Splits
+### Splits
 
 Splitting vim into subsections
 
@@ -326,12 +310,14 @@ Vimrc settings:
 `set splitbelow splitright`
 
 
-## Tabs
-`:tab help foo` open help for `foo in a new tab
+### Tabs
+`:tab help foo` open help for `foo` in a new tab
 :tabedit [FILE] Edit file in new tab
 :tabclose
 :tabn or tabp Go to next/previous tab OR `gt` or `gT`
 Navigate to tab numbered 'n':  ngt 
+
+
 
 
 ## Plugins
@@ -344,14 +330,14 @@ By installing third-party plugins, vim is almost infinitely extensible.
 
 Install new plugs into neovim:
 Add new plug definition into vimrc (init.vim)
-In vim, run :PlugInstall
+In vim, run `:PlugInstall`
 
 
 
 
 ### NERDTree
-CTRL-F to toggle ON/OFF (shortcut set in vimrc)
 
+Opens via <Leader> + o
 
 #### Some NERDTree commands
 (complete listing shown via `:help NERDTree`)

@@ -56,6 +56,8 @@ notifications
 * Send audio through HDMI port when connecting to other monitors
 * Layout icon color (less/not important since current config only uses one layout and hides icons)
 * Exclude screen saver windows from picom rounded frames
+* Volume control doesn't work for headphones
+* Theming for Vscodium is light
 
 
 

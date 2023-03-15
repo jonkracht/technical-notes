@@ -22,3 +22,8 @@ Add command-line style arguments in the 'Parameter's field
 
 
 Feb 2022:  Updated to version 2021.3.2 (do some using the JetBrains toolbox app)
+
+
+Debug streamlit app in Pycharm:
+In "Run" -> "Edit Configuration"
+In the streamlit section, include "run [main_app_name]" in the "Parameters" field
