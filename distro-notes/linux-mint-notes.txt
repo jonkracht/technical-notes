@@ -1,0 +1,2 @@
+Enabled sound through HDMI via instructions at:
+https://askubuntu.com/questions/1256043/no-sound-on-hdmi-ubuntu-20-04

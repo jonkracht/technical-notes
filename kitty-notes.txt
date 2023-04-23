@@ -1,3 +1,5 @@
+# kitty terminal emulator
+
 Template config file located at:
 `/usr/share/doc/kitty/examples/kitty.conf`
 
@@ -115,3 +117,17 @@ Increment by page:  CTRL + SHIFT + PAGEUP/PAGEDOWN
 
 
 ## Shortcuts
+
+
+
+## Theming
+
+### Define coloring manually
+Provide hex code for colors, background, foreground, etc
+
+### Custom themes 
+Use theme from `https://github.com/dexpota/kitty-themes` and add `include [/PATH/TO/CONFIG]` to config file
+
+### Theme preview
+`kitty @ set-colors -a "[/PATH/TO/CONFIG]"`
+

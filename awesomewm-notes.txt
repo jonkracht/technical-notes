@@ -72,6 +72,7 @@ notifications
 * Remap switching between monitors (called screens) to something more ergonomic
 * Unmute audio with volume up key (addressed using amixer output to check if audio output is on)
 * Standardize theming (pcman, flameshot using light theme; all QT apps?, anything else) installed kvantum to set QT theming to something consistent with other system components
+* Added blur; use the --experimental-backends flag in rc.lua
 
 
 ## References

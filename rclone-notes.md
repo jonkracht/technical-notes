@@ -56,5 +56,8 @@ Config file (by default) located at `~/.config/rclone/rclone.conf`
 ## Most-used command
 * `rclone sync [/LOCAL/PATH/TO/ROOT/FOLDER] [GOOGLE-DRIVE-NICKNAME] --track-renames --exclude-from=.rclone-ignore --verbose`
 
+Execute from /mnt/1-tb-hd/organ/ so can find .rclone ignore
+`rclone sync /mnt/1-tb-hd/organ/ google-drive-organ: --track-renames --exclude-from=.rclone-ignore --verbose`
+
 ## TODO
 *

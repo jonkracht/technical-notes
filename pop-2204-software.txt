@@ -8,7 +8,7 @@ Entries in each category are in roughly chronological order.
 ## apt
 
 * nvim (jan 2023: removing and installing from source on github)
-* kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method
+* kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install
 * exa (ls upgrade)
 * brave-browser
 * speedtest
@@ -61,7 +61,7 @@ Entries in each category are in roughly chronological order.
 * pavucontrol volume control gui
 * gparted disc formatting utility to create a macos installer
 * xscreensaver to play around with screensavers (configure through GUI of xscreensaver-demo); installing rss-glx, xscreensaver-data-extra, xscreensaver-gl-extra package for complete screensaver set
-* picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx
+* picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx; included --experimental-backends flag
 * alacritty, konsole for a few additional terminals
 * Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
 * Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
@@ -70,6 +70,7 @@ Entries in each category are in roughly chronological order.
 * deluge torrent client (previously used transmission)
 * timeshift for system snapshots
 * fzf fuzzy finder for both command line and vim
+* kazam screencast utility
 
 
 
@@ -103,7 +104,7 @@ Entries in each category are in roughly chronological order.
 * bash scripts for previewing terminal colorschemes (https://github.com/stark/Color-Scripts; https://gitlab.com/dwt1/shell-color-scripts)
 * Awesome themes from https://github.com/lcpz/awesome-copycats
 * neovim (pop repo has an old version)
-
+* lf (terminal file manager):  Installing via a pre-built binary from https://github.com/gokcehan/lf/releases?page=1 
 
 
 

@@ -1,0 +1,55 @@
+# vimium notes
+
+Vim-like movements for Chromium and Firefox based browsers
+
+[Vimium github](https://github.com/philc/vimium)
+[Vimium homepage](https://vimium.github.io/)
+
+
+## Help
+View key bindings:  ?
+View options:  CTRL + Enter
+
+## Page navigation
+Scroll down/up:  j/k
+Scroll left/right:  h/l
+
+Navigate to top/bottom of page:  gg/G
+
+## Navigate to new pages
+Refresh:  r
+
+Open URL:  o
+Open URL in new tab:  O
+
+Open link in current tab:  f and type letters of desired link
+Open link in new tab:  F and "
+
+## Navigation through history
+Go backward/forward:  H/L
+
+
+## Navigating tabs
+Create new tab:  t
+Goto tab left/right:  J/K
+Close tab:  x
+Returned a closed tab:  X
+
+
+
+
+## Search
+Find text:  /
+Cycle forward/backward through matches:  n/N
+
+Copy website URL to clipboard:  yy
+
+Enter insert mode (ignores vimium commands until ESC):  i
+
+
+
+## Fullscreen
+
+ESC and CTRL + [ behave similarly; the same is true on YT unfortunately.
+Create a custom mapping of CTRL + ] to remove conflict
+https://github.com/philc/vimium/issues/2963

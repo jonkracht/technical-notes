@@ -443,7 +443,7 @@ Number 0 represent standin, 1 standout, and 2 stderr
 
 ### man
 * Run `man [COMMAND_NAME]` to view official documentation
-
+* Search man page by pressing `/` and typing text to search; scroll through matches with `n`
 
 
 ### cheat.sh
