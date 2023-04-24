@@ -144,7 +144,7 @@ Entries in each category are in roughly chronological order.
 * Modified /etc/gtk-3.0/settings.ini to use Adwaita-dark theming for gtk software
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
 * Adding user to 'dialout' group to facilitate minicom use
-
+* Replacing github ssh key as per instructions at  https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/
 
 
 ## Gnome extensions
