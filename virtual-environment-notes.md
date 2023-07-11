@@ -1,5 +1,4 @@
 # Virtual environments
-
 Maintain project-specific environments so as to avoid version conflicts
 
 

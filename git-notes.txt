@@ -15,18 +15,17 @@ Then add files on local computer and push to remote
 
 
 
-Check configuration of git; information is stored in /.gitconfig:
-git config -l
+Check configuration of git; information is stored in ./.gitconfig:
+`git config -l`
 
 
-Repo settings (origin location etc.) are stored in:
-./.git/config
+Repo settings (origin location etc.) are stored in  ./.git/config
 
 
-git init
+`git init`
 Initialize git tracking in a folder
 
-git status	
+`git status`	
 Check for status of files in a repository
 Shows edits or new files in directory
 

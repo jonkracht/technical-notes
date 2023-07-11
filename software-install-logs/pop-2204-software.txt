@@ -71,9 +71,9 @@ Entries in each category are in roughly chronological order.
 * timeshift for system snapshots
 * fzf fuzzy finder for both command line and vim
 * kazam screencast utility
-
-
-
+* qmmp (winamp clone)
+* cookiecutter (tool for creating project outline structures)
+* exfat-fuse to format usb drive as exfat to interact with Windows
 
 
 
@@ -82,6 +82,9 @@ Entries in each category are in roughly chronological order.
 ## Apt repository
 
 
+## PPA
+* ckb to configure corsair devices.  Using weekly build PPA:  https://launchpad.net/~tatokis/+archive/ubuntu/ckb-next-git
+Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service ExecStart line to include --enable-experimental flag
 
 
 
@@ -145,6 +148,10 @@ Entries in each category are in roughly chronological order.
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
 * Adding user to 'dialout' group to facilitate minicom use
 * Replacing github ssh key as per instructions at  https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/
+* Installing candy icon set from Github
+
+
+
 
 
 ## Gnome extensions

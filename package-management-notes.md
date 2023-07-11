@@ -3,7 +3,7 @@
 ## Background
 Ways to install software include:
 * .deb
-* PPA
+* PPA (personal package archive)
 * Snaps
 * Flatpak 
 

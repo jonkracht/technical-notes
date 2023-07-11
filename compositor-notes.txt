@@ -1,10 +1,10 @@
 
-Compositor interacts with window system to produce
+Compositor interacts with window manager to provide
 * Transparency
 * Transition animations
 * Drop shadows behind windows
 
-Some window manages perform their own compositing (ex. Mutter)
+Some window managers perform their own compositing (ex. Mutter)
 
 Consumes some amount of system resources so not ideal for gaming
 
@@ -12,7 +12,7 @@ Some Linux compositors
 * Compton
 * Picom
 
-Configuration is done via a .conf file
+Configuration is done via a *.conf file
 
 
 
