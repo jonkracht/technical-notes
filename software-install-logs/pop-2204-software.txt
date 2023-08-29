@@ -8,7 +8,7 @@ Entries in each category are in roughly chronological order.
 ## apt
 
 * nvim (jan 2023: removing and installing from source on github)
-* kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install
+* kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install  https://sw.kovidgoyal.net/kitty/binary/
 * exa (ls upgrade)
 * brave-browser
 * speedtest
@@ -74,7 +74,7 @@ Entries in each category are in roughly chronological order.
 * qmmp (winamp clone)
 * cookiecutter (tool for creating project outline structures)
 * exfat-fuse to format usb drive as exfat to interact with Windows
-
+* librecad for creating 2D floor plans
 
 
 
@@ -95,7 +95,8 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * nuclear music player
 * spotify
 * vscodium
-
+* bottles to run windows software
+* cavalier music visualizer
 
 
 
@@ -108,6 +109,8 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Awesome themes from https://github.com/lcpz/awesome-copycats
 * neovim (pop repo has an old version)
 * lf (terminal file manager):  Installing via a pre-built binary from https://github.com/gokcehan/lf/releases?page=1 
+* Alternative kitty icon:  https://github.com/k0nserv/kitty-icon  Overwrote png files in ~/.local/kitty.app/lib/kitty/logo with new icons
+* Sweet folders  https://github.com/EliverLara/Sweet-folders.git
 
 
 
@@ -126,6 +129,8 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Swift as a tarball; needed to some finagling to get it run error-free https://github.com/llvm/llvm-project/issues/55575
 * Starship terminal prompt; install via curl-ed installer
 * zoom via downloaded .deb file
+* openrgb .deb file
+* Ventoy for creating bootable USB's with numerous OS's on them
 
 ## Browser plugins
 * bitwarden (password manager)
@@ -148,7 +153,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
 * Adding user to 'dialout' group to facilitate minicom use
 * Replacing github ssh key as per instructions at  https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/
-* Installing candy icon set from Github
+* Installing candy icon set https://github.com/EliverLara/candy-icons
 
 
 
