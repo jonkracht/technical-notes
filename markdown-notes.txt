@@ -12,13 +12,21 @@ Three hyphens (---)
 # Lists
 
 ## Ordered
+
+Use numbers, starting at 1, followed by a period
+
 1.  Text
 2.  More text
 3.  Etc
 
 
 ## Unordered
-Use hyphen, minus sign or plus sign
+Use hyphen, minus sign or plus sign for entries  (but don't mix)
+
+``
+* First item
+* Second item
+``
 
 
 # Line breaks
@@ -30,7 +38,8 @@ End line with two spaces or <br/>
 # Code segments
 
 ## Inline
-Surround with back ticks
+Surround with backticks  (`)
+
 Ex. `sudo apt update` updates your repo lists
 
 ## Fenced block
@@ -43,6 +52,9 @@ where [LANG] provides syntax highlighting and can be Python, C, HTML, vim etc
 
 
 # Links
+
+Link text in brackets and URL in parentheses.
+
 [link text](www.link.url)
 
 
@@ -51,7 +63,7 @@ where [LANG] provides syntax highlighting and can be Python, C, HTML, vim etc
 # Images
 
 ## Local
-![image-name](/path/to/image/in/repo)
+![image-name](/path/to/image/)
 
 ## External
 ![image-name](https://www.domain.sthing/path/to/image.png)
@@ -74,3 +86,41 @@ Can use html syntax:
 |--- | --- | ---|
 |**bold style**| `code block`|data3|
 |\|escape pipe|\`backtick|data13|
+
+
+# Metadata blocks
+
+## pandoc_title_block
+
+Include document information at the beginning of the document
+
+```
+% title
+% author(s) separated by semicolons
+% date
+```
+
+Leave blank space for entries to be omitted
+
+
+## yaml_metadata_block
+
+Bookended by three hyphens (---)
+Second line must be blank
+
+Example:
+---
+title:  'This is the title: it contains a colon'
+author:
+- Author One
+- Author Two
+keywords: [nothing, nothingness]
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+...
+
+
+# Math
+Use LaTex syntax with double dollar sign before and after code segment
