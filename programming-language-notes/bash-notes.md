@@ -1,13 +1,20 @@
+# bash
+
 Primarily a scripting language
 Commands used in a text editor NOT directly in terminal
 
-Convention is to give bash scripts a .sh extension so as to indicate that it's a shell script
-The !# (shebang) at the beginning of the file confirms that the file is a shell script and indicates with which shell it is to be executed.
+Convention is to give bash scripts a .sh extension
 
+The !# (shebang) at the beginning of the file defines which interpreter is to be used.
 
-First line of script defines shell to be used
 Most common is `#!/bin/bash`
+
+Alternatively, use the 'env' executable to locate first instance of bash in the path:  `#!/usr/bin/env bash`
+
 Available shells are listed in `/etc/shells`
+
+
+
 
 Make file executable:
 `chmod a+x [/path/to/file.sh]`
@@ -130,7 +137,7 @@ DEBUG]
 set +x
 
 
-Inputing arguments into a bash script via standard in (STDIN):
+Inputting arguments into a bash script via standard in (STDIN):
 In the terminal:
 /path/to/script.sh input1 input2 [etc]
 
@@ -163,15 +170,16 @@ ls -al >& file1.txt
 
 
 
-Transmitting information between scripts:
+Transferring between scripts:
 
 Use export command 
-message = 'hi'; export message
+message='hi'; export message
+
 
 Variable maybe accessed in another script via `$message`
 
 
-## Math in BASH
+## Math
 
 $(( $var1 + $var2 ))
 (spaces surrounding math expression are required)
@@ -186,7 +194,12 @@ Multiplication is achieved via \*
 
 ## Comments
 * single line - prepend with #
-* multiline - : '  some text - over many lines'
+
+* multi-line 
+: '  
+some text 
+over many lines
+'
 
 
 ## Miscellaneous
@@ -199,3 +212,5 @@ then
 
 Analagous syntax for checking existence of files using -f flag
 
+
+* shellcheck tool detects errors in bash scripting

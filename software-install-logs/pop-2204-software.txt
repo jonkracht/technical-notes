@@ -76,6 +76,7 @@ Entries in each category are in roughly chronological order.
 * exfat-fuse to format usb drive as exfat to interact with Windows
 * librecad for creating 2D floor plans
 * Looking for a better file manager:  spacefm-gtk3, pcmanfm
+* shellcheck:  tools for detecting errors in bash scripts
 
 
 
@@ -131,10 +132,13 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * zoom via downloaded .deb file
 * openrgb .deb file
 * Ventoy for creating bootable USB's with numerous OS's on them
+* thorium browser via adding to sources.list.d (https://thorium.rocks/)
+
+
 
 ## Browser plugins
 * bitwarden (password manager)
-* dark reader (sets light/dark mode for eye-friendly webpage viewing)
+* dark reader (sets light/dark mode for eye-friendly webpage viewing);  trying "Dark Mode" an equivalent for Chrome-based browsers
 * tabliss (new browser tabs display pictures)
 * Great Suspender (halts inactive browser tabs to conserve system resources).  As of Sep 2023, deemed to be adware...  Brave removed automatically from browser extensions.
 * Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)

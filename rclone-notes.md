@@ -1,21 +1,22 @@
 # Rclone
 
-Enables communication (sync, copy, move) between local and cloud storage
+Enables communication (sync, copy, move) between local and cloud storage.
+Similar to the rsync command
 
 [Documentation](https://rclone.org/docs/)
 
 
 
-## Configuration
+## Setup
 
 Run `rclone config` and follow steps detailed:
 https://rclone.org/drive/
 
-Optional:  Create client ID detailed to accelerate communication speed
+Optional:  Create client ID to accelerate communication speed
 
-[Detailed Here](https://rclone.org/drive/#making-your-own-client-id)
+[Description Here](https://rclone.org/drive/#making-your-own-client-id)
 
-Config file (by default) located at `~/.config/rclone/rclone.conf`
+Config file by default is located at `~/.config/rclone/rclone.conf`
 
 
 
