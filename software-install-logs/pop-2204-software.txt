@@ -8,7 +8,7 @@ Entries in each category are in roughly chronological order.
 ## apt
 
 * nvim (jan 2023: removing and installing from source on github)
-* kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install  https://sw.kovidgoyal.net/kitty/binary/
+* kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install  `curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
 * exa (ls upgrade)
 * brave-browser
 * speedtest
@@ -61,7 +61,7 @@ Entries in each category are in roughly chronological order.
 * pavucontrol volume control gui
 * gparted disc formatting utility to create a macos installer
 * xscreensaver to play around with screensavers (configure through GUI of xscreensaver-demo); installing rss-glx, xscreensaver-data-extra, xscreensaver-gl-extra package for complete screensaver set
-* picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx; included --experimental-backends flag
+* picom:  Trying in place of compton while using awesome; installing required packages specified at https://github.com/yshui/picom .  Used sample config file at /usr/share/doc/picom/examples as starting point of config.  Getting some screen tearing so changing backend from xrender to glx; included --experimental-backends flag.  Nov 2023: upgrading to 10.2 by recompiling in order to fix awesome autostart bug.
 * alacritty, konsole for a few additional terminals
 * Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
 * Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
@@ -77,7 +77,7 @@ Entries in each category are in roughly chronological order.
 * librecad for creating 2D floor plans
 * Looking for a better file manager:  spacefm-gtk3, pcmanfm
 * shellcheck:  tools for detecting errors in bash scripts
-
+* bat (cat command update):  binary is title 'batcat' in order to avoid name conflicts
 
 
 ## Apt repository
@@ -98,8 +98,9 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * vscodium
 * bottles to run windows software
 * cavalier music visualizer
-
-
+* videodownloader (save local copies of online e.g. youtube videos)
+* localsend (fileshare within local network)
+* flatseal (modify permissions of other flatpaks)
 
 
 ## Github repos
@@ -112,7 +113,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * lf (terminal file manager):  Installing via a pre-built binary from https://github.com/gokcehan/lf/releases?page=1 
 * Alternative kitty icon:  https://github.com/k0nserv/kitty-icon  Overwrote png files in ~/.local/kitty.app/lib/kitty/logo with new icons
 * Sweet folders  https://github.com/EliverLara/Sweet-folders.git
-
+* Alacritty color themes:  https://github.com/alacritty/alacritty-theme 
 
 
 ## Python packages via pip

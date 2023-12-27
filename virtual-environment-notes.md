@@ -32,12 +32,12 @@ Some tools for managing virtual environments
 ### Add packages to environment
 `pip install [PACKAGE_NAME]`  
 
-Include `==[PACKAGE_VERSION]` to specify version
+Include `=={PACKAGE_VERSION}` to specify version
 
 
 Install all packages listed in a text file:  
 
-`pip install -r [LIST_OF_PACKAGES.txt]`
+`pip install -r {LIST_OF_PACKAGES.txt}`
 
 
 
@@ -61,7 +61,8 @@ Simply delete the folder in which the environment environment files are stored. 
 
 ## Using virtual environments in a Jupyter notebook
 
-Install the IPython kernel via `pip install ipykernel`
+Must have the IPython kernel installed
+Do so by `pip install ipykernel`
 
 Activate virtual environment
 
@@ -79,4 +80,6 @@ Alternatively, details of environments are located at:
 
 
 
-
+## TODO
+Install
+sudo apt install python3.10-venv

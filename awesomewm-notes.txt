@@ -46,6 +46,9 @@ notifications
 
 
 
+## lain widgets
+https://github.com/lcpz/lain/wiki
+
 
 ## TODO
 * Xorg.conf

@@ -9,24 +9,27 @@
 * Words:  'w' (next word), 'b' (beginning of word), 'e' (end of word)
 * Lines:  '0' (beginning of line), '^' (first non-blank character), '$' (end of line)
 * Screen:  'H' (top of screen), 'M' (middle of screen), 'L' (bottom of screen)
-* File:  'gg' (beginning of file), 'G' (end of file)
+* File:  'gg' (beginning of file), 'G' (end of file), specific line of file `{LINENUM}G`
+* Next/previous instance of word in file:  `*`, `#`
 
 ### Writing (e.g. saving a file)
     * `:w` to save and continue working
-    * `:w [FILENAME]` to specify a new file name
+    * `:w {FILENAME}` to specify a new file name
 
-### Quit
+### Exiting vim
     * Save and quit:  `:wq` (write and quit), `:x` or `ZZ`
-    * Quit Without saving:  `:q!` or `QZ`
+    * Quit without saving:  `:q!` or `QZ`
 
     
 ### Search 
-* Type '/' and characters to be searched for
+* Type '/' and enter characters to be search for
 * 'n' advances forward through matches; 'N' reverses
 
-
-* Cut (d), copy (y for a word; yy for an entire line), paste (p)
+### Cut, copy, paste
+* Cut (d), copy (y for a word; yy for an entire line), paste before (p) or after (`A`) cursor
 * cc:  Delete current line and enter insert mode
+
+
 
 * Sync current vim session to settings in config file (init.vim): 
 `source $MYVIMRC`
@@ -39,7 +42,8 @@
 
 ## Notes from `vimtutor` tutorial
 
-All commands below must be input while in Normal mode which may be entered into by pressing ESC.
+Commands below must be input while in Normal mode which may be entered into by pressing ESC or CTRL + [.  
+This enters into Command mode.
 
 
 
@@ -86,7 +90,6 @@ All commands below must be input while in Normal mode which may be entered into 
 
 
 
-
 #### Compound commands
 
 Composed of an operator, a motion and an optional number of repetitions
@@ -112,7 +115,7 @@ Commands are of the form:
 
 [OPERATOR] [REPETITIONS] [MOTION]
 
-where `[REPETITIONS]` is an optional modifier.
+where `[REPETITIONS]` is optional.
 
 Examples of navigating by count and motions:
 
@@ -151,8 +154,8 @@ Various editing commands
 
 |Action| Command|
 |---|---|
-| "Put" (i.e. paste) previously deleted text to location of cursor| `p`|
-| Copy text to system clipboard| Highlight text and press `y`|
+| "Put" (i.e. paste) previously deleted text to cursor's location| `p`|
+| Copy text to clipboard| Highlight text and press `y`|
 | Replace (or substitute) individual character under cursor| `r` and enter new character|
 | Delete to end of word and edit| `ce` and edit as desired|
 | Delete to edit of line and edit |`c$` or `C`| 
@@ -181,9 +184,9 @@ Various editing commands
 
 | Action| Command|
 |---| ---|
-| Search forward| `/` |
-| Search backward |  `?` |
-| Cycle forward/backward through matches| `n` / `N` |
+| Search forward in document| `/` |
+| Search backward in document |  `?` |
+| Scroll forward/backward through matches| `n` / `N` |
 
 When finished searching, `CTRL + O` returns cursor to its before-search location.
 
@@ -215,21 +218,17 @@ Substitute one piece of text for another.  In the example snippets below, text t
 * Ex:  `:!ls` executes the list command in the current directory
 
 
-#### Insert file contents into current buffer
-`:r [FILENAME]`
+#### Insert file contents into current buffer at location of cursor
+`:r {FILENAME}`
 
 #### Insert output of a shell command
-`:r ![COMMAND]`  
+`:r !{COMMAND}`  
 Ex:  `:r !ls` inserts the directory contents into the active file
 
 
 #### Write text block to file
-* Use cursor to highlight desired block of text (will have entered Visual mode)
+* Enter visual mode by pressing 'v' and use cursor to highlight desired text
 * Type `:w [FILENAME]`
-
-
-
-Here is a sentence
 
 
 
@@ -241,9 +240,10 @@ Here is a sentence
 | Insert new line below/above cursor and begin editing | `o` |
 | Insert new line above cursor and begin editing | `O`|
 | Insert text before cursor | `i`|
+| Goto beginning of line and enter insert mode | `I`|
 | Insert text after cursor| `a`|
 | Insert text at end of line| `A`|
-| Enter replace mode where new existing text is overwritten | `R`|
+| Enter replace mode in which new text overwrites previous content | `R`|
 
 
 
@@ -270,7 +270,7 @@ Here is a sentence
 * Full list available at:
 https://neovim.io/doc/user/options.html
 
-Can auto include preference in config (vimrc or init.vim)
+Defined in config (vimrc or init.vim)
 
 
 
@@ -287,11 +287,13 @@ Can auto include preference in config (vimrc or init.vim)
 
 
 
+## Miscellaneous
+Delete inside characters (parentheses, quotation marks, etc):  `di(`
+
+Toggle character's case (upper/lower):  `~`
 
 
-
-
-## Multiple concurrent sessions
+## Multiple vim sessions
 
 ### Splits
 
@@ -299,13 +301,14 @@ Splitting vim into subsections
 
 | Action | Shortcut |
 | --- | --- |
-| Create new horizontal split | `:split` or `:sp` |
-| Create new vertical split |`:vsplit` or `:vs`|
-| Flip positions of splits | CTRL + W then R |
-| Close split | `:q` |
+| Create new horizontal split (up/down) | `:split {FILENAME}` or `:sp` |
+| Create new vertical split (left/right) |`:vsplit {FILENAME}` or `:vs`|
+| Toggle split being edited | Hold CTRL and press w twice|
+| Toggle positions of splits | CTRL + W then R |
+| Close a split | `:q` |
 
 
-Vimrc settings:
+Define splitting behavior in the vimrc
 * Create new splits below/right of existing
 `set splitbelow splitright`
 
@@ -315,14 +318,30 @@ Vimrc settings:
 :tabedit [FILE] Edit file in new tab
 :tabclose
 :tabn or tabp Go to next/previous tab OR `gt` or `gT`
-Navigate to tab numbered 'n':  ngt 
 
+Navigate to tab numbered 'n':  `ngt`
+
+
+
+
+### Buffers
+
+Edit another buffer:  `:e {FILENAME}`
+Tab completion may be used.
+
+Navigate forward/backward in buffer history:  `:bn`  and `:bp`  (stands for buffer next/previous)
+
+Create an empty buffer:  `:enew`
+Must save buffer to a file name before navigating to another buffer
+
+Delete a buffer:  `:bd`
 
 
 
 ## Plugins
 
-By installing third-party plugins, vim is almost infinitely extensible.
+Third-party plugins provide additional functionality to vim.
+
 
 ### vim-plug (plugin manager)
 * (Vim-plug)[https://github.com/junegunn/vim-plug]
@@ -337,7 +356,7 @@ In vim, run `:PlugInstall`
 
 ### NERDTree
 
-Opens via <Leader> + o
+Hotkey set to <Leader> + o
 
 #### Some NERDTree commands
 (complete listing shown via `:help NERDTree`)
@@ -381,7 +400,7 @@ Rename file <Leader>wr
 
 
 ## TODO
-* Fix GOYO messing with transparency and colorscheme upon exit
+* Fix GOYO affecting transparency and colorscheme upon exit
 
 
 ## References

@@ -1,0 +1,32 @@
+# lf terminal file manager
+
+Generally obeys vim-style commands
+
+## Config
+
+Colors and icon set are set in ~/.config/lf/{icon,colors}
+
+## Quit and return to shell  `q`
+
+## Run shell command
+`$ {command}`
+
+## Copy, cut, paste
+y, d, p
+
+## Rename 
+r
+
+## Open file in editor
+e
+
+## Open a file using preferences in open command definition in lfrc.
+In Linux, opener defaults to xdg-open.
+
+## Change sorting method
+Press 's' and a menu of sort options (time, type, extension, size) appears
+
+Pressing 'z' presents other sorting options
+
+# Wiki tips (i.e. cookbook)
+https://github.com/gokcehan/lf/wiki/Tips
