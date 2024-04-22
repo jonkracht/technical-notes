@@ -21,7 +21,7 @@ r
 e
 
 ## Open a file using preferences in open command definition in lfrc.
-In Linux, opener defaults to xdg-open.
+Defaults to xdg-open.
 
 ## Change sorting method
 Press 's' and a menu of sort options (time, type, extension, size) appears

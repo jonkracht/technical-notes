@@ -43,6 +43,8 @@ CPU architecture:  `lscpu`
 
 PCI devices:	`lspci`
 
+USB devices:  `lsusb`
+
 Graphics card:	`lspci | grep VGA`
 Alternatively:	`lshw -C video`
 
@@ -145,3 +147,7 @@ Pretty front-end to `du`
 Config files for flatpak apps are located under ~/.var/app/
 
 Flatseal is a flatpak that eases permission modifications to other flatpaks
+
+
+## watch
+Execute command repeatedly and print its output.
