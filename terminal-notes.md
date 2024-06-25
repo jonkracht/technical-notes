@@ -1,26 +1,30 @@
-CTRL + L  OR typing 'clear'  Clears terminal screen
+# terminal notes
 
 
-Navigation:
+## Navigation
 Navigate through words in a command:  CTRL + Left/Right Arrow
 Navigate to beginning/end of a line:  CTRL + A/E
 
-Deletion:
+
+## Deletion:
+Cursor to previous space:  CTRL + W
+Cursor to previous punctuation:  ALT + Backspace
 Cursor to beginning of line:  CTRL + U
 Cursor to end of line:  CTRL + K
 Cursor to end of word:  ALT + D
-Cursor to start of word:  ALT + Backspace
+
+CTRL + L  -or- type 'clear'  Clears terminal screen
 
 Paste most recently deleted text:  CTRL + Y
 
+View more terminal commands with `stty -a`
+
+## Autocomplete 
+Begin typing command and hit TAB for available completions
 
 
-Autocomplete:  
-Begin typing command and hit TAB for suggestions
-
-
-Open an application as a background task:
-Append an '&' to the end of the command
+## Run application as a background task
+Append '&' to the end of the run command
 ex: `gedit &` launches gedit as a background task leaving terminal functional
 
 Send a process to background with CTRL + Z

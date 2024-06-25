@@ -28,5 +28,15 @@ Press 's' and a menu of sort options (time, type, extension, size) appears
 
 Pressing 'z' presents other sorting options
 
+
+## Selection
+Spacebar selects a file
+'u' unselects file
+'v' inverts file selections
+
+## Sorting
+Can sort by modification time, size,
+s#
+
 # Wiki tips (i.e. cookbook)
 https://github.com/gokcehan/lf/wiki/Tips

@@ -15,7 +15,7 @@ Entries in each category are in roughly chronological order.
 * rhythmbox
 * ubuntu-restricted-extras (mp3 plugins etc.)
 * awesome
-* tldr  tried Haskell implementation but lost ability to sync with online repo.  Trying recommended nodejs client so also installing nodejs and npm - annoying.  Installing python version with pip.
+* tldr tried Haskell implementation but lost ability to sync with online repo.  Trying recommended nodejs client so also installing nodejs and npm - annoying.  Installing python version with pip.
 * vlc
 * mpv
 * neofetch
@@ -80,7 +80,9 @@ Entries in each category are in roughly chronological order.
 * bat (cat command update):  binary is title 'batcat' in order to avoid name conflicts
 * rofi
 * abiword for editing Word documents
-
+* sxiv image previewer
+* thunar file manager (to allow theme standardization unlike nautilus)
+* cava music visualizer
 
 ## Apt repository
 
@@ -120,12 +122,16 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Alacritty color themes:  https://github.com/alacritty/alacritty-theme 
 * Wayfire window manager:  https://github.com/WayfireWM/wf-install
 * zoxide (smarter cd command) via curl
+* fontpreview via make install
+* projectm (music visualizer) https://github.com/projectM-visualizer/projectm?tab=readme-ov-file
+* Rofi themes https://github.com/newmanls/rofi-themes-collection
 
 
 ## Python packages via pip
 * jupyterlab
 * yfinance pulling stock data
 * nbterm interact with jupyter from the terminal
+* unoserver convert documents such as LibreOffice
 
 
 ## Other means

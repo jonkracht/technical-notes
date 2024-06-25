@@ -1,13 +1,19 @@
+# Headings
+Use #'s.  Additional # decreases heading importance.
+
+
 # Text styling
 
 *Italicized text*       (single asterisk)
 **Bold text**           (double asterisk)
 ~~Strikethrough text~~  (double tilde)
+==Highlight==  (double equals sign)
 
 
-# Horizontal line across page width  
-Three hyphens (---)
+# Horizontal line 
 
+* Three hyphens (---)
+* Three asterisks
 
 # Lists
 
@@ -27,6 +33,10 @@ Use hyphen, minus sign or plus sign for entries  (but don't mix)
 * First item
 * Second item
 ``
+## Checkbox
+- [] Item 1
+- [] Item 2
+- [] Item 3
 
 
 # Line breaks
@@ -35,10 +45,12 @@ Use hyphen, minus sign or plus sign for entries  (but don't mix)
 End line with two spaces or <br/>
 
 
+
+
 # Code segments
 
 ## Inline
-Surround with backticks  (`)
+Surround with backticks "\`"
 
 Ex. `sudo apt update` updates your repo lists
 
@@ -47,6 +59,7 @@ Ex. `sudo apt update` updates your repo lists
 SOME CODE
 MORE CODE
 ```
+
 where [LANG] provides syntax highlighting and can be Python, C, HTML, vim etc
 
 
@@ -68,7 +81,7 @@ Link text in brackets and URL in parentheses.
 ## External
 ![image-name](https://www.domain.sthing/path/to/image.png)
 
-Can use html syntax:
+## May also use html syntax:
 <img src = '/path/to/image'>
 
 
@@ -124,3 +137,10 @@ abstract: |
 
 # Math
 Use LaTex syntax with double dollar sign before and after code segment
+
+
+# Footnotes
+This is example text [^1] with a couple of footnote tags [^2]
+
+[^1] Footnote 1 text
+[^2] Footnote 2 text
