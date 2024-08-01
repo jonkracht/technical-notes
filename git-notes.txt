@@ -72,7 +72,7 @@ Move to <branch-name> branch
 
 
 Connect local tracking to Github or other remote destination:
-git remote add origin git@github.com:jonkracht/pdga_rating_scraper.git
+git remote add origin git@github.com:[GITHUB_USERNAME]/[REPO_NAME].git
 git branch -M master
 git push -u origin master
 
@@ -127,17 +127,16 @@ Git configurations (name, email, etc.) is stored in /home/jon/.gitconfig
 
 
 
-.md extensions stands for MarkDown
 
 
 
-Delete a repository:
+## Delete a repository
 Navigate to desired repo
 rm -rf .git
 
 
 
-Download a copy of a repository:
+## Download a copy of a repository
 git clone https://some.url.com
 or
 via ssh
