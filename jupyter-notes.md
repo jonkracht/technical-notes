@@ -1,9 +1,12 @@
 # Jupyter
 name chosen as a combination of Julia, Python, and R, a few of its first languages
 
-Successor to IPython (i is for interactive)
+Successor to IPython (i stands for interactive)
 
 Current flavors include notebook, lab and hub
+
+
+## Installation
 
 
 ## Basics

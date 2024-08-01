@@ -1,11 +1,11 @@
 # Virtual environments
-Maintain project-specific environments so as to avoid version conflicts
+Maintain project-specific environments so as to avoid version conflicts of software 
 
 
 
 ## Background
 
-Works by appending virtual environment files (shims?) to the beginning of the `$PATH` so that executables in the virtual environment are found before those elsewhere in the system
+Works by appending virtual environment files (shims?) to the beginning of `$PATH` so that executables in the virtual environment are found before those elsewhere
 
 Some tools for managing virtual environments
 * `virtualenv`, `virtualenvwrapper`
@@ -81,5 +81,3 @@ Alternatively, details of environments are located at:
 
 
 ## TODO
-Install
-sudo apt install python3.10-venv

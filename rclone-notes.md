@@ -60,5 +60,8 @@ Config file by default is located at `~/.config/rclone/rclone.conf`
 Execute from /mnt/1-tb-hd/organ/ so can find .rclone ignore
 rclone sync /mnt/1-tb-hd/organ/ google-drive-organ: --track-renames --exclude-from=.rclone-ignore --verbose
 
+Fractal implementation:
+rclone sync /home/jon/Documents/organ/ google-drive-organ:organ --track-renames --exclude-from=.rclone-ignore --verbose
+
 ## TODO
 *

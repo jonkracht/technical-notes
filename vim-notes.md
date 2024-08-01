@@ -3,14 +3,15 @@
 
 
 
-## Most-used commands (i.e. TLDR)
+## Most-used commands
 
 ### Navigation
-* Words:  'w' (next word), 'b' (beginning of word), 'e' (end of word)
-* Lines:  '0' (beginning of line), '^' (first non-blank character), '$' (end of line)
-* Screen:  'H' (top of screen), 'M' (middle of screen), 'L' (bottom of screen)
-* File:  'gg' (beginning of file), 'G' (end of file), specific line of file `{LINENUM}G`
-* Next/previous instance of word in file:  `*`, `#`
+* Words:  w (next word), b (beginning of word), e (end of word)
+* Lines:  0 (beginning of line), ^ (first non-blank character in the line), $ (end of line)
+* Pargraph:  { (previous), } (next)
+* Screen:  H (top of screen), M (middle of screen), L (bottom of screen)
+* File:  gg (beginning of file), G (end of file), specific line of [LINENUM]G
+* Next/previous instance of word in file:  *, #
 
 ### Writing (e.g. saving a file)
     * `:w` to save and continue working
@@ -82,7 +83,7 @@ This enters into Command mode.
 
 | Action | Command|
 | --- | ---| 
-| Delete entire word under cursor (see footnote) | `daw`|
+| Delete entire word under cursor and spaces behind it (see footnote) | `daw`|
 | Delete from cursor to end of word| `de` |
 | Delete three consecutive words (see additional description below) | `d3w`|
 | Delete from cursor to end of line| `d$` or `D` (SHIFT + d)|
