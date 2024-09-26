@@ -1,6 +1,6 @@
 ## Produce a pdf
 
-`pandoc test.txt -o test.pdf`
+`pandoc [FILENAME] -o [OUTPUT_NAME].pdf`
 
 
 ## Referencing in document

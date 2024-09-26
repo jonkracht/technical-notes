@@ -34,6 +34,7 @@
 
 ## Flatpak
 * VideoDownloader
+* LocalSend
 
 
 
@@ -42,7 +43,9 @@
 *
 
 ## Pipx
-* yfinance
+* yfinance (as of July 2024, doesn't work via pipx)
+* cookiecutter-data-science  (function is named 'ccds')
+* jupyterlab
 
 
 ## Github repos

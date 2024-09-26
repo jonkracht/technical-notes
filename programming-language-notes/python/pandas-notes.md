@@ -119,13 +119,13 @@ In general, operations exclude missing values.
 
 
 ## [Miscellaneous](Miscellaneous)
-|Description |Code  |
+|Description |Code  |pandas histogram sort bins by number
 |--- | --- |
 | Set number of decimal places displayed in output | `df.to_csv('pd.set('display.precision', [N_DEC_POINTS])')`|
 | Set backend for rendering images | `%config InlineBackend.figure_format = 'svg' (or 'png', etc)`|
 
 
-## Other methods
+##sdfa Other methods
 * `query`
 * `pivot_table`
 * `melt`

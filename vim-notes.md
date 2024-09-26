@@ -30,13 +30,22 @@
 * Cut (d), copy (y for a word; yy for an entire line), paste before (p) or after (`A`) cursor
 * cc:  Delete current line and enter insert mode
 
+### Formatting
+ 
+#### Indenting
+Block indent/deindent:  Highlight text in visual mode and press >/<
+Alternatively, in command mode, type `3>>` to indent lower three lines
 
+When pasting into an indented block, use `]p` to obey local indentation
+
+In insert mode:  `CTRL` + t/d adds/removes indent from beginning of line
 
 * Sync current vim session to settings in config file (init.vim): 
 `source $MYVIMRC`
 
 
-
+### Autocomplete
+`CTRL + N/P` autocompletes with words in document
 
 
 

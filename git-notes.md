@@ -6,51 +6,43 @@
 
 
 
-## Create new repository
-
-First, make new repo on Github
-Clone into folder locally
-Then add files on local computer and push to remote
-
-
-
-
-
 ## Config
 
 Check configuration of git. Information is stored in ./.gitconfig:
 `git config --list`
 
-Configuration can be done at three levels:  system-wide, global (meaning user specific), and local/repository.
+Configuration can be set at three levels:  system-wide, global (meaning user specific), and local/repository.
 
 `git config --list --show-scope` shows config parameters and from which level they are set.
 
 
-Repo settings (origin location etc.) are stored in  ./.git/config
+Repo settings (origin, location, etc.) are stored in  ./.git/config
 
 
 ## Authentication
-Use memory cache to retain Github user name and login
-git config --global credential.helper cache
 
-Set time period to use the cache (timeout is in seconds)
-git config --global credential.helper 'cache --timeout=3600'
+* Use memory cache to retain Github user name and login
+`git config --global credential.helper cache`
 
-Git configurations (name, email, etc.) is stored in $HOME/.gitconfig
-
+* Set time period to use the cache (timeout parameter in units of seconds)
+`git config --global credential.helper 'cache --timeout=3600'`
 
 
 
+
+## Basics
 
 `git init`
-Initialize git tracking in a folder
+Initialize git tracking in a repository
 
 `git status`	
 Check for status of files in a repository
-Shows edited or newly-added files
 
-`git add file1 file2`	
-Adds file1, file2 to tracked files
+`git add {file1} {file2}`	
+Adds files to those to be tracked
+
+`git add {file1} {file2}`
+Add changes in specified to files to staging area
 
 `git add .`		
 Add all changes into staging area
@@ -59,7 +51,20 @@ Add all changes into staging area
 `git commit -m “Message”`	
 Adds staged changes to history and described by a short message
 
+## Undo a commit
+
+Revert to most recent commit
+`git reset HEAD~1`
+
+
+Go to a previous point in the code’s development defined by hash
+`git checkout {COMMIT_HASH}` or `git revert {COMMIT_HASH}`
+
+where a commit hash is generally a long string of alphanumeric characters
 `git log`		
+
+
+
 View history of commits
 
 `git diff <branch-name>`
@@ -91,13 +96,17 @@ Move to different branch
 
 
 
-Connect local repository to Github or other remote destination:
-`git remote add origin git@github.com:[GITHUB_USERNAME]/[REPO_NAME].git`
-`git branch -M master`
-`git push -u origin master`
+## Connect local repository to Github or other remote destination:
 
-Check remote origins connected to repo
-git remove -v
+### Github  
+https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
+
+Summary:
+* Initialize tracking, add all files, commit
+* Create empty repository on Github (do not create README, LICENSE, or .gitignore)
+* Set location where local repository will be pushed:  `git remote add origin {REMOTE-URL}`
+* Push changes to remote via `git push origin main`
+
 
 
 
@@ -114,7 +123,7 @@ Create a local copy of some other repository
 
 
 ## Push 
-Send code out
+Send code out often to a remote repository
 
 `git push --set-upstream origin <BRANCH-NAME>`
 
@@ -123,9 +132,10 @@ Send code out
 
 
 ## Pull
-Update local repository from a remote counterpart
+Update local repository from some remote counterpart
 
 Good description:  https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640
+
 
 ### Fast-forwarding
 
@@ -136,21 +146,11 @@ Good description:  https://stackoverflow.com/questions/71768999/how-to-merge-whe
 
 
 ## Pull request
-Request main branch of something to download code from you.
+Request remote branch to download code from you.
 
 
 
 
-## Undo a commit
-
-Revert to most recent commit
-`git reset HEAD~1`
-
-
-Go to a previous point in the code’s development defined by hash
-`git checkout {COMMIT_HASH}` or `git revert {COMMIT_HASH}`
-
-where a commit hash is generally a long string of alphanumeric characters
 
 
 

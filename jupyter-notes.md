@@ -1,5 +1,5 @@
 # Jupyter
-name chosen as a combination of Julia, Python, and R, a few of its first languages
+name is a combination of Julia, Python, and R (a few languages first implemented)
 
 Successor to IPython (i stands for interactive)
 
@@ -25,13 +25,16 @@ Alternatively, within notebook, File -> Download As
 
 
 Run current cell:  CTRL + ENTER
-Run current cell and move cursor next cell:  SHIFT + ENTER
+Run current cell and move cursor to next cell:  SHIFT + ENTER
 
-ENTER:  enters into edit mode so as to modify a cell
-ESC:  enters into command mode so as to modify notebook
+ENTER:  Edit mode so as to modify a cell
+ESC:  Command mode so as to modify notebook
 
 
 ## Command-mode actions
+
+### Navigation
+Move up/down with arrows or vim-style j/k
 
 ### Insert a new cell
 a  insert cell above
@@ -46,49 +49,55 @@ dd  delete active cell
 z  undo cell deletion
 
 ### Selection
-SHIFT + Up/Down  Select multiple cellsi
+Hold SHIFT + Up/Down  Select multiple cells
 
 
 ### Grouping
 SHIFT + M  Merge cells
 CTRL + SHIFT + MINUS:  Split active cell at cursor
 
-Mass comment/uncomment:
+### Commenting
 Highlight code and CTRL + /
+
+
+
 
 
 ## Misc
 
 ### Execute shell commands
-Prepend any shell command with !
-Ex.  !ls prints contents of current directory
+Prepend command with !
+Ex.  `!ls` prints contents of current directory
 
 
-Formatting can be accomplished via Markdown syntax
-(bold, italics, list, links, etc.)
+### Text formatting
+Markdown syntax can be used to format text (ex. bold, italics, list, links, etc.)
 
-Latex:  $math equations etc.$
-
-Centered text:  <center>some text<center>
-
-
-Get documentation on a function:
-Hold SHIFT + TAB or ?[FUNCT_NAME]  
-
-
-Color:
-<font color='green'>Enter text here</font>
+Color can be control via:  `<font color='green'>Enter text here</font>`
 
 Tabbing can be done by including '\t' in markdown
+
+
+
+### Latex
+$[LATEX_CODE_HERE]$
+
+### Centering
+Centered text:  <center>some text<center>
+
+### Documentation
+While cursor is on command, hold SHIFT + TAB
+or type `?[FUNCT_NAME]`  
 
 Help:  Type [Command_NAME] followed by ?
 
 
 
-Insert images:
+### Images
 
-Local (must be in subpath of notebook i.e. can't be "above" the notebook in the filesystem)
-<img src "[/PATH/TO/IMAGE]" />
+#### Local 
+Must be in subpath of notebook i.e. can't be "above" the notebook in the filesystem
+`<img src "[/PATH/TO/IMAGE]" />`
 
-From URL:
-!([/URL/TO/IMAGE])
+#### Remote
+`!([/URL/TO/IMAGE])`

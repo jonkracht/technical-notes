@@ -35,7 +35,7 @@ Some tools for managing virtual environments
 Include `=={PACKAGE_VERSION}` to specify version
 
 
-Install all packages listed in a text file:  
+Install all packages listed in a text file often called 'requirements.txt':  
 
 `pip install -r {LIST_OF_PACKAGES.txt}`
 

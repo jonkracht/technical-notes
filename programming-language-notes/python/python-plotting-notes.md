@@ -7,10 +7,13 @@
 ## Initialization
 
 
-### Matplotlib:  
+### Matplotlib  
 `import matplotlib.pyplot as plt`
 
-### seaborn:  
+Set plot style:  `plt.style.use('bmh')`
+
+
+### Seaborn  
 `import seaborn as sns`
 
 Set plot style:  `sns.set()`
@@ -23,13 +26,15 @@ Examine the characteristics of each feature/variable/column independently
 ### Quantitative features
 
 #### Histograms/density plots  
+
 Either discrete or continuous representations of value distributions.  May provide insight into underlying distribution(s) (type, skewness, etc.).
-* pandas hist method:  `df[[COL1],...].hist()`
-* pandas plot method with kind set to 'density':  `df[[COL1],...].plot(kind='density', subplots=True)`
-* seaborn distribution plot (identical to `histplot`):  `sns.displot(data=[DATA_FRAME], x=[COL_OF_INTEREST])`
-    * flags: binwidth, bins (either number of or a list of bin breaks), discrete, stat="density", probability (normalize histogram)
-    * kind = "kde"; flags:  bw_adjust= [Value] controls how wide a bin the density plots averages over; hue, multiple="stack", cut flag specifies how far curve should be computer outside range of data 
-    * Histogram + kde density:  `sns.displot(data=[df], x='[COL1]', kde=True)`
+
+* pandas hist method:  `df[[COL1],...].hist()`  
+* pandas plot method with kind set to 'density':  `df[[COL1],...].plot(kind='density', subplots=True)`  
+* seaborn distribution plot (identical to `histplot`):  `sns.displot(data=[DATA_FRAME], x=[COL_OF_INTEREST])`  
+    * flags: binwidth, bins (either number of or a list of bin breaks), discrete, stat="density", probability (normalize histogram)  
+    * kind = "kde"; flags:  bw_adjust= [Value] controls how wide a bin the density plots averages over; hue, multiple="stack", cut flag specifies how far curve should be computer outside range of data  
+    * Histogram + kde density:  `sns.displot(data=[df], x='[COL1]', kde=True)`  
 
 * Subplot of histograms:  `df[features].plot(kind="density", subplots=True, layout=(1, 2), sharex=False, figsize=(10, 4))`
 
@@ -78,12 +83,13 @@ Examine relationships between two or more features/variables/columns
     * sns.heatmap(corr, mask=mask, vmax=1, center=0, annot=True, fmt=".1f", square=True, linewidths=0.5, cbar_kws={"shrink": 0.5});
 
 #### Scatter plot
+
 Cartesian (2D) representation
-* `plt.scatter(df[[COL1]], df[[COL2]])`
-* Include variable histograms:  `sns.countplot(data=[df], x='[COL1]', y='[COL2]', kind="scatter")`
-* Density version:  `sns.jointplot(data=[df], x='[COL1]', y='[COL2]', kind='kde', color='g')`
-* Matrix of scatterplots:  `sns.pairplot(data=df[[QUANT_COLS]])`
-    * Helpful to use 'png' backend for speedier rendering (`%config InlineBackend.figure_format = 'png' or 'svg' or 'retina'`)
+* `plt.scatter(df[[COL1]], df[[COL2]])`  
+* Include variable histograms:  `sns.countplot(data=[df], x='[COL1]', y='[COL2]', kind="scatter")`  
+* Density version:  `sns.jointplot(data=[df], x='[COL1]', y='[COL2]', kind='kde', color='g')`  
+* Matrix of scatterplots:  `sns.pairplot(data=df[[QUANT_COLS]])`  
+* Helpful to use 'png' backend for speedier rendering (`%config InlineBackend.figure_format = 'png' or 'svg' or 'retina'`)  
 
 
 ### Quantitative/categorical

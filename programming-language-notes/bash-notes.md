@@ -212,5 +212,7 @@ then
 
 Analagous syntax for checking existence of files using -f flag
 
+Similarly:  `if [-z STRING]` returns True if string is empty  
+
 
 * shellcheck tool detects errors in bash scripting
