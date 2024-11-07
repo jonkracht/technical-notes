@@ -1,27 +1,25 @@
-# Notes regarding package management
+# Package management
+
 
 ## Background
+
 Ways to install software include:
-* .deb
-* PPA (personal package archive)
-* Snaps
-* Flatpak 
+* .deb files
+* ppa (personal package archive)
+* snaps
+* flatpak
+* app images
 
 
-Distro repos - defined in /etc/apt/sources.list
-
-List enabled repos:
-apt policy
--or-
-ls /etc/apt/sources.list.d
+View installed repos:
+`apt policy` or `ls /etc/apt/sources.list.d`
 
 
 ## .deb packages
 
-Install `.deb` package
+### Install `.deb` package
 
-* Using apt
-Navigate in terminal to location of file and run
+Using apt:  Navigate in filesystem to location of .deb and
 `sudo apt install ./filename.deb`
 
 
@@ -29,19 +27,17 @@ Navigate in terminal to location of file and run
 
 ## snap packages
 
-Snap is a packaging system use to bundle software.
-
-Find snaps:
+### Find snaps
 * Online at https://snapcraft.io/store
-* Terminal via `snap find [PACKAGE_NAME]`
+* In terminal: `snap find [PACKAGE_NAME]`
 
-Install snap packages
+### Install snap packages
 `sudo snap install [PACKAGE_NAME]`
 
-Display snaps installed on system:
+### Display snaps installed on system
 `snap list`
 
-Remove  
+### Remove
 `sudo snap remove [PACKAGE_NAME]`
 
 
@@ -50,10 +46,16 @@ Remove
 
 ## PPA 
 
-Adding a PPA to your system
+### Add a PPA to your system
 `sudo add-apt-repository ppa:[PPA_NAME]`
 `sudo apt install [PPA_NAME]`
 
-Remove PPA
+### Remove PPA
 `sudo add-apt-repository --remove ppa:ppa_name`
+
+
+
+## flatpak
+
+Files (including configs) are generally installed into `~/.var/app` 
 

@@ -32,11 +32,13 @@ Config file by default is located at `~/.config/rclone/rclone.conf`
 
 
 
-### Copy local files to remote
+### Copying
+
+#### Copy local files to remote
 
 `rclone copy [/PATH/TO/LOCAL/DIR] [REMOTE_NAME]:[/PATH/TO/REMOTE_DIR]`
 
-### Copy remote files to local
+#### Copy remote files locally
 
 `rclone copy [REMOTE_NAME]:[/PATH/TO/FILE_OR_DIR] [/PATH/TO/LOCAL/DIR]`
 

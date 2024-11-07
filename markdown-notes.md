@@ -101,6 +101,13 @@ Link text in brackets and URL in parentheses.
 |\|escape pipe|\`backtick|data13|
 
 
+## Column justification
+Set with in second line of table defintion
+* Left: `:---`
+* Center:  `:---:`
+* Right:  `---:`
+
+
 # Metadata blocks
 
 ## pandoc_title_block

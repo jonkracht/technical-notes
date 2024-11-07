@@ -8,7 +8,7 @@
 ### Navigation
 * Words:  w (next word), b (beginning of word), e (end of word)
 * Lines:  0 (beginning of line), ^ (first non-blank character in the line), $ (end of line)
-* Pargraph:  { (previous), } (next)
+* Paragraph:  { (previous), } (next)
 * Screen:  H (top of screen), M (middle of screen), L (bottom of screen)
 * File:  gg (beginning of file), G (end of file), specific line of [LINENUM]G
 * Next/previous instance of word in file:  *, #
