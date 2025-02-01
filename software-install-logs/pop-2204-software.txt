@@ -125,6 +125,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * fontpreview via make install
 * projectm (music visualizer) https://github.com/projectM-visualizer/projectm?tab=readme-ov-file
 * Rofi themes https://github.com/newmanls/rofi-themes-collection
+* Fontpreview for terminal preview (/usr/local/share/fonts/CaskaydiaCoveNerdFont/CaskaydiaCoveNerdFontMono-Regular.ttf).  Cloning and then install using make
 
 
 ## Python packages via pip

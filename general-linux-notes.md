@@ -151,3 +151,14 @@ Flatseal is a flatpak that eases permission modifications to other flatpaks
 
 ## watch
 Execute command repeatedly and print its output.
+
+
+## .desktop files
+
+Use `desktop-file-validate` to check for errors in .desktop file 
+
+User's files are in `~/.local/share/applications` and system-wide are in `/usr/share/applications`
+
+After modifying .desktop file, run `sudo update-desktop-database` to alert system to changes
+
+Include `StartupWMClass` to show correct icon (not gear) when exploding open apps

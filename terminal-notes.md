@@ -316,8 +316,16 @@ Cycle between arguments or recent commands:  ALT + .
 
 Empty, but not delete, a text file:  > filename
 
-Kill a process:  CTRL + C
-OR locate process id (pid) with:  ps -ef; then sudo kill pid
+# Terminate a process
+
+For non-responsive process, say.
+
+For a hung terminal process:  `CTRL + C`
+
+Kill by process id (pid):  
+Find pid:  `pidof [PROCESS_NAME]` or use `ps -ef` to print all process to debug and located pid; then `kill -15 [PID]`.  If this doesn't work `kill -9 [PID]` terminates immediately.
+
+Terminates all instances of a process:  `killall -9 [PROCESS_NAME]`
 
 
 Print date:  date; format various ways - date +%D displays MM/DD/YY
@@ -386,8 +394,12 @@ touch file1.txt file2.txt
 Zip/unzip (compress/decompress):
 
 Single file:
-gzip [FILE_NAME.EXT]  
+
+## .gz files
+
 Compressed file will have a .gz extension is appended to the original file name)
+Decompress: `gzip -d path/to/file.gz`
+
 
 gunzip filename.txt.gz
 

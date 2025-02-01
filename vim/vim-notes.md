@@ -33,12 +33,23 @@
 ### Formatting
  
 #### Indenting
-Block indent/deindent:  Highlight text in visual mode and press >/<
+* Single line:  in normal mode `>>` and `<<`; in insert mode, CTRL + T and CTRL + D
+* Block indent/deindent:  Highlight text in visual mode and press `>` or `<` and then a number of  `.` equal to the desired indentation.
+
 Alternatively, in command mode, type `3>>` to indent lower three lines
 
 When pasting into an indented block, use `]p` to obey local indentation
 
 In insert mode:  `CTRL` + t/d adds/removes indent from beginning of line
+
+
+#### Block commenting
+* Enter Visual-block mode with CTRL + V.  Highlight desired text with navigation keys.  Enter insert mode with SHIFT + I and type commenting character likely (commonly # or %).  Press ESC.
+* Remove commenting from a block via CTRL + V, navigation to highlight desired rows and 'x' to delete commenting character
+
+* Added code to init.vim to accomplish:  `,ic` and `,rc` to insert/remove # character
+
+
 
 * Sync current vim session to settings in config file (init.vim): 
 `source $MYVIMRC`
@@ -47,7 +58,7 @@ In insert mode:  `CTRL` + t/d adds/removes indent from beginning of line
 ### Autocomplete
 `CTRL + N/P` autocompletes with words in document
 
-
+ 
 
 
 ## Notes from `vimtutor` tutorial
@@ -77,7 +88,6 @@ This enters into Command mode.
 
 * Insert character mid-line
     * Navigate cursor to desired location of new text.  Press `i` and type begin adding text.
-
 
 * Append/add character(s) to the end of a line 
     * From anywhere in desired line:  `A`  (SHIFT + a)

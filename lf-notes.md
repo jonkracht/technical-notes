@@ -4,39 +4,51 @@ Generally obeys vim-style commands
 
 ## Config
 
-Colors and icon set are set in ~/.config/lf/{icon,colors}
+### Theming
+* Colors and icon set are set in ~/.config/lf/{icon,colors}
+* Alternatively, lf inherits environment variable `LS_COLORS`
+* vivid tool is used to create color themes
 
-## Quit and return to shell  `q`
 
-## Run shell command
-`$ {command}`
+## Commands
 
-## Copy, cut, paste
-y, d, p
+### Cut, copy, paste
 
-## Rename 
-r
+* Uses vim bindings (d, y, p)
+* To work on multiple files, select files with spacebar, navigate to destination and cut/paste
 
-## Open file in editor
-e
 
-## Open a file using preferences in open command definition in lfrc.
-Defaults to xdg-open.
+* Quit  `q`
 
-## Change sorting method
-Press 's' and a menu of sort options (time, type, extension, size) appears
+* Run shell command:  `$ {command}`
 
-Pressing 'z' presents other sorting options
+
+* Rename:  `r`
+
+* Open file with $EDITOR:  `e`
+
+* Open a file: `o`  (defaults to xdg-open)
+
+* Change sorting method:  press 's' and a menu of sort options (time, type, extension, size) appears;  pressing 'z' presents other sorting options
 
 
 ## Selection
-Spacebar selects a file
-'u' unselects file
-'v' inverts file selections
+* Spacebar toggles a file's selection state 
+* `u` unselects file
+* `v` inverts which files are selected in directory
+* Selected files are stored in `~/.local/share/lf/[tags,history,files]`
 
-## Sorting
-Can sort by modification time, size,
-s#
 
-# Wiki tips (i.e. cookbook)
+## Misc
+
+* Return to terminal from lf:  `w`
+
+
+## Wiki tips (i.e. cookbook)
 https://github.com/gokcehan/lf/wiki/Tips
+
+
+
+
+## TODO
+* Font preview not working because ImageMagick packaged by Ubuntu is out of date

@@ -1,9 +1,13 @@
 # Jupyter
-name is a combination of Julia, Python, and R (a few languages first implemented)
 
-Successor to IPython (i stands for interactive)
+Name is a combination of Julia, Python, and R (a few languages first implemented)
 
-Current flavors include notebook, lab and hub
+Successor to IPython (`i` stands for interactive)
+
+Current flavors include Notebook, Lab and Hub.  Notebook version is being deprecated so switch to Lab.
+
+
+
 
 
 ## Installation
@@ -101,3 +105,17 @@ Must be in subpath of notebook i.e. can't be "above" the notebook in the filesys
 
 #### Remote
 `!([/URL/TO/IMAGE])`
+
+
+
+
+
+## TODO
+
+look into extensions.  puzzle piece on left dock
+in settings menu, enable "close brackets" feature
+look into jupytext extension to version control only code portions of .ipynb (removes metadata information)
+"Show contextual help" to display function descriptions
+Look into jupyter_contrib_nb_extensions for autocomplete  and install Hinterland
+SHIFT + SPACE brings up function description
+to enable autocompletion when editing python files outside of notebook, install jupyterlab-lsp and jedi-language-server
