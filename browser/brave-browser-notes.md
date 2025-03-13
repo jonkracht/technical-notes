@@ -16,3 +16,9 @@ Jump to address bar:  Alt + d
 
 Fullscreen:  F11
 
+
+
+
+## Graphics
+
+Check settings via:  `brave://gpu` in address bar

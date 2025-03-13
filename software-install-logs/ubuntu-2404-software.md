@@ -89,12 +89,12 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 
 
 
-## Other
+## Other installation methods
 * brave-browser  adding keyring and entry to /etc/apt/sources.list.d; updated incorrect architecture warning according to https://community.brave.com/t/solved-linux-deb-install-gives-error-when-you-apt-update-a-repository/464626
 * Starship prompt via curl  
 * GPT4ALL (allows large language models to be run locally:  https://docs.gpt4all.io/gpt4all_desktop/quickstart.html)
 * ckb-next via apt repository for control of Corsair device lighting control
-* openrgb via download .deb file
+* openrgb via download .deb file.  Trying experimental branch rather than stable.
 * element (downloading keyring and adding repo to /etc/apt/sources.list.d)
 * pycharm community edition.  Downloaded compressed file (both .gz and .tar), extracted, moved to ~/.local/ and ran installer shell script; creating .desktop file in ~/.local/share/applications
 * mtn (video thumbnailer)  Adding apt repository
@@ -121,9 +121,10 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * highlight focus  - looks ugly.  find something better.
 
 
-## Other mods
+## Other system mods
 * Mapped caps lock to escape
 * Fixed speaker crackling according to itsfoss.com/buzzing-noise-speaker-linux
 * Nerd fonts via download:  Ubuntu, Fira, Caskaydia  Installed to /usr/local/share/fonts.  Update the font cache after moving via fc-cache.
 * Changed value of XDG_MUSIC_DIR to $HOME/Documents/music so that music can be found by gnome-music
 * Including `acpi_enforce_resources=lax` into /etc/default/grub so that OpenRGB can find RAM
+* Enabling command completion in bash shell via eval command in bashrc:  https://askubuntu.com/questions/1026332/does-pip-have-autocomplete

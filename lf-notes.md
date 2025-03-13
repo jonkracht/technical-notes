@@ -15,7 +15,8 @@ Generally obeys vim-style commands
 ### Cut, copy, paste
 
 * Uses vim bindings (d, y, p)
-* To work on multiple files, select files with spacebar, navigate to destination and cut/paste
+
+* To move multiple files, select files with spacebar, navigate to destination, and cut/copy and paste (d/y then p).
 
 
 * Quit  `q`

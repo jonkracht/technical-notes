@@ -61,8 +61,13 @@ Simply delete the folder in which the environment environment files are stored. 
 
 ## Using virtual environments in a Jupyter notebook
 
+### Prerequisite
+
 Must have the IPython kernel installed
 Do so by `pip install ipykernel`
+
+
+### Instructions
 
 Activate virtual environment
 
