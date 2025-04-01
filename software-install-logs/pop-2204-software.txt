@@ -107,6 +107,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * flatseal (modify permissions of other flatpaks)
 * signal desktop client
 * blanket for ambient noise
+* gdm-settings https://github.com/gdm-settings/gdm-settings
 
 
 ## Github repos
