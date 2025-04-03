@@ -6,7 +6,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * lutris
 * kitty
 * git 
-* neovim
+* neovim (removed to get a newer version)
 * zoxide
 * signal
 * fzf
@@ -52,6 +52,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * font-manager
 * ripgrep (executable is named rg)
 * steam
+* npm (mason, a neovim plugin, requires it)
 
 
 
@@ -82,6 +83,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * fontpreview for previewing in terminal (https://github.com/sdushantha/fontpreview).  Cloning repo and then install with make
 * Collection of alacritty color themes:  git@github.com:alacritty/alacritty-theme.git
 * eza-themes
+* neovim  (version 12.0 in March 2025) https://github.com/neovim/neovim/blob/master/BUILD.md
 
 
 
@@ -102,6 +104,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * geekbench (downloaded) http://support.primatelabs.com/kb/geekbench/geekbench-6-command-line-tool
 * Epson printer driver via downloaded .deb
 * Stockfish chess engine:  Downloaded zip file with executable inside.  Placed in `~/Documents/games/chess/` but not required.
+* Language servers:  Git repos cloned to ~/repos/language-servers.  Built executables and moved to ~/.local/bin
 
 
 
