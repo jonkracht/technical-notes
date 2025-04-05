@@ -140,7 +140,12 @@ Also, harpoon.
 
 
 
+Enter netrw (vim's file manager):  `:Ex`
 
+Create new file:  %
+Create new directory:  d
+
+`:so` sources current file
 
 
 
