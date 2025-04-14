@@ -53,6 +53,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * ripgrep (executable is named rg)
 * steam
 * npm (mason, a neovim plugin, requires it)
+* pypy3  (fast Python interpreter)
 
 
 
@@ -62,6 +63,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * Shortwave (internet radio streaming)
 * Resources (system monitor GUI)
 * cavalier (music visualizer)
+* blanket (background noises)
 
 
 ## PIP
@@ -105,6 +107,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * Epson printer driver via downloaded .deb
 * Stockfish chess engine:  Downloaded zip file with executable inside.  Placed in `~/Documents/games/chess/` but not required.
 * Language servers:  Git repos cloned to ~/repos/language-servers.  Built executables and moved to ~/.local/bin
+* Lua compiler downloaded from https://www.lua.org/download.html and built from source
 
 
 
