@@ -117,7 +117,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * btop (latest-greatest bashtop update; themes located at `/usr/share/btop/themes/`)
 * bash scripts for previewing terminal colorschemes (https://github.com/stark/Color-Scripts; https://gitlab.com/dwt1/shell-color-scripts)
 * Awesome themes from https://github.com/lcpz/awesome-copycats
-* neovim (https://github.com/neovim/neovim/releases/).  Installing version 0.11.0 in April 2025.  Placing executable in /usr/local/bin/. 
+* neovim (https://github.com/neovim/neovim/releases/).  April 2025:  Building version 0.11.0 stable from source so runtime files are found.
 * lf (terminal file manager):  Installing via a pre-built binary from https://github.com/gokcehan/lf/releases?page=1 
 * Alternative kitty icon:  https://github.com/k0nserv/kitty-icon  Overwrote png files in ~/.local/kitty.app/lib/kitty/logo with new icons
 * Sweet folders  https://github.com/EliverLara/Sweet-folders.git
