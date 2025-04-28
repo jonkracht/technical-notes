@@ -37,13 +37,13 @@ REPL can be accessed from the command line via `lua`
 
 ### Strings
 
-* Strings defined by 'text' or "text" are immutable
+* Strings (defined via `var ='text'` or `var = "text"`) are immutable
 * Multiline string definition can be accomplished by double brackets [[ text ]]
 * Concatenate strings (use two periods): `STRING1 .. STRING2`
 * String length is given by hash symbol:  `print(#'Hello World') -- 11 chars`
 
 
-## if statements
+## if/elseif/else statements
 
 ``` lua
 if num > 40 then
@@ -113,11 +113,20 @@ Can pass an arbitrary number of parameters to a function using an ellipsis
 Lua's only compound data structure.  They are associative arrays.
 
 ### Definition
+
+
 `t = {key1 = 'value1', key2 = false}`
 
+Have string keys by default.
 Access values with dot notation:  `print(t.key1)`
 
-### Iteration
+
+### Modify contents
+Add new key/val pair:  `t.newKey = {}`
+Remove key from table:  `t.key2 = nil`
+
+
+### Iterating over table's key/val pairs
 ``` lua
 for key, val in pairs(u) do
   print(key, val)
@@ -127,7 +136,7 @@ end
 Difference between pairs and ipairs?
 
 
-### Used as "lists"
+### Using table as a list/array
 
 ```lua
 v = {'value1', 'value2', 1.21, 'gigawatts'}
@@ -144,13 +153,15 @@ end
 ## Metatables
 
 
+## Class-like tables
+
+
 
 ## Modules
 
-* Include contents of another file with 'require' commad
-```lua
-local mod = require('mod') -- Run the file mod.lua
-```
+Include contents of another file with 'require' command
+`local mod = require('mod') -- Run the file mod.lua`
 
 ## Miscellaneous
 * Assert command exists
+* `_G` is a special table of all globals 

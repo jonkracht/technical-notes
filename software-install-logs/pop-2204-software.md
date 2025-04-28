@@ -150,7 +150,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Ventoy for creating bootable USB's with numerous OS's on them
 * thorium browser via adding to sources.list.d (https://thorium.rocks/)
 * Updated nodejs to version 22.14.0 via Method 2 in https://itsfoss.com/upgrade-node-ubuntu/
-
+* Lua interpreter (downloaded gz, tar and used 'make' to build and install it)
 
 ## Browser plugins
 * bitwarden (password manager)
