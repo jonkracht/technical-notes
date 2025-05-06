@@ -3,7 +3,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 ## APT
 * neofetch
 * btop
-* lutris
+* lutris - removed because Ubuntu package is too old.  Using flatpak.
 * kitty
 * git 
 * neovim (removed to get a newer version)
@@ -54,7 +54,9 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * steam
 * npm (mason, a neovim plugin, requires it)
 * pypy3  (fast Python interpreter)
-
+* tree (view directory contents in a hierarchical manner)
+* mailutils (allow cyberpower scripts to send alert emails)
+* qalc (command line calculator; any advantage over python repl?)
 
 
 ## Flatpak
@@ -64,6 +66,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * Resources (system monitor GUI)
 * cavalier (music visualizer)
 * blanket (background noises)
+* lutris
 
 
 ## PIP
@@ -108,6 +111,7 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * Stockfish chess engine:  Downloaded zip file with executable inside.  Placed in `~/Documents/games/chess/` but not required.
 * Language servers:  Git repos cloned to ~/repos/language-servers.  Built executables and moved to ~/.local/bin
 * Lua compiler downloaded from https://www.lua.org/download.html and built from source
+* Cyberpower power panel command line utility for monitoring UPS and shutting down PC when battery is low (https://www.cyberpowersystems.com/product/software/power-panel-personal/powerpanel-for-linux/).  Installed pwrstat and pwrstatd (daemon) binaries.  Documentation at /usr/share/doc/powerpanel.  Some shell scripts in /etc/powerstatd*.  Log located at /var/log/pwrstatd.log
 
 
 
@@ -127,6 +131,8 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * highlight focus  - looks ugly.  find something better.
 
 
+
+
 ## Other system mods
 * Mapped caps lock to escape
 * Fixed speaker crackling according to itsfoss.com/buzzing-noise-speaker-linux
@@ -134,3 +140,4 @@ Installed Ubuntu 24.04 on newly-built Fractal system in May 2024
 * Changed value of XDG_MUSIC_DIR to $HOME/Documents/music so that music can be found by gnome-music
 * Including `acpi_enforce_resources=lax` into /etc/default/grub so that OpenRGB can find RAM
 * Enabling command completion in bash shell via eval command in bashrc:  https://askubuntu.com/questions/1026332/does-pip-have-autocomplete
+* Set DNS server.  Settings -> WIFI/Network.  Turn off automatic toggle for DNS field.  Trying Cloudflare services:  https://blog.cloudflare.com/dns-resolver-1-1-1-1/.  

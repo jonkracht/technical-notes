@@ -1,6 +1,8 @@
 # lf terminal file manager
 
-Generally obeys vim-style commands
+Documentation:
+`lf -doc`
+
 
 ## Config
 
@@ -38,6 +40,7 @@ Generally obeys vim-style commands
 * `u` unselects file
 * `v` inverts which files are selected in directory
 * Selected files are stored in `~/.local/share/lf/[tags,history,files]`
+* `clear` empties copy/cut buffer; mapped to `c` by default 
 
 
 ## Misc
