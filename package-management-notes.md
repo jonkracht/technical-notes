@@ -4,7 +4,8 @@
 ## Background
 
 Ways to install software include:
-* .deb files
+* .deb files (Debian-based distributions)
+* .rpm (Red Hat derived distributions)
 * ppa (personal package archive)
 * snaps
 * flatpak
@@ -23,6 +24,8 @@ Using apt:  Navigate in filesystem to location of .deb and
 `sudo apt install ./filename.deb`
 
 
+
+## .rpm packages
 
 
 ## snap packages

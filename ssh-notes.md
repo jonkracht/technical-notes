@@ -4,14 +4,25 @@
 
 Private/public pairs
 
-Types:  ed25519 (stronger), rsa
+Types  
+* ed25519 (stronger)
+* rsa
 
 
 ## Generating ssh keys
-ssh-keygen
+`ssh-keygen`
+
+Permissions
+(tecmint.com/set-ssh-directory-permissions-in-linux
+
+* Read, write, and execute for the user and not accessbile for user and group (700)
+* Set via: `chmod u+rwx, go-rwx ~/.ssh` or `chmod 0700 ~/.ssh`
 
 
 ## Add to ssh-agent
+
+`ssh-add /path/to/private/key`
+
 Also, ensure ssh-agent is autostarted by installation
 
 
