@@ -108,8 +108,8 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * flatseal (modify permissions of other flatpaks)
 * signal desktop client
 * blanket for ambient noise
-* gdm-settings https://github.com/gdm-settings/gdm-settings
-
+* gdm-settings https://github.com/gdm-settings/gdm-settings 
+* resources:  view/manage system resources (ex. cpu, gpu, mem)
 
 ## Github repos
 * EasyEffects-Presets (sensible presets for equalization, reverb, etc:  https://github.com/JackHack96/EasyEffects-Presets )
