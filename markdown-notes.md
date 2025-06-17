@@ -23,7 +23,8 @@ Use #'s.  Additional # decreases heading importance.
 ## Lists
 
 ### Ordered list
-Use numbers, starting at 1, followed by a period:
+Use numbers, starting at 1, followed by a period
+
 ```
 1.  Text
 2.  More text
@@ -32,7 +33,7 @@ Use numbers, starting at 1, followed by a period:
 
 
 ### Unordered list
-Use hyphen, minus sign or plus sign for entries  (but don't mix)
+Use either hyphen, minus sign or plus sign for entries (without mixing)
 
 ``
 * First item
@@ -40,6 +41,7 @@ Use hyphen, minus sign or plus sign for entries  (but don't mix)
 ``
 
 ### Checkboxes
+
 ```
 - [] Item 1
 - [] Item 2
@@ -58,17 +60,16 @@ End line with two spaces or <br/>
 ## Code segments
 
 ### Inline
-Surround with backticks "\`"
-
-Ex. `sudo apt update` updates your repo lists
+Surround with backticks  (eg. `sudo apt update`)
 
 ### Fenced block
+
 ```[LANG] 
 SOME CODE
 MORE CODE
 ```
 
-where [LANG] provides syntax highlighting and can be Python, C, HTML, vim etc.
+where [LANG] is language of block (Python, C, HTML, etc) and may allow syntax highlighting
 
 
 
@@ -78,6 +79,8 @@ Link text in brackets and URL in parentheses.
 
 `[link text](www.link.url)`
 
+Some example of other link formats:
+https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?123
 
 
 
@@ -86,7 +89,7 @@ Link text in brackets and URL in parentheses.
 ### Local file
 ![image-name](/path/to/image/)
 
-### External file
+### Remote file
 ![image-name](https://www.domain.sthing/path/to/image.png)
 
 ### HTML-style syntax is also valid
@@ -161,7 +164,9 @@ abstract: |
 
 
 ## Math notation
-Use LaTex syntax with double dollar sign before and after code segment
+Use LaTex syntax with dollar signs surrounding block.
+
+Ex.  Euler's equation is $e^{i \pi} = -1$.
 
 
 ## Footnotes
