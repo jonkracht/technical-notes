@@ -1,7 +1,7 @@
 # Git
 
 * Distributed version control system for software projects
-* Created by Linus Torvalds
+* Created by Linus Torvalds and first released in 2005
 * Some common web servers for hosting git projects are Github, Gitlab, and Bitbucket.
 
 
@@ -11,12 +11,12 @@
 Check configuration of git. Information is stored in ./.gitconfig:
 `git config --list`
 
-Configuration can be set at three levels:  system-wide, global (meaning user specific), and local/repository.
+Configuration can be set at three scopes:  system-wide, global (meaning user specific), and local/repository.
 
 `git config --list --show-scope` shows config parameters and from which level they are set.
 
 
-Repo settings (origin, location, etc.) are stored in  ./.git/config
+Repo settings (origin, location, etc.) are stored in `.git/config`
 
 
 ## Authentication
@@ -32,71 +32,46 @@ Repo settings (origin, location, etc.) are stored in  ./.git/config
 
 ## Basics
 
-`git init`
-Initialize git tracking in a repository
+Initialize git tracking in a repository:  `git init`
 
-`git status`	
-Check for status of files in a repository
+Check status of files in a repository:  `git status`	
 
-`git add {file1} {file2}`	
-Adds files to those to be tracked
+Include files to be tracked in repository:  `git add {file1} {file2}`	
 
-`git add {file1} {file2}`
-Add changes in specified to files to staging area
+Add changes in specific files to staging area:  `git add {file1} {file2}`
 
-`git add .`		
-Add all changes into staging area
+Add all changes into staging area:  `git add .`		
 
+Remove a modified file from staging area: `git restore --staged {file}` 
 
-`git commit -m “Message”`	
-Adds staged changes to history and described by a short message
+Adds staged changes to commit described by a short description:  `git commit -m “Commit message here”`	
 
-## Undo a commit
+Revert to most recent commit:  `git reset HEAD~1`
 
-Revert to most recent commit
-`git reset HEAD~1`
+Rever to a previous commit definied by a commit hash:  `git checkout {COMMIT_HASH}` or `git revert {COMMIT_HASH}`
 
+(A commit hash is generally a long string of alphanumeric characters.)
 
-Go to a previous point in the code’s development defined by hash
-`git checkout {COMMIT_HASH}` or `git revert {COMMIT_HASH}`
-
-where a commit hash is generally a long string of alphanumeric characters
-`git log`		
-
-
-
-View history of commits
+View history of commits:  `git log`		
 
 `git diff <branch-name>`
 shows changes in the code
 
 
 
-
-
 ## Branches
 
+Display current branch:  `git branch`
 
-Display current branch
-`git branch`				
+Create new branch:  `git branch -b {branch-name}`
 
-Create new branch
-`git branch -b {branch-name}`
+Delete a branch:  `git branch -d {branch-name}`
 
-Delete a branch
-`git branch -d {branch-name}`
-
-Move to different branch
-`git checkout <branch-name>`		
+Move to different branch:  `git checkout <branch-name>`		
 
 
 
-
-
-
-
-
-## Connect local repository to Github or other remote destination:
+## Connect local repository to remote location such as Github 
 
 ### Github  
 https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
@@ -107,7 +82,11 @@ Summary:
 * Set location where local repository will be pushed:  `git remote add origin {REMOTE-URL}`
 * Push changes to remote via `git push origin main`
 
-
+Alternatively:
+* Create new repo on Github
+* Clone locally
+* Add files to be included in repo
+* Push back to Github
 
 
 
@@ -117,13 +96,13 @@ Integrate a branch's changes into another branch
 `git merge <branch_name>`
 
 
-## Forking
+## Fork
 Create a local copy of some other repository
 
 
 
 ## Push 
-Send code out often to a remote repository
+Send code to a remote repository
 
 `git push --set-upstream origin <BRANCH-NAME>`
 
@@ -136,6 +115,9 @@ Update local repository from some remote counterpart
 
 Good description:  https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640
 
+
+
+Methods to handle merge conflicts between local and remote versions of the repository.
 
 ### Fast-forwarding
 
@@ -153,33 +135,36 @@ Request remote branch to download code from you.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Remove git tracking
-Navigate to repo and delete .git directory via `rm -rf .git`
+Delete .git folder:  `rm -rf .git`
 
 
 
-## Download a copy of a repository
-git clone https://some.url.com
-or
-via ssh
+## Clone a remote repository
 
-Note: To use ssh key rather than password validation, clone using SSH rather than HTTPS
-Ex.  git clone  git@github.com:[USER_NAME]/[REPO_NAME].git
+Via https:  `git clone {URL}`
+
+Via ssh:  `git clone  git@github.com:[USER_NAME]/[REPO_NAME].git`
+Must have ssh key recognized by the remote repo.
+
+To use ssh key rather than password validation, clone using SSH method.
 
 
 
-## Ignore files
+## Miscellanehous
 
-Create a file named ".gitignore" in the repo and list file names to ignore
 
+
+### Ignore files
+
+Files listed in the .gitignore are explicitly not tracked by the repository.
+
+
+### Search commit history
+
+Show all commits:  `git log`
+
+Search for string in all tracked files:  `git log --patch  | less +/searching_string`
+
+Find commit that deleted a file:  `git rev-list -n 1 HEAD -- file_path`
+Use git show {COMMIT_HASH} to view commit.
