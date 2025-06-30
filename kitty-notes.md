@@ -3,7 +3,10 @@
 
 ## Config
 
-### Example
+To bring up config file in new window `kitty_mod + F2`
+To reload config after changes are made  `kitty_mod + F5`
+
+### Example config
 Was located at `/usr/share/doc/kitty/examples/kitty.conf`
 Moved to `~/.local/kitty.app/share/doc/kitty/..`
 
@@ -78,10 +81,10 @@ See environment variables:  CTRL + ALT + a
 
 
 Change transparency during session:
-Requires `dynamic_background_opacity` be set to 'yes' (some performance loss, apparently)
-kitty_mod + a then m increases opacity by 0.1
-kitty_mod + a then l decreases opacity by 0.1
-kitty_mod + a then 1 sets to completely opaque
+Requires `dynamic_background_opacity` be set to 'yes' in config (some performance loss, apparently)
+kitty_mod + a then m        increases opacity by 0.1
+kitty_mod + a then l        decreases opacity by 0.1
+kitty_mod + a then 1        sets to completely opaque
 
 
 
@@ -89,20 +92,26 @@ See effective config with `debug_config` or `CTRL + SHIFT + F6`
 Reload config `CTRL + SHIFT + F5`
 
 
+Open kitty shell        kitty_mod + ESC
 
+Insert a unicode character (ex. symbol or emoji)        kitty_mod + u
 
 
 ## Theming
 
-### Define coloring manually
-Provide hex code for colors, background, foreground, etc
+### Included themes
+Enter into a kitty shell via `kitty_mod + ESC`
+Type `kitten themes` to view list
 
-### Custom themes 
-Use theme from `https://github.com/dexpota/kitty-themes` and add `include [/PATH/TO/CONFIG]` to config file
+###  `https://github.com/dexpota/kitty-themes`
+Add `include [/PATH/TO/CONFIG]` to config file
+Imports a bunch (background, foreground, color0, color1, etc.) of hex color variables
 
 ### Theme preview
 `kitty @ set-colors -a "[/PATH/TO/CONFIG]"`
 
+### Define coloring manually
+Provide hex code for colors, background, foreground, etc
 
 
 ### Font
@@ -122,7 +131,9 @@ Some available fonts as of 10/2022:
 
 Adding a new icon via instructions at https://github.com/k0nserv/kitty-icon
 Edited kitty.desktop to use 128 pixel icon for launcher and dock
+.desktop file may be in `/usr/share/applications/` or `~/.local/[AP_NAME]/share/applications/` depending how/where software was installed
 
+Alternatively, can place an image named kitty.app.png in the config directory.  Some chance system detects and sets this icon properly.
 
 
 
@@ -147,9 +158,8 @@ Hides title-bar and window borders.  Interaction with awesomewm
 ## Questions
 
 * Difference between `window_margin_width` and  `window_padding_width`?
-* Foreground/background colors: what are these?
 
 
 
 ## TODO
-*
+*  Is it possible to input a command (such as next_layout) without using a hotkey (perhaps like vim)?
