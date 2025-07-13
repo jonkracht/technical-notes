@@ -9,7 +9,7 @@ Documentation:
 ### Theming
 * Colors and icon set are set in ~/.config/lf/{icon,colors}
 * Alternatively, lf inherits environment variable `LS_COLORS`
-* vivid tool is used to create color themes
+* `vivid` creates and export color themes
 
 
 ## Commands

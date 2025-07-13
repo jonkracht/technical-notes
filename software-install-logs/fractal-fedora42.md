@@ -1,25 +1,18 @@
 ## TODO
-* openrgb packages
-* npm
-* xdotool, nsxiv (dependencies for fontpreviewer)
+* openrgb packages  (must add acpi_enforce_resources=lax to /etc/default/grub)
 * adwaita-qt (for theming QT apps in an Adwaita-like way)
-* pypy3
-* cookie cutter (data science)
-* yazi
 * projectM visualizer
-* GPT4all
 * ckb-next
-* pycharm
-* stockfish
-* lua compiler
-
+* element (messenger)
+* DNS server
+* cyberpower utility
 
 
 
 
 
 ## DNF
-* tldr	
+* tldr
 * kitty
 * neovim
 * zoxide
@@ -31,7 +24,7 @@
 * lutris
 * hyprland
 * vlc
-* zathura
+* zathura, zathura-plugins-all (especially need pdf-poppler for pdf viewing)
 * pandoc
 * texmaker
 * gimp
@@ -43,23 +36,32 @@
 * nodejs
 * pipx
 * fastfetch (no-longer developed neofetch replacement)
-* gnome-music
+* gnome-music (laggy and uses ~7GB RAM with current music library)
 * gnome-pomodoro (time management utility)
 * pychess  (front-end for chess engines)
 * hwinfo (hardware information tool)
 * bat (modernized cat command)
 * alacritty
-* steam
+* steam  (desktop launcher fails https://www.reddit.com/r/Fedora/comments/1kk0gak/psa_steam_crashing_loop_fix/ ; unsetting DRI_PRIME env variable)
 * python3-ipykernel (interactive python kernel for jupyter)
 * Requirements of jupyter-nbconvert to pdf:  texlive-collection-fontsrecommended, texlive-collection-latexextra
 * ffmpegthumbnailer (used to create video preview in lf)
-
+* fontawesome-fonts-all (icons for latex documents)
+* xdotool
+* transmission (torrenting client)
+* rhythmbox-alternative-toolbar (compact toolbar that allows theming)
+* speedtest-cli
+* inxi (system information tool)
+* waybar
 
 
 
 ## Copr
 * lf  (via `dnf copr enable pennbauman/ports;  dnf install lf`)
 * mtn (video previewer for lf https://copr.fedorainfracloud.org/coprs/wahibre/mtn)
+* yazi (terminal file manager) via lihaohong/yazi 
+* cosmic desktop environment (https://github.com/pop-os/cosmic-epoch)
+* solopasha/hyprland (https://copr.fedorainfracloud.org/coprs/solopasha/hyprland) for utilities (hyprpaper) not yet packaged by Fedora
 
 
 
@@ -76,8 +78,8 @@
 * Cavalier (music visualizer)
 * Blanket (ambient sound player)
 * gdm-settings (customize gdm)
-
-
+* gpt4all
+* quadrapassel
 
 ## Pip
 * jupyterlab (https://shape.host/resources/step-by-step-guide-on-installing-jupyterlab-on-fedora-39)
@@ -87,6 +89,11 @@
 
 ## Pipx
 * virtualenv
+* cookiecutter  (project templates https://github.com/cookiecutter/cookiecutter)
+* cookiecutter-data-science (comes with `ccds` binary to setup new data science project)
+
+
+
 
 ## Cargo
 * vivid (generator for LS_COLORS env variable; used by ls, tree, etc)
@@ -105,11 +112,15 @@
 * Alternative kitty icon (https://github.com/k0nserv/kitty-icon; Icon field of /usr/share/applications/kitty.desktop changed to path of desired icon)
 
 
-
 ## Other installation methods
 * brave-browser  (via `dnf config-manager addrepo ...` command)
 * nerd fonts (nerdfonts.com/font-downloads; extracted to `/usr/share/fonts/`)
 * signal (using `config-manager add repo ...` method from https://software.opensuse.org/download.html?project=network:im:signal&package=signal-desktop)
+* Pycharm:  Downloaded compressed files abd extracted to /usr/local/share/.  Soft linked executable to /usr/local/bin/.  Created launcher via Tools -> Create Desktop Entry within PyCharm.
+* lua compiler:  Via build instructions https://www.lua.org/download.html.  Extracted files moved to /usr/local/share/.  Binary soft-linked to /usr/local/bin/
+* pypy3 (faster implementation of python):  https://pypy.org/download.html
+* geekbench6 (PC benchmarking tool):  Downloaded executabl
+
 
 
 
@@ -134,7 +145,8 @@
 
 ## System mods
 * Add ssh key to agent via `ssh-add`
-
+* Change location of XDG_MUSIC_DIR in ~/.config/user-dirs.dirs to ~/Documents/Music
+* Disabling audio power save via https://itsfoss.com/buzzing-noise-speaker-linux/
 
 
 ## Already installed (perhaps by distro or as a dependency for something else)
@@ -143,4 +155,5 @@
 * tree
 * gnome-maps
 * ffmpeg
-
+* npm
+* stockfish (chess engine) 
