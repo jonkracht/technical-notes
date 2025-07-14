@@ -1,12 +1,10 @@
-#pop-software
+# Software installed on Pop!_OS 22.04 on ASUS laptop
 
-List of software and system mods in a Pop.OS 22.04 system.  
-Entries in each category are in roughly chronological order.
+Entries in each category are roughly in chronological order.
 
 
 
 ## apt
-
 * nvim (jan 2023: removing and installing from source on github)
 * kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install  `curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
 * exa (ls upgrade)
@@ -84,8 +82,15 @@ Entries in each category are in roughly chronological order.
 * thunar file manager (to allow theme standardization unlike nautilus)
 * cava music visualizer
 * tree (file directory tree)
+* systemd-container (to get machinectl command required for gdm-settings)
+
+
 
 ## Apt repository
+
+
+
+
 
 
 ## PPA
@@ -111,6 +116,11 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * gdm-settings https://github.com/gdm-settings/gdm-settings 
 * resources:  view/manage system resources (ex. cpu, gpu, mem)
 
+
+
+
+
+
 ## Github repos
 * EasyEffects-Presets (sensible presets for equalization, reverb, etc:  https://github.com/JackHack96/EasyEffects-Presets )
 * lain (widgets for awesome; `git clone https://github.com/lcpz/lain.git ~/.config/awesome/lain`)
@@ -132,25 +142,32 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 
 ## Python packages via pip
 * jupyterlab
-* yfinance pulling stock data
-* nbterm interact with jupyter from the terminal
-* unoserver convert documents such as LibreOffice
+* yfinance (pulling stock data)
+* nbterm (interact with jupyter from the terminal)
+* unoserver (document type conversion such as LibreOffice)
+
+
+
+
 
 
 ## Other means
-
 * jetbrains toolbox and pycharm (proprietary software so not in repos; installed to /opt; executable below ~/.local/share/Jetbrains/... ; creating symlink in /usr/bin to allow dmenu to find and run it; later removing since it seems no longer necessary)
 * zoom via downloaded .deb file
 * Microsoft core fonts via deb package: https://github.com/pop-os/pop/issues/1321
 * Installed JetBrainsMono font via downloaded zip and manually moving files to `/usr/share/fonts/jetbrainsmono/`
-* Swift as a tarball; needed to some finagling to get it run error-free https://github.com/llvm/llvm-project/issues/55575
-* Starship terminal prompt; install via curl-ed installer
-* zoom via downloaded .deb file
-* openrgb .deb file
-* Ventoy for creating bootable USB's with numerous OS's on them
+* Swift via tarball; needed some finagling to get it run error-free https://github.com/llvm/llvm-project/issues/55575
+* Starship terminal prompt:  via curl installer
+* zoom (.deb)
+* openrgb (.deb)
+* Ventoy for creating bootable USB's with multiple OS's on them
 * thorium browser via adding to sources.list.d (https://thorium.rocks/)
 * Updated nodejs to version 22.14.0 via Method 2 in https://itsfoss.com/upgrade-node-ubuntu/
 * Lua interpreter (downloaded gz, tar and used 'make' to build and install it)
+
+
+
+
 
 ## Browser plugins
 * bitwarden (password manager)
@@ -159,8 +176,11 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Great Suspender (halts inactive browser tabs to conserve system resources).  As of Sep 2023, deemed to be adware...  Brave removed automatically from browser extensions.
 * Chromium webstore extension to allow anonymous shopping (https://github.com/NeverDecaf/chromium-web-store)
 * Bypass paywalls (for select websites)  https://github.com/iamadamdev/bypass-paywalls-chrome
-# vimium to allow vim-style navigation of web pages
-# Cookie Remover for paywall bypass
+* vimium to allow vim-style navigation of web pages
+* Cookie Remover for paywall bypass
+
+
+
 
 
 ## System mods
@@ -172,16 +192,14 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * Modified /etc/gtk-3.0/settings.ini to use Adwaita-dark theming for gtk software
 * Creating `my-env-vars` file in `/etc/profile.d` containing environment variables to ease standardizing of theming across various self-configured software
 * Adding user to 'dialout' group to facilitate minicom use
-* Replacing github ssh key as per instructions at  https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/
+* Replacing github ssh key as per https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/
 * Installing candy icon set https://github.com/EliverLara/candy-icons
 * Attempting to open port 53317 to allow LocalSend to behave properly.  Trying `ufw allow 53317`
-
+* Fixed incorrect xdg-open behavior:  determined current default program via `xdg-mime query default <mime-type>` and set to desired behavior `xdg-mime default <application> <mime-type>` 
 
 
 
 ## Gnome extensions
 Improved workspace indicator (icon displaying current workspace number)
-
-
 
 
