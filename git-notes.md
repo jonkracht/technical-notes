@@ -159,6 +159,9 @@ To use ssh key rather than password validation, clone using SSH method.
 
 Files listed in the .gitignore are explicitly not tracked by the repository.
 
+Because git does not track empty directories, a placeholder file called .gitkeep is inserted.
+
+
 
 ### Search commit history
 

@@ -43,9 +43,9 @@ Use either hyphen, minus sign or plus sign for entries (without mixing)
 ### Checkboxes
 
 ```
-- [] Item 1
-- [] Item 2
-- [] Item 3
+- [ ] Item 1
+- [x] Item 2
+- [x] Item 3
 ```
 
 

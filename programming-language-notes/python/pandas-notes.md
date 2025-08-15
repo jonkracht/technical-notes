@@ -48,10 +48,12 @@ Merging:
 | Display column/feature names          | `df.columns`                                                       |
 | Print first `N` rows (default is 5)   | `df.head([N])`                                                     |
 | Print last `N` rows (default is 5)    | `df.tail([N])`                                                     |
-| Display summary of the dataframe      | `df.info`,  `df.describe`                                          |
-| Display dimensions                    | `df.shape`                                                         |
+| Display random sample of rows         | `df.sample(10)`
+| Display summary of the dataframe      | `df.info()`,  `df.describe()`                                      |
+| Display dataframe's dimensions        | `df.shape`                                                         |
 | Get row names                         | `df.index`                                                         |
-| Get unique values in a column         | `df[[COL]].nunique()`                                              |
+| Unique values in a column             | `df['COL'].unique()`                                              |
+| Number of unique values in a column   | `df['COL'].nunique()`
 | Show frequency counts of two features | `pd.crosstab(df['[COL_1]'], df['[COL_2]'], values=[], aggfunc=[])` |
 
 
@@ -65,7 +67,6 @@ Merging:
 | Manually set value(s) by label | `df.at[[ROW], [COL]] = [VALUE]` |
 | Manually set value(s) by position | `df.iat[[ROW_IDX], [COL_IDX]] = [VALUE]`|
 | Change column variable type (ex. from integer to Boolean) |  `df[[COLUMN]] = df[COLUMN].astype([VARIABLE_TYPE])` |
-| Sort dataframe by the values of one of more columns | `df.sort_values(by=[[COL1],[COL2],...], ascending=[[T/F],[T/F],...])`|
 | Transpose dataframe (i.e. swap rows and columns) | `df.T` |
 | Various mathematical functions |`df.add()`, `df.sub()`, `df.div()`, `df.mul()` |
 | Apply function `FUNCT` to elements of column `COL` | `df[[COL]].apply([FUNCT])` |
@@ -73,6 +74,7 @@ Merging:
 | Transform row/column using key/value pairs of a dictionary|  `df[[COL]].map([DICT])`|
 | Add a column| `df.insert(['[NEW_COL]'])` |
 | Remove column(s) |  `df.drop([[COL1], [COL2],...], axis=1, inplace=True)`|
+| Select of subset of the dataframe's columns | `df[['COL1', 'COL2', 'COL3', ...]]` 
 | Remove row | `df.drop([[ROW_IDX], [COL_IDX])` |
 | Make a numpy array representation of the dataframe (all values must be of the same type) | `df.to_numpy()` |
 
@@ -80,18 +82,26 @@ Merging:
 ## Missing values
 | Description | Code |
 |---|---|
+| Return a Boolean mask indicating if value is `na` | `df[['COL1', 'COL2', ...]].isna()`|
+| Count number of missing values in each column | `df[['COL1', 'COL2', ...]].isna().sum()` |
 | Drop any rows with missing values | `df.dropna(how="any")`|
 | Fill missing values with `[VAL]`| `df.fillna(value=[VAL])` |
-| Return a Boolean mask indicating if value is `na` | `pd.isna(df)`|
+
+
+
+
+
 
 ## Selection
 |Desription|Code|
 |---|---|
 | Select a single column (yields a series) | `df[[COL]]`|
-| Select portion of dataframe using column names | `df.loc[[FIRST_ROW]:[LAST_ROW], [COL1], [COL2]]` |
-| Select portion of datrame using row, column indices | `df.iloc[[FIRST_ROW]:[LAST_ROW], [COL1_IDX], [COL2_IDX]]`  |
-| Get value at specified row, column|  `d.loc[[ROW], [COL]]`|
+| Select portion of dataframe using names | `df.loc[[FIRST_ROW]:[LAST_ROW], [COL1], [COL2]]` |
+| Select portion of datrame using indices | `df.iloc[[FIRST_ROW]:[LAST_ROW], [COL1_IDX], [COL2_IDX]]`  |
+| Select only columns of a certain datatype | `df.select_dtypes('int')`|
+| Get value at specified row, column|  `df.loc[[ROW], [COL]]`|
 | Create sub-dataframes whose members have identical feature(s) value | `df.groupby(['[COL1]', '[COL2]', ...])`|
+| Group rows by COL1's value and perform computation on COL2 | `df.groupby('COL1')['COL2].agg()`
 | Create a series whose elements are `[COL2]` values only where `[COL1] == [VAL]` | `df.loc[df[[COL1]] == [VAL], [COL2]]` |
 | Select rows of dataframe that meet one or more criteria (==, <, >, etc.) | `df[df[[COL1]] == [VAL1] && df[[COL2]] > [VAL2] && ...]`|
 | Select rows whose feature value is one of a desired set | `df[df[[COL].isin([VALUE_LIST])]]`|
@@ -104,10 +114,9 @@ In general, operations exclude missing values.
 
 |Description |Code  |
 |--- | --- |
-| Compute mean of a numerical column | `df['[COL]'].mean()`|
-| Compute numerical mean of all rows | `df.mean(1)`|
+| Compute statistical measure | `df['[COL]'].FUN()` when FUN can be mean, min, max, std, var, count, sum|
 | Compute instances of values in column `[COL]`  | `df['[COL]'].value_counts(normalize=[TRUE/FALSE])`  |
-| Compute metrics of all or some subset |  `df.agg([np.mean, np.std, np.min, np.max, ...])`|
+| Compute metrics of all or some subset |  `df.agg([mean, min, ...])`; can also use numpy functions|
 
 
 
@@ -123,9 +132,27 @@ In general, operations exclude missing values.
 |--- | --- |
 | Set number of decimal places displayed in output | `df.to_csv('pd.set('display.precision', [N_DEC_POINTS])')`|
 | Set backend for rendering images | `%config InlineBackend.figure_format = 'svg' (or 'png', etc)`|
+| Increase number of rows/columns displayed | `pd.set_option('display.max_columns', 500)`
+| Sort dataframe by the values of one of more columns | `df.sort_values(by=[[COL1],[COL2],...], ascending=[[T/F],[T/F],...])`|
 
 
-##sdfa Other methods
-* `query`
-* `pivot_table`
-* `melt`
+
+
+
+## Other methods
+
+### query
+
+`df.query('(COL1 > 10) and (COL2 == "monkey")')`
+
+
+### pivot_table
+
+### melt
+
+
+## References
+
+### Rob Mulla YT
+
+Parquet file type

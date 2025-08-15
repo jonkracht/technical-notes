@@ -53,6 +53,10 @@
 * speedtest-cli
 * inxi (system information tool)
 * waybar
+* dmenu
+* flameshot (screenshot utility)
+* dunst (notification daemon for hyprland)
+* rocm-smi (dependency for btop to show gpu info)
 
 
 
@@ -99,7 +103,7 @@
 * vivid (generator for LS_COLORS env variable; used by ls, tree, etc)
 * Starship prompt
 * eza
-
+* hyprsome (workspace configuration in hyprland)
 
 
 
@@ -110,6 +114,7 @@
 * JK's kickstarter.nvim  (symlinked folder to ~/.config/nvim)
 * keyd (key remapping especially for Wayland.  built from source.  daemon runs via systemctl.  creating config in dotfiles repo and sim-linking to /etc/keyd/default.conf)
 * Alternative kitty icon (https://github.com/k0nserv/kitty-icon; Icon field of /usr/share/applications/kitty.desktop changed to path of desired icon)
+* hyprshot (screenshot utility for hyprland) executable linked to /usr/local/bin
 
 
 ## Other installation methods
@@ -147,6 +152,7 @@
 * Add ssh key to agent via `ssh-add`
 * Change location of XDG_MUSIC_DIR in ~/.config/user-dirs.dirs to ~/Documents/Music
 * Disabling audio power save via https://itsfoss.com/buzzing-noise-speaker-linux/
+* Forcing brave to use wayland rather than xwayland via brave://flags/#ozone-platform-hint
 
 
 ## Already installed (perhaps by distro or as a dependency for something else)
