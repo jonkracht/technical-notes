@@ -56,3 +56,8 @@ ESC and CTRL + [ behave similarly; the same is true on YT unfortunately in that 
 
 Create a custom mapping of CTRL + ] to remove conflict
 https://github.com/philc/vimium/issues/2963
+
+
+
+## Unmap a vimium default keymap
+`unmap {CHAR}`
