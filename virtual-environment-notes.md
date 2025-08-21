@@ -54,6 +54,21 @@ Simply delete the folder in which the environment environment files are stored. 
 
 
 
+## virtualenvwrapper
+https://virtualenvwrapper.readthedocs.io/en/latest/
+
+Shell script with commands in `/usr/bin/virtualenvwrapper.sh`
+
+
+
+List available venv:  `workon`
+
+Virtual environments and hooks stored in `~/.virtualenvs/`
+
+Activate venv:  `workon [NAME]`
+
+
+
 ## pyenv
 
 ## venv
@@ -72,7 +87,8 @@ Do so by `pip install ipykernel`
 Activate virtual environment
 
 
-Add virtual environment to IPython
+
+Add virtual environment to IPython - ipykernel must be installed in venv
 `python -m ipykernel install --user --name=[ENV_NAME]`
 
 
