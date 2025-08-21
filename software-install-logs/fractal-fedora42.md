@@ -57,7 +57,9 @@
 * flameshot (screenshot utility)
 * dunst (notification daemon for hyprland)
 * rocm-smi (dependency for btop to show gpu info)
-
+* xev (keyboard event detection utility)
+* python3-virtualenvwrapper (for ccds virtual env management)
+* hyprlock, hyperidle (hyprland screen lock on timeout)
 
 
 ## Copr
@@ -125,7 +127,7 @@
 * lua compiler:  Via build instructions https://www.lua.org/download.html.  Extracted files moved to /usr/local/share/.  Binary soft-linked to /usr/local/bin/
 * pypy3 (faster implementation of python):  https://pypy.org/download.html
 * geekbench6 (PC benchmarking tool):  Downloaded executabl
-
+* Bash scripts to increment/decrement workspaces in hyprland https://github.com/sopa0/hyprsome/issues/14  installed to /usr/local/bin/
 
 
 
