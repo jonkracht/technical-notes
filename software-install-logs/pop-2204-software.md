@@ -83,6 +83,7 @@ Entries in each category are roughly in chronological order.
 * cava music visualizer
 * tree (file directory tree)
 * systemd-container (to get machinectl command required for gdm-settings)
+* virtualenvwrapper
 
 
 
