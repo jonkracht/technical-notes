@@ -11,6 +11,8 @@ Install user-created modules into current python:
 ### cookiecutter-data-science
 https://cookiecutter-data-science.drivendata.org/
 
+### Mistake
+When choosing virutalenv to manage environments, default Makefile has an error in the 'create_environment' method.  In the 'mkvirtualenv' flags, should say '--python=$(PYTHON_VERSION)' not PYTHON_INTERPRETER
 
 Opinions:
 * Raw data is immutable so shouldn't need to be under source control
