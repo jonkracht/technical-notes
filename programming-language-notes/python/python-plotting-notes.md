@@ -10,7 +10,10 @@
 ### Matplotlib  
 `import matplotlib.pyplot as plt`
 
+#### Styling
 Set plot style:  `plt.style.use('bmh')`
+
+Use Latex rendering:  `plt.rcParams['text.usetex'] = True;  plt.rcParams['font.family'] = 'serif'`
 
 
 ### Seaborn  
