@@ -11,7 +11,7 @@ For ease, generally performed within a Jupyter environment.
 * seaborn
 
 ### Useful settings
-* `plt.style.use('ggplot')` uses style sheet for plots
+* `plt.style.use('ggplot')` uses 'ggplot' style sheet for plots; others available
 * `pd.set_option('max_columns', 200)` sets number of columns pandas prints to screen
 * `%matplotlib inline` display plots inline (i.e. in notebook) rather than opening new window; newer environments like jupyter or modern IDE's do this by default but still a good idea to include for backward compatibility; alternatively, `%matplotlib notebook` allows interactivity (zooming, panning, data inspection) with the plot
 
@@ -103,9 +103,9 @@ Remove identified duplicates:
 ### Univariate analysis
 
 * Value counts (counts instances of each value in a column):  `df['COL'].value_counts()`
-* Plot value count:  `ax = df['COL'].value_counts.head(10).plot(kind='bar', title = "TITLE")`
+* Plot value count:  `ax = df['COL'].value_counts.plot(kind='bar', title = "TITLE")`
 * Plot histogram:  `ax = df['COL'].plot(kind='hist', bins=20, title = "TITLE")`
-* Kernel density estimation:  `kind=kde`
+* Kernel density estimation (continuous estimate of distribution):  `kind=kde`
 
 
 ### Feature relationships

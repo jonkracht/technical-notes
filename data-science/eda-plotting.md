@@ -56,22 +56,23 @@ Examine the characteristics of each feature/variable/column independently
 
 Either discrete or continuous representations of value distributions.  May provide insight into underlying distribution(s) (type, skewness, etc.).
 
-* pandas hist method:  `df[[COL1],...].hist()`  Setting bin centers and widths is annoying  
+* pandas hist method:  `df[[COL1],...].hist()`  (Setting bin centers and widths can be annoying) 
 
 * pandas plot method with kind set to 'density':  `df[[COL1],...].plot(kind='density', subplots=True)`  
 
-* seaborn distplot; identical to `histplot`):  `sns.displot(data=[DATA_FRAME], x=[COL_OF_INTEREST])`  
+* seaborn displot or histplot:  `sns.displot(data=[DATA_FRAME], x=[COL_OF_INTEREST])`  
     * flags: binwidth, bins (either number of or a list of bin breaks), discrete, stat="density", probability (normalize histogram)  
     * kind = "kde"; flags:  bw_adjust= [Value] controls how wide a bin the density plots averages over; hue, multiple="stack", cut flag specifies how far curve should be computer outside range of data  
     * Histogram + kde density:  `sns.displot(data=[df], x='[COL1]', kde=True)`  
 
-* Subplot of histograms:  `df[features].plot(kind="density", subplots=True, layout=(1, 2), sharex=False, figsize=(10, 4))`
+* Subplot histograms:  `df[features].plot(kind="density", subplots=True, layout=(1, 2), sharex=False, figsize=(10, 4))`
+
 
 
 #### Boxplot
 Shows median, interquartile range and outliers
 
-* `df[].plot(kind='box')`
+* `df[COL].plot(kind='box')`
 * `sns.boxplot(data=[df], x='[COL1]')`
 
 
@@ -82,13 +83,10 @@ Shows median, interquartile range and outliers
 
 
 
-
-
-
-
 ### Categorical and binary features
 
-(Binary variables are a special case of categorical where there are only two values.)  
+Binary variables are a special case of categorical where there are only two values.
+
 Ordinal:  similar to categorical but with an order
 
 
@@ -104,7 +102,17 @@ Ordinal:  similar to categorical but with an order
 ## Multivariate analysis
 Examine relationships between two or more features/variables/columns
 
+
 ### Quantitative/quantative
+
+#### Scatter plot
+
+* `plt.scatter(df[COL1], df[COL2])`  
+
+* Include variable histograms:  `sns.countplot(data=[df], x='[COL1]', y='[COL2]', kind="scatter")`  
+* Density version:  `sns.jointplot(data=[df], x='[COL1]', y='[COL2]', kind='kde', color='g')`  
+* Matrix of scatterplots:  `sns.pairplot(data=df[[QUANT_COLS]])`  
+* Helpful to use 'png' backend for speedier rendering (`%config InlineBackend.figure_format = 'png' or 'svg' or 'retina'`)  
 
 
 #### Correlation matrix
@@ -115,14 +123,7 @@ Examine relationships between two or more features/variables/columns
     * mask = np.zeros_like(corr, dtype=np.bool); mask[np.triu_indices_from(mask)] = True
     * sns.heatmap(corr, mask=mask, vmax=1, center=0, annot=True, fmt=".1f", square=True, linewidths=0.5, cbar_kws={"shrink": 0.5});
 
-#### Scatter plot
 
-Cartesian (2D) representation
-* `plt.scatter(df[[COL1]], df[[COL2]])`  
-* Include variable histograms:  `sns.countplot(data=[df], x='[COL1]', y='[COL2]', kind="scatter")`  
-* Density version:  `sns.jointplot(data=[df], x='[COL1]', y='[COL2]', kind='kde', color='g')`  
-* Matrix of scatterplots:  `sns.pairplot(data=df[[QUANT_COLS]])`  
-* Helpful to use 'png' backend for speedier rendering (`%config InlineBackend.figure_format = 'png' or 'svg' or 'retina'`)  
 
 
 ### Quantitative/categorical
