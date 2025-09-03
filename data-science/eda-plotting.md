@@ -4,8 +4,9 @@
 * [mlcourse.ai, Topic 2.  Visual Data Analysis](https://mlcourse.ai/book/topic02/topic02_visual_data_analysis.html)
 * [seaborn tutorial](https://seaborn.pydata.org/tutorial/distributions.html)
 
-## Initialization
 
+
+## Initialization
 
 ### Matplotlib  
 `import matplotlib.pyplot as plt`
@@ -13,28 +14,53 @@
 #### Styling
 Set plot style:  `plt.style.use('bmh')`
 
-Use Latex rendering:  `plt.rcParams['text.usetex'] = True;  plt.rcParams['font.family'] = 'serif'`
+List available styles `plt.style.available`
+Examples:  ggplot, bmh
+Gallery:  https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html
+
+Use Latex font rendering:  `plt.rcParams['text.usetex'] = True;  plt.rcParams['font.family'] = 'serif'`
 
 
 ### Seaborn  
 `import seaborn as sns`
 
-Set plot style:  `sns.set()`
+```
+sns.set_theme(
+    context='notebook',
+    style='darkgrid',
+    palette='deep',
+    font='sans-serif',
+    font_scale=1,
+    color_codes=True,
+    rc=None,
+)
+```
 
 
-## Univariate
+## Univariate analysis
 
 Examine the characteristics of each feature/variable/column independently
 
+
 ### Quantitative features
+
+
+#### Value counts
+
+* df["COL_NAME"].value_counts(normalize=False).sort_index().plot(kind='bar')
+
+* Countplot:  sns.countplot(data=df, x="COL_NAME")
+
 
 #### Histograms/density plots  
 
 Either discrete or continuous representations of value distributions.  May provide insight into underlying distribution(s) (type, skewness, etc.).
 
-* pandas hist method:  `df[[COL1],...].hist()`  
+* pandas hist method:  `df[[COL1],...].hist()`  Setting bin centers and widths is annoying  
+
 * pandas plot method with kind set to 'density':  `df[[COL1],...].plot(kind='density', subplots=True)`  
-* seaborn distribution plot (identical to `histplot`):  `sns.displot(data=[DATA_FRAME], x=[COL_OF_INTEREST])`  
+
+* seaborn distplot; identical to `histplot`):  `sns.displot(data=[DATA_FRAME], x=[COL_OF_INTEREST])`  
     * flags: binwidth, bins (either number of or a list of bin breaks), discrete, stat="density", probability (normalize histogram)  
     * kind = "kde"; flags:  bw_adjust= [Value] controls how wide a bin the density plots averages over; hue, multiple="stack", cut flag specifies how far curve should be computer outside range of data  
     * Histogram + kde density:  `sns.displot(data=[df], x='[COL1]', kde=True)`  
@@ -45,12 +71,16 @@ Either discrete or continuous representations of value distributions.  May provi
 #### Boxplot
 Shows median, interquartile range and outliers
 
+* `df[].plot(kind='box')`
 * `sns.boxplot(data=[df], x='[COL1]')`
 
 
 #### Violin plot
 
 * `sns.violinplot()`
+
+
+
 
 
 
