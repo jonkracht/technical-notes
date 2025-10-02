@@ -143,10 +143,6 @@ Some flags:
 Pretty front-end to `du`
 
 
-## Flatpak
-Config files for flatpak apps are located under ~/.var/app/
-
-Flatseal is a flatpak that eases permission modifications to other flatpaks
 
 
 ## watch
