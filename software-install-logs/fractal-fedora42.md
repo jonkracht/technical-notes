@@ -128,7 +128,7 @@
 * pypy3 (faster implementation of python):  https://pypy.org/download.html
 * geekbench6 (PC benchmarking tool):  Downloaded executabl
 * Bash scripts to increment/decrement workspaces in hyprland https://github.com/sopa0/hyprsome/issues/14  installed to /usr/local/bin/
-
+* Devtoys:  Downloaded zip file, extracted and moved to ~/repos.  Symlinked executable to ~/.local/bin/
 
 
 ## Browser extensions
