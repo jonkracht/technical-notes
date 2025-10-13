@@ -112,7 +112,7 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * videodownloader (save local copies of online e.g. youtube videos)
 * localsend (fileshare within local network)
 * flatseal (modify permissions of other flatpaks)
-* signal desktop client
+* signal desktop client  (10/2025:  removing flatpak in favor of recommended source method)
 * blanket for ambient noise
 * gdm-settings https://github.com/gdm-settings/gdm-settings 
 * resources:  view/manage system resources (ex. cpu, gpu, mem)
