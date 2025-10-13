@@ -5,16 +5,28 @@ Programs executed on system boot
 * All users:  `/etc/xdg/autostart/`
 
 
-## Trash
+## Deletion of files and directories
 
-Trashed files go to `~/.local/share/Trash/`
-
-Empty trash:
-* Graphical file managers (like nautilus) often have an option to do so
-* Command line:  `rm -rf ~/.local/share/Trash/*`
+Linux default is the `rm` command
+Files are completely removed so no safeguards for user error
 
 
-`trash-cli` is a command line utility for trash management.
+### trash-cli
+
+`trash` or `trash-put` to send file to trashcan, by default located at `~/.local/share/Trash/`
+
+`trash-rm /path/to/directory` trashes all files within directory 
+
+`trash-list` to display trashcan contents
+Alternatively, nautilus and perhaps other graphical file managers provide a sidebar icon to quickly display trash contents.
+
+`trash-restore` to return a trashed file to its previous location
+
+`trash-empty` to permanently delete trash contents
+Alternatively `rm -rf ~/.local/share/Trash/*`
+
+
+
 
 
 
