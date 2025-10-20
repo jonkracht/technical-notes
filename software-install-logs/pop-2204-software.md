@@ -70,7 +70,7 @@ Entries in each category are roughly in chronological order.
 * fzf fuzzy finder for both command line and vim
 * kazam screencast utility
 * qmmp (winamp clone)
-* cookiecutter (tool for creating project outline structures)
+* cookiecutter (tool for creating project outline structures)  Removed in favor of pipx method to get more current version.
 * exfat-fuse to format usb drive as exfat to interact with Windows
 * librecad for creating 2D floor plans
 * Looking for a better file manager:  spacefm-gtk3, pcmanfm
@@ -148,6 +148,8 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 * unoserver (document type conversion such as LibreOffice)
 
 
+## Pipx
+cookiecutter
 
 
 

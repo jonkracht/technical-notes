@@ -3,17 +3,20 @@
 
 ## Navigation
 Navigate through words in a command:  CTRL + Left/Right Arrow
+Alternatively:  ALT + f/b
+
 Navigate to beginning/end of a line:  CTRL + A/E
 
 
 ## Deletion:
+
 Cursor to previous space:  CTRL + W
 Cursor to previous punctuation:  ALT + Backspace
 Cursor to beginning of line:  CTRL + U
 Cursor to end of line:  CTRL + K
 Cursor to end of word:  ALT + D
 
-CTRL + L  -or- type 'clear'  Clears terminal screen
+Clear screen:  CTRL + L  -or- type 'clear'
 
 Paste most recently deleted text:  CTRL + Y
 
@@ -427,6 +430,8 @@ Synchronize current shell to contents of bashrc:
 Display a list of aliases:
 Run 'alias' command in terminal
 
+Remove an alias via:  `unalias ALIAS_NAME`
+
 df command shows disc usage for mounted drives
 
 
@@ -485,7 +490,7 @@ Use `curl cht.sh/[LANG_NAME]/[FLAG]` where `[FLAG]` can be
 
 
 
-
+
 ### tldr
 
 * Usage:  `tldr [COMMAND_NAME]`

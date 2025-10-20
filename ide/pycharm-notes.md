@@ -44,8 +44,8 @@ as of April 2020
 
 
 ## Using Streamlit with PyCharm
-Debug streamlit app in Pycharm:
-In "Run" -> "Edit Configuration"
+
+In Run menu, select "Edit Configuration"
 In the streamlit section, include "run [main_app_name]" in the "Parameters" field
 
 
@@ -55,4 +55,12 @@ In the streamlit section, include "run [main_app_name]" in the "Parameters" fiel
 In 'Run' menu, select 'Edit configurations'
 Add command-line style arguments in the 'Parameter's field
 
+
+
+
+## Installation 
+
+Executable located `~/.local/share/JetBrains/....`
+Appears as "java" in system monitoring (ex. btop)
+Desktop file located at ~/.local/share//applications/ executes a shell script
 
