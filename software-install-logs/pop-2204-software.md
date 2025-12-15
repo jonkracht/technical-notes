@@ -84,6 +84,7 @@ Entries in each category are roughly in chronological order.
 * tree (file directory tree)
 * systemd-container (to get machinectl command required for gdm-settings)
 * virtualenvwrapper
+* wkhtmltopdf (pdf engine)
 
 
 
@@ -151,7 +152,8 @@ Modifying /etc/systemd/system/multi-user.target.wants/ckb-next-daemon.service Ex
 ## Pipx
 cookiecutter
 
-
+## Cargo/rust
+* typst (pdf engine)
 
 
 ## Other means
