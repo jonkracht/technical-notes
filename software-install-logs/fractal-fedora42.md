@@ -60,6 +60,7 @@
 * xev (keyboard event detection utility)
 * python3-virtualenvwrapper (for ccds virtual env management)
 * hyprlock, hyperidle (hyprland screen lock on timeout)
+* ImageMagick-libheic (library to interact with .heic images, a Apple image format)
 
 
 ## Copr
@@ -117,6 +118,7 @@
 * keyd (key remapping especially for Wayland.  built from source.  daemon runs via systemctl.  creating config in dotfiles repo and sim-linking to /etc/keyd/default.conf)
 * Alternative kitty icon (https://github.com/k0nserv/kitty-icon; Icon field of /usr/share/applications/kitty.desktop changed to path of desired icon)
 * hyprshot (screenshot utility for hyprland) executable linked to /usr/local/bin
+* catppucin btop theme https://github.com/catppuccin/btop  Cloned repo and copied .theme files into /usr/share/btop/themes/  Similar method with rose-pine https://github.com/rose-pine/btop
 
 
 ## Other installation methods
@@ -127,7 +129,7 @@
 * lua compiler:  Via build instructions https://www.lua.org/download.html.  Extracted files moved to /usr/local/share/.  Binary soft-linked to /usr/local/bin/
 * pypy3 (faster implementation of python):  https://pypy.org/download.html
 * geekbench6 (PC benchmarking tool):  Downloaded executabl
-* Bash scripts to increment/decrement workspaces in hyprland https://github.com/sopa0/hyprsome/issues/14  installed to /usr/local/bin/
+* Bash scripts to increment/decrement workspaces in hyprland https://github.chttps://github.com/rose-pine/btopom/sopa0/hyprsome/issues/14  installed to /usr/local/bin/
 * Devtoys:  Downloaded zip file, extracted and moved to ~/repos.  Symlinked executable to ~/.local/bin/
 
 

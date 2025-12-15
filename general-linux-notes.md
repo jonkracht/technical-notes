@@ -5,6 +5,7 @@ Programs executed on system boot
 * All users:  `/etc/xdg/autostart/`
 
 
+<<<<<<< HEAD
 ## Deletion of files and directories
 
 Linux default is the `rm` command
@@ -24,6 +25,13 @@ Alternatively, nautilus and perhaps other graphical file managers provide a side
 
 `trash-empty` to permanently delete trash contents
 Alternatively `rm -rf ~/.local/share/Trash/*`
+=======
+
+
+
+
+## Trash
+>>>>>>> f51313e (Dec 2025 Fractal push)
 
 
 
