@@ -73,6 +73,15 @@ Toggle light/dark state:  CTRL + d
 Toggle visibility:  CTRL + b
 
 
+### Bookmark sync
+
+#### Xbrowsersync
+Stopped working perhaps because project is no longer being developed
+
+#### Floccus
+Using git method to sync and personal access token
+
+
 ## Graphics
 
 Check settings via:  `brave://gpu` in address bar

@@ -12,39 +12,39 @@
 
 
 ## DNF
-* tldr
-* kitty
-* neovim
-* zoxide
+* tldr  (abbreviated manual pages)
+* kitty  (terminal emulator)
+* neovim  (terminal text editor)
+* zoxide  ("smart" ls command)
 * python3-pip
-* btop
+* btop  (terminal system monitor)
 * cargo (rust package manager and build tool)
-* trash-cli
-* ripgrep (installed out of the box)
+* trash-cli  (move files to trash rather than removing)
+* ripgrep (search tool; installed out of the box)
 * lutris
-* hyprland
-* vlc
+* hyprland  (compositor/window manager)
+* vlc  (media player)
 * zathura, zathura-plugins-all (especially need pdf-poppler for pdf viewing)
 * pandoc
-* texmaker
-* gimp
+* texmaker  (LaTex editor)
+* gimp  (image manipulation)
 * rclone
 * texlive-xetex
 * gnome-tweaks
-* easyeffects
+* easyeffects  (audio effects)
 * nvtop (GPU process monitoring)
 * nodejs
 * pipx
-* fastfetch (no-longer developed neofetch replacement)
-* gnome-music (laggy and uses ~7GB RAM with current music library)
+* fastfetch (display system info in terminal; neofetch replacement)
+* gnome-music (audio player; laggy and uses ~7GB RAM with current music library)
 * gnome-pomodoro (time management utility)
 * pychess  (front-end for chess engines)
 * hwinfo (hardware information tool)
 * bat (modernized cat command)
-* alacritty
+* alacritty  (terminal emulator)
 * steam  (desktop launcher fails https://www.reddit.com/r/Fedora/comments/1kk0gak/psa_steam_crashing_loop_fix/ ; unsetting DRI_PRIME env variable)
 * python3-ipykernel (interactive python kernel for jupyter)
-* Requirements of jupyter-nbconvert to pdf:  texlive-collection-fontsrecommended, texlive-collection-latexextra
+* jupyter-nbconvert to pdf requirements:  texlive-collection-fontsrecommended, texlive-collection-latexextra
 * ffmpegthumbnailer (used to create video preview in lf)
 * fontawesome-fonts-all (icons for latex documents)
 * xdotool
@@ -61,6 +61,9 @@
 * python3-virtualenvwrapper (for ccds virtual env management)
 * hyprlock, hyperidle (hyprland screen lock on timeout)
 * ImageMagick-libheic (library to interact with .heic images, a Apple image format)
+* unrar  (interact with Windows-compressed files)
+* supertuxkart
+* xournalpp (pdf annotation)
 
 
 ## Copr
@@ -119,7 +122,7 @@
 * Alternative kitty icon (https://github.com/k0nserv/kitty-icon; Icon field of /usr/share/applications/kitty.desktop changed to path of desired icon)
 * hyprshot (screenshot utility for hyprland) executable linked to /usr/local/bin
 * catppucin btop theme https://github.com/catppuccin/btop  Cloned repo and copied .theme files into /usr/share/btop/themes/  Similar method with rose-pine https://github.com/rose-pine/btop
-
+* kew (terminal music player)  https://github.com/ravachol/kew/blob/main/docs/MANUAL-INSTALL-INSTRUCTIONS.md#install-kew  Cloned repo, used make/install, and binary created in /usr/local/bin/kew  Not building RPM (not sure exactly what this means)
 
 ## Other installation methods
 * brave-browser  (via `dnf config-manager addrepo ...` command)
