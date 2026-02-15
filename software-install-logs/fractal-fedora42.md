@@ -136,16 +136,6 @@
 * Devtoys:  Downloaded zip file, extracted and moved to ~/repos.  Symlinked executable to ~/.local/bin/
 
 
-## Browser extensions
-* vimium
-* bitwarden
-* dark reader
-* tabliss
-* bookmark sidebar
-* xBrowserSync
-
-
-
 
 
 ## Gnome shell extensions
