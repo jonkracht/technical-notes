@@ -85,6 +85,7 @@ Entries in each category are roughly in chronological order.
 * systemd-container (to get machinectl command required for gdm-settings)
 * virtualenvwrapper
 * wkhtmltopdf (pdf engine)
+* qpdf (decrypt pdfs)
 
 
 
