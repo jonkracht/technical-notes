@@ -4,40 +4,41 @@
 Primarily a scripting language
 Commands used in a text editor NOT directly in terminal
 
-Convention is to give bash scripts a .sh extension
+Convention is to give bash scripts a '.sh' extension
 
-The !# (shebang) at the beginning of the file defines which interpreter is to be used.
+The !# (called a "shebang") at the beginning of the file defines which interpreter is to be used.
 
-Most common is `#!/bin/bash`
+Most common interpreter is `#!/bin/bash`
 
 Alternatively, use the 'env' executable to locate first instance of bash in the PATH:  `#!/usr/bin/env bash`
 
 Available shells are listed in `/etc/shells`
 
 
-
-
-File must be exectuable.
+Shell scripts must be exectuable.
 `chmod a+x /path/to/file.sh`
-May need to execute with sudo privileges
 
-Alternatively, use three digit syntax:  `chmod 755 /path/to/file.sh`
+May need to execute command with sudo privileges.
+
+Alternatively, use three-digit syntax:
+Ex:  `chmod 755 /path/to/file.sh`
 (read = 4, write = 2, execute = 1; sum desired permissions; first entry owner, second group, third others)
 
-Print to stdout via `echo` commands
-Include -n flag to not print new line at end of output.
+
+
+
 
 
 
 ## Variables
 
 * Create a variable
-`myvar='Monkies'`     (no spaces allowed)
+`myvar='Monkies'`     (no spaces permitted)
 
-Convention is to use lowercase for variable names so as not to conflict with system variables.
+Convention is to name variable in lowercase so as not to conflict with system variables.
 
-Variable contents are accessed by prepending their name with $
-ex.  `$myvar`
+Variable contents are accessed by prepending their name with '$'
+ex:  `$myvar`
 
 
 
@@ -45,17 +46,19 @@ ex.  `$myvar`
 ## Arrays
 1 dimensional data structure
 
-### Create array 
+### Instantiating an array 
+
 `newArr=('thing1' 'thing2')`
-(BASH is fairly picky about spaces before/after equals sign)
+(Bash is quite particular about spaces before and after equals sign.)
 
 ### Delete element(s) of array
 `unset newArr[2]`
 
+
 ### Printing elements
 
 Single element:  `echo "${newArr[1]}"`
-All elements (@ represents all):  `echo "${newArr[@]}"`
+All elements ('@' represents all):  `echo "${newArr[@]}"`
 Print indices:  `echo "${!newArr[@]}"`
 Print length of array (#):  `echo "${#newArr[@]}"`
 
@@ -63,18 +66,18 @@ Print length of array (#):  `echo "${#newArr[@]}"`
 
 
 ## Input
-Use "read" function to query user for input.
-`read variable_name`
+Use "read" function to query user for input:
+`read var_1`
 
-Include a prompt in the query:
-`read -p "Text to input a variable: " [variable_name]`
+Include a prompt in query:
+`read -p "Text to input a variable: " var_1]`
 
 
 
 
 ## Logic
 
-### IF/THEN
+### IF/THEN/ELIF/ELSE statement
 
 Syntax:
 ```
@@ -89,39 +92,39 @@ fi
 ```
 
 Logical operators:  surround by square brackets
-* -eq 
+* -eq  example:  `if [var -eq 7]`
 * -neq 
 * -gt 
 * -lt  
 
-Can use traditional comparison operator (<, >, =) when expression is surrounded by ()
+Can also use traditional comparison operator (<, >, =) by surrounding expression in parentheses ['(' and ')']
 
-Use && for logical AND  (ex. if [ condition1 ]  && [ condition2 ]
+Use '&&' for logical AND  (ex. if [ condition1 ]  && [ condition2 ]
 
-Logical OR is achieved using ||
+Logical OR is achieved via '||'
 
 
 ### Case statements
 
 ```
-case EXPRESSION in 
+case [EXPRESSION] in 
 
     PATTERN_1)
-        COMMANDS
+        COMMANDS_1
         ;;
 
     PATTERN_2)
-        COMMANDS
+        COMMANDS_2
         ;;
 
     *)
-        COMMANDS
+        COMMANDS_ELSE
         ;;
 esac
 ```
 
-Asterisk commands are executed if none of the above patterns are matched
-Can include `|` in a pattern to employ OR logic.
+`COMMANDS_ELSE` (ie. those in the '*' block) are executed if none of the above patterns are matched
+
 
 
 
@@ -131,14 +134,15 @@ Can include `|` in a pattern to employ OR logic.
 
 ### for loop
 
+Block syntax:
 ```
 for i in {start..ending..increment}
 do
-    some operations
+    some operations here
 done
 ```
 
-Alternatively:
+Alternative loop definition:
 `for (( i=0; i<5; i++ ))`
 
 
@@ -160,7 +164,7 @@ done
 
 ## Functions 
 
-## Function definition
+### Function definition
 
 ```
 someFunction() {
@@ -176,15 +180,14 @@ someFunction() {
 
 ## Debugging
 
-* Include -x flag in execution
-`bash -x ./path/to/scipt.sh`
+### Debug entire file
+* Include '-x' flag in script execution:  `bash -x /path/to/scipt.sh
+* Include -x flag after shell declaration within script:  `#!/bin/bash -x`
 
--OR-
 
-* Include -x flag after shell declaration in script
-`#!/bin/bash -x`
+### Debug a specific block of code
 
-Debug a specific block of code:
+Within script:
 ```
 set -x
 [CODE 
@@ -197,10 +200,10 @@ set +x
 
 ### Input to script
 
-`/path/to/script.sh input1 input2`
+Insert data in script:  `/path/to/script.sh input1 input2`
 
-Within the script, these inputs may be accessed via $1, and $2.
-$0 is the script name
+Within the script, these inputs may be accessed via $1 and $2.
+$0 is the script name.
 
 Allow for arbitrary number of inputs:
 Within script:  `args=("$@")`
@@ -210,12 +213,24 @@ Number of arguments input:  `$#`
 
 ### Output
 
+#### Printing to std 
+Print to stdout via `echo` command.
+
+
+Include -e flag to enable escape sequences  (\n, \t, etc.)
+
+Include -n flag to not print new line at end of output.
+
+Ex:  `echo -e "First line\nSecond Line`
+
+
+
 Storing application STDOUT to a variable
 `some_variable=$(some_application)`
 
 
 
-
+#### Handling output to/from other data streams
 
 '0' refers to standard input
 '1' refers to standard output
@@ -266,6 +281,10 @@ over many lines
 '
 ```
 
+
+
+
+
 ## Miscellaneous
 
 * Check if file directory exists
@@ -282,3 +301,8 @@ Check if string is empty
 
 
 Shellcheck tool detects errors in bash scripting
+
+
+
+
+
