@@ -8,7 +8,7 @@ Entries in each category are roughly in chronological order.
 * nvim (jan 2023: removing and installing from source on github)
 * kitty  - removed and installing via source from Github to get a newer version than packaged in Pop repo, pre-built binary method; can update via same curl command as install  `curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
 * exa (ls upgrade)
-* brave-browser
+* brave-browser  (Feb 2026:  not updating so uninstalling in favor of apt sources method)
 * speedtest
 * rhythmbox
 * ubuntu-restricted-extras (mp3 plugins etc.)
