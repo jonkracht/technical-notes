@@ -64,6 +64,7 @@
 * unrar  (interact with Windows-compressed files)
 * supertuxkart
 * xournalpp (pdf annotation)
+* xeyes (determine if a program is using Xwayland)
 
 
 ## Copr
@@ -124,6 +125,9 @@
 * catppucin btop theme https://github.com/catppuccin/btop  Cloned repo and copied .theme files into /usr/share/btop/themes/  Similar method with rose-pine https://github.com/rose-pine/btop
 * kew (terminal music player)  https://github.com/ravachol/kew/blob/main/docs/MANUAL-INSTALL-INSTRUCTIONS.md#install-kew  Cloned repo, used make/install, and binary created in /usr/local/bin/kew  Not building RPM (not sure exactly what this means)
 
+
+
+
 ## Other installation methods
 * brave-browser  (via `dnf config-manager addrepo ...` command)
 * nerd fonts (nerdfonts.com/font-downloads; extracted to `/usr/share/fonts/`)
@@ -150,6 +154,11 @@
 * Change location of XDG_MUSIC_DIR in ~/.config/user-dirs.dirs to ~/Documents/Music
 * Disabling audio power save via https://itsfoss.com/buzzing-noise-speaker-linux/
 * Forcing brave to use wayland rather than xwayland via brave://flags/#ozone-platform-hint
+* Increasing number of parallel downloads via configuration in /etc/dnf/dnf.conf 'max_parallel_downalods'.  Also set to use fastest mirror via `fastestmirror=1`
+* Set .png files to open with Loupe.  In ~/.config/mimeapps.list, add `image/png=org.gnome.Loupe.desktop;`
+* Trying variable refresh rate in Gnome and Hyprland:  https://wiki.archlinux.org/title/Variable_refresh_rate  
+gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer", "xwayland-native-scaling", "variable-refresh-rate"]'
+* Set browser to use Cloudfare DNS
 
 
 ## Already installed (perhaps by distro or as a dependency for something else)

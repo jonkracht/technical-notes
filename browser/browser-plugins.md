@@ -28,3 +28,5 @@ Customizeable browser home page
 
 ## Change Theme And Color For Youtube - Colorize Youtube
 Looking for better highlighting of currently playing in YouTube playlist
+
+Using Inspired-Dark theme

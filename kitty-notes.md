@@ -39,52 +39,55 @@ Moved to `~/.local/kitty.app/share/doc/kitty/..`
 
 ## Shortcuts
 
+Many use 'kitty_mod' as prefix which by default is CTRL + SHIFT
+
 ### Scroll up/down
-By line:  CTRL + SHIFT + UP/DOWN
-By page:  CTRL + SHIFT + PAGEUP/PAGEDOWN
+By line:  km + UP/DOWN
+By page:  km + PAGEUP/PAGEDOWN
 
 
 ### Window/tab management
 
 Previous/next window:
-Default was kitty_mod + [ or ]
-Remapped to kitty_mod + h/l
+Default was km + [ or ]
+Remapped to km + h/l
 
-Create new tab:  kitty_mod + t
+Create new tab:  km + t
 
 Previous/next tab:
-kitty_mod + left/right
+km + left/right
 
 
-Change layout:  kitty_mod + l  (current unbound)
+Change layout:  km + l
+Remapped to:  km + z
 
 Create new window inside of existing kitty session:
-kitty_mod + ENTER
+km + ENTER
 
 
-Move window position earlier/later in stack:
-kitty_mod + f/b
+Move window position earlier/later within stack:
+km + f/b
 
 Change window size:  
-kitty_mod + r to enter menu
-w(ider), n(arrower), t(aller), s(horter) to resize
+Enter resizing menu with km + r
+Use w(ider), n(arrower), t(aller), s(horter) to resize
 
 
 
 ### Misc
 
-Change font size:  kitty_mod + minus/plus
+Change font size:  km + minus/plus
 
-Edit config file:  kitty_mod + f2
+Edit config file:  km + f2
 
 See environment variables:  CTRL + ALT + a
 
 
-Change transparency during session:
+Change transparency window:
 Requires `dynamic_background_opacity` be set to 'yes' in config (some performance loss, apparently)
-kitty_mod + a then m        increases opacity by 0.1
-kitty_mod + a then l        decreases opacity by 0.1
-kitty_mod + a then 1        sets to completely opaque
+km + a then m        increases opacity by 0.1
+km + a then l        decreases opacity by 0.1
+km + a then 1        sets to completely opaque
 
 
 
@@ -105,7 +108,7 @@ Type `kitten themes` to view list
 
 ###  `https://github.com/dexpota/kitty-themes`
 Add `include [/PATH/TO/CONFIG]` to config file
-Imports a bunch (background, foreground, color0, color1, etc.) of hex color variables
+Imports pre-defined color palettes (ex. background, foreground, color0, color1 ...)
 
 ### Theme preview
 `kitty @ set-colors -a "[/PATH/TO/CONFIG]"`
@@ -114,24 +117,21 @@ Imports a bunch (background, foreground, color0, color1, etc.) of hex color vari
 Provide hex code for colors, background, foreground, etc
 
 
-### Font
+## Font
 
-kitty can be only rendered using a monospace font (something about how the graphics are rendered by the GPU).
-`kitty list-fonts` prints compatible fonts.
+kitty can be only rendered using a monospace font.  Has to do with how graphics are rendered by the CPU/GPU.
+`kitty list-fonts` lists compatible fonts.
 Include `--psnames` to get PostScript name of font which is required for some software
 
-Some available fonts as of 10/2022:
-* Courier
-* Courier10PitchBT-Roman
-* FreeMono
-* UbuntuMono-Regular
 
 
-### Change kitty icon
+
+
+## Change kitty icon
 
 Adding a new icon via instructions at https://github.com/k0nserv/kitty-icon
 Edited kitty.desktop to use 128 pixel icon for launcher and dock
-.desktop file may be in `/usr/share/applications/` or `~/.local/[AP_NAME]/share/applications/` depending how/where software was installed
+.desktop file may be in `/usr/share/applications/` or `~/.local/[AP_NAME]/share/applications/` depending how software was installed
 
 Alternatively, can place an image named kitty.app.png in the config directory.  Some chance system detects and sets this icon properly.
 

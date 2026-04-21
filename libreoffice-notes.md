@@ -47,10 +47,17 @@ Move cursor to input line (for example, to input an equation):  CTRL + SHIFT + F
 Insert a line break within a cell:  CTRL + Enter
 
 
+#### List of valid inputs
+Access with hotkey of ALT + Down
+
 
 ### General
 
 Enter Libreoffice menu:  Hold ALT and press first letter of desired menu (File, Edit, etc.)
 
 
+## Writer
 
+### Comments
+
+To include editer's name in comments, populate the users's information via Tools > Options > User Data

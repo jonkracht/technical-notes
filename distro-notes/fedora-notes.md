@@ -31,3 +31,14 @@ timeout=0
 
 Edit /etc/tuned/post_loaded_profile and add the directory name that was created earlier.
 Reboot system or just tuned daemon.
+
+
+
+
+
+
+## dnf
+
+Configured in /etc/dnf/dnf.conf
+
+Available settings and default are found via `man dnf.conf`
