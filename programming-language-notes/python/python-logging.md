@@ -88,9 +88,9 @@ Alternatively: Use `logging.exception("Message here")` in except clause
 
 
 
-### Create custom logger
+### Create custom (i.e. non-root) logger
 
-Allows use of multiple loggers
+Allows use of multiple loggers with different behaviors
 
 Create logger:  `logger = logging.getLogger(__name__)`
 '__name__' give logger the name of the module; altneratively can use any string
@@ -106,7 +106,18 @@ Add the formatted handler to the logger: `logger.addHandler(handler)`
 
 
 
-Also StreamHandler
+Add a StreamHandler
+
+Sets output to console.
+
+```
+stream_handler = logging.StreamHandler()
+logger.addHandler(stream_handler)
+```
+
+Variety of other handlers.  Emails.
+
+
 
 
 #### Custom logger snippet
@@ -170,6 +181,13 @@ Can hold this dictionary in an external json or yaml file
 
 Install package via pip.
 Import via `from loguru import logger`
+
+
+
+
+## Structure logs
+
+Convert to json dicts so can be later easily-parsible
 
 
 ## References
