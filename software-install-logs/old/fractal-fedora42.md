@@ -57,18 +57,16 @@
 * flameshot (screenshot utility)
 * dunst (notification daemon for hyprland)
 * rocm-smi (dependency for btop to show gpu info)
-* xev (keyboard event detection utility)
-* python3-virtualenvwrapper (for ccds virtual env management)
-* hyprlock, hyperidle (hyprland screen lock on timeout)
-* ImageMagick-libheic (library to interact with .heic images, a Apple image format)
-* unrar  (interact with Windows-compressed files)
-* supertuxkart
-* xournalpp (pdf annotation)
-* xeyes (determine if a program is using Xwayland)
+* xev (keyboard event detection utility) 
+* python3-virtualenvwrapper (for ccds virtual env management) 
+* hyprlock, hyperidle (hyprland screen lock on timeout) 
+* ImageMagick-libheic (library to interact with .heic images, a Apple image format) 
+* unrar  (interact with Windows-compressed files) 
+* supertuxkart xournalpp (pdf annotation) 
+* xeyes (determine if a program is using Xwayland) 
 
 
-## Copr
-* lf  (via `dnf copr enable pennbauman/ports;  dnf install lf`)
+## Copr lf  (via `dnf copr enable pennbauman/ports;  dnf install lf`)
 * mtn (video previewer for lf https://copr.fedorainfracloud.org/coprs/wahibre/mtn)
 * yazi (terminal file manager) via lihaohong/yazi 
 * cosmic desktop environment (https://github.com/pop-os/cosmic-epoch)
