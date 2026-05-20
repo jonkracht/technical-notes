@@ -8,6 +8,7 @@
 Apparently unmaintained and replaced with Floccus
 
 ### Floccus
+Setup up using Github and creating a Personal Access Token as a password
 
 
 ## vimium
@@ -27,6 +28,6 @@ Customizeable browser home page
 
 
 ## Change Theme And Color For Youtube - Colorize Youtube
-Looking for better highlighting of currently playing in YouTube playlist
+Looking for better contrast for currently playing
 
-Using Inspired-Dark theme
+Using Inspired-Dark theme.  Also NierAutomata Dark

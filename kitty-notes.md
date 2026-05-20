@@ -117,10 +117,16 @@ Imports pre-defined color palettes (ex. background, foreground, color0, color1 .
 Provide hex code for colors, background, foreground, etc
 
 
-## Font
+## Selecting font
 
-kitty can be only rendered using a monospace font.  Has to do with how graphics are rendered by the CPU/GPU.
-`kitty list-fonts` lists compatible fonts.
+https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/
+
+kitty can only be rendered using a monospace font.  
+(Has to do with how graphics are rendered by the CPU/GPU.)
+
+`kitty list-fonts` brings up UI showing available fonts that are compatible with kitty.
+Can also use this to set font (rather than editing config).
+
 Include `--psnames` to get PostScript name of font which is required for some software
 
 
