@@ -17,10 +17,12 @@ These are .lua files located in ./lua
 
 #### custom folder
 
-##### init.lua
+##### plugins folder
+
+###### init.lua
 Define user-specific plugins
 
-##### nvim-colorizer.lua
+###### nvim-colorizer.lua
 
 
 #### kickstart folder

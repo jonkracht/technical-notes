@@ -3,12 +3,12 @@
 # Browser extensions
 
 ## Bookmark syncing
+### Floccus
+Setup up using Github and creating a Personal Access Token as a password
+
 
 ### xBrowserSync
 Apparently unmaintained and replaced with Floccus
-
-### Floccus
-Setup up using Github and creating a Personal Access Token as a password
 
 
 ## vimium
