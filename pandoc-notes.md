@@ -19,3 +19,7 @@ colorlinks: true
 ```
 
 
+## Errors
+If receive warning `[WARNING] [makePDF] LaTeX Warning: Float too large for page by 24.48112pt on input line 128.`
+
+Include `{width=80%}` in the image input call.

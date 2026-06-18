@@ -85,6 +85,7 @@ Do so by `pip install ipykernel`
 ### Instructions
 
 Activate virtual environment
+Something like `source ./bin/activate`
 
 
 

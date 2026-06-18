@@ -26,6 +26,7 @@ Also, pip and pip3 are linked to the same executable so may be used interchangea
 
 ## Creating a requirements file
 
-In general, can install a list of packages from a 'requirements.txt' file.  However, local packages (i.e. in the repository) cause errors when executing `python -m pip install requirements`.  To avoid, when exporting package list to requirements.txt, include the --exclude-editable flag.
+In general, can install a list of packages from a properly-formatted text file.  However, local packages cause errors when executing `python -m pip install requirements`.  To avoid, when exporting package list to requirements.txt, include the --exclude-editable flag.
 `pip list --format=freeze --exclude-editable`.
+
 Can install these local packages via `pip install -e .`

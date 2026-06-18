@@ -14,9 +14,25 @@ https://rclone.org/drive/
 
 Optional:  Create client ID to accelerate communication speed
 
-[Description Here](https://rclone.org/drive/#making-your-own-client-id)
 
 Config file by default is located at `~/.config/rclone/rclone.conf`
+
+
+
+
+### Create unique `client_id`
+
+(As opposed to using the default rclone credentials.)
+
+Rclone instructions (not up to date with current Google UI layout)
+https://rclone.org/drive/#making-your-own-client-id
+
+
+https://www.youtube.com/watch?v=iCOKS0XTizw
+
+When attempting browser verification, disregard warning and select 'Advanced' to proceed anyway.
+
+Credentials created are stored on `cloud.google.com`
 
 
 
@@ -56,6 +72,11 @@ Config file by default is located at `~/.config/rclone/rclone.conf`
 * `--verbose` or `-v` gives prints details to stdout
 
 
+
+
+
+
+
 ## Most-used command
 * `rclone sync [/LOCAL/PATH/TO/ROOT/FOLDER] [GOOGLE-DRIVE-NICKNAME] --track-renames --exclude-from=.rclone-ignore --verbose`
 
@@ -64,6 +85,10 @@ rclone sync /mnt/1-tb-hd/organ/ google-drive-organ: --track-renames --exclude-fr
 
 Fractal implementation:
 rclone sync /home/jon/Documents/organ/ google-drive-organ:organ --track-renames --exclude-from=.rclone-ignore --verbose
+
+
+
+
 
 ## TODO
 *

@@ -152,7 +152,7 @@
 * Change location of XDG_MUSIC_DIR in ~/.config/user-dirs.dirs to ~/Documents/Music
 * Disabling audio power save via https://itsfoss.com/buzzing-noise-speaker-linux/
 * Forcing brave to use wayland rather than xwayland via brave://flags/#ozone-platform-hint
-* Increasing number of parallel downloads via configuration in /etc/dnf/dnf.conf 'max_parallel_downalods'.  Also set to use fastest mirror via `fastestmirror=1`
+* Increasing number of parallel downloads via configuration in /etc/dnf/dnf.conf `max_parallel_downloads`.  Also set to use fastest mirror via `fastestmirror=1`
 * Set .png files to open with Loupe.  In ~/.config/mimeapps.list, add `image/png=org.gnome.Loupe.desktop;`
 * Trying variable refresh rate in Gnome and Hyprland:  https://wiki.archlinux.org/title/Variable_refresh_rate  
 gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer", "xwayland-native-scaling", "variable-refresh-rate"]'
