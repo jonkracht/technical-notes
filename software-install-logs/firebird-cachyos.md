@@ -20,6 +20,13 @@
 * hyprsunset (add exec-once to autoload; creating hyprsunset.conf from wiki example)
 * nodejs, npm (bash-language-server lsp requirements)
 * python-shapely (Python geometry package)
+* textlive-meta (full tex distribution)
+* biber (VimTex seems to require it)
+* tree (graphically display sub-directory structure)
+* swayimg (image viewer; hyprland does not ship with one...)
+* signal-desktop (messenger)
+* udiskie (to allow external hard drive mounting in hyprland; include exec-once line in hyprland config)
+* vlc
 
 
 
@@ -34,7 +41,7 @@
 ## flatpak
 * Including flathub via `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo`
 * G4 Music Player (also called Gapless):  `flatpak install flathub com.github.neithern.g4music`
-
+* Blanket (white noise)
 
 
 
@@ -61,3 +68,5 @@
 
 ## System mods
 * Changed capslock to escape in hyprland.conf via `kb_options = caps:escape` in input section
+* Creating $HOSTNAME environment variable.  Make ~/.config/systemd/user/environment.d/hostname.conf and includ `HOSTNAME=firebird`.  Trying ~/.config/environment.d as well
+* Try theming sddm login screen.  Set `theme` in /usr/lib/sddm/sddm.conf.d/default.conf.  Themes stored in /usr/share/sddm/themes/
