@@ -323,6 +323,7 @@ Splitting vim into subsections
 | --- | --- |
 | Create new horizontal split (up/down) | `:split {FILENAME}` or `:sp` |
 | Create new vertical split (left/right) |`:vsplit {FILENAME}` or `:vs`|
+| Navigate between splits| Default `CTRL+W` then vim-direction; remapped in kickstarter to simply CTRL + vim-direction|
 | Toggle split being edited | Hold CTRL and press w twice|
 | Toggle positions of splits | CTRL + W then R |
 | Close a split | `:q` |
