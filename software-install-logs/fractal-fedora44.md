@@ -32,11 +32,16 @@ Installed May 2026
 * python3-yfinance
 * python3-virtualenv (Python package manager)
 * inxi (command line sysinfo tool)
+* fuse-libs (filesystem in userspace) allows running of AppImages
 
 
 ## Copr
 * alternateved/keyd key remapping daemon (specifically for remapping CAPS to ESC).  Creating `/etc/keyd/default.conf` softlinked to dotfile repo.  https://github.com/rvaiya/keyd 
 * starship (terminal prompt) atim/starship
+* lf via `dnf copr enable pennbauman/ports; dnf install lf`
+* yazi via `dnf copr enable liahohong/yazi; dnf install yazi`
+
+
 
 
 ## RPM
@@ -45,7 +50,7 @@ Installed May 2026
 ## Flatpak
 * Tauon-box (music player).  Giving access to music folder via `flatpak override com.github.taiko2k.tauonmb --filesystem=/home/jon/Documents/Music/`.  Milkdrop visualizations downloaded to `/home/jon/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/presets/`
 * gnome-shell-extension-manager  https://flathub.org/en/apps/com.mattjakeman.ExtensionManager
-
+* signal (messenger)
 
 
 
@@ -65,6 +70,7 @@ Installed May 2026
 ## Github
 * kitty-themes (https://github.com/dexpota/kitty-themes)  collection of themes for kitty terminal
 * wallpaper pack:  https://github.com/dharmx/walls.git
+* fluent-reader  Building from source
 
 ## Other installation methods
 * brave-browser
