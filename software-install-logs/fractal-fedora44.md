@@ -51,7 +51,7 @@ Installed May 2026
 * Tauon-box (music player).  Giving access to music folder via `flatpak override com.github.taiko2k.tauonmb --filesystem=/home/jon/Documents/Music/`.  Milkdrop visualizations downloaded to `/home/jon/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/presets/`
 * gnome-shell-extension-manager  https://flathub.org/en/apps/com.mattjakeman.ExtensionManager
 * signal (messenger)
-
+* mousam (weather app)
 
 
 ## Pip
