@@ -27,7 +27,8 @@
 * signal-desktop (messenger)
 * udiskie (to allow external hard drive mounting in hyprland; include exec-once line in hyprland config)
 * vlc
-
+* minicom (serial communication)
+* lf (terminal file manager)
 
 
 
