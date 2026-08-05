@@ -359,6 +359,29 @@ Delete a buffer:  `:bd`
 
 
 
+
+## Misc
+
+### Spellcheck
+
+Turn on spell check in current buffer:  `:set spell`
+Turn off spell check:  `set nospell`
+Toggle spell check state:
+
+Start spell check only in Markdown document:
+`autocmd FileType markdown,text setlocal spell`
+
+
+
+Once spell check is active, use these normal mode shortcuts to manage your typos:
+]s – Jump to the next misspelled word.
+[s – Jump to the previous misspelled word.
+z= – View spelling suggestions for the word under the cursor.
+1z= – Automatically fix the word with the first (most likely) suggestion.
+zg – Add the word under your cursor to your dictionary as a good word.
+zw – Mark the word under your cursor as incorrect (wrong)
+
+
 ## Plugins
 
 Third-party plugins provide additional functionality to vim.
