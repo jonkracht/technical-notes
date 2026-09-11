@@ -40,6 +40,7 @@ Installed May 2026
 * starship (terminal prompt) atim/starship
 * lf via `dnf copr enable pennbauman/ports; dnf install lf`
 * yazi via `dnf copr enable liahohong/yazi; dnf install yazi`
+* mtn (movie thumbnailer)  https://copr.fedorainfracloud.org/coprs/wahibre/mtn
 
 
 
