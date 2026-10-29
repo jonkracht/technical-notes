@@ -1,5 +1,7 @@
 # Git
 
+## Background
+
 * Distributed version control system for software projects
 * Created by Linus Torvalds and first released in 2005
 * Some common web servers for hosting git projects are Github, Gitlab, and Bitbucket.
@@ -8,15 +10,17 @@
 
 ## Config
 
-Check configuration of git. Information is stored in ./.gitconfig:
+Print configuration of git repository. 
 `git config --list`
 
 Configuration can be set at three scopes:  system-wide, global (meaning user specific), and local/repository.
 
-`git config --list --show-scope` shows config parameters and from which level they are set.
+Global system information is stored in ~/.gitconfig
+Local repo information is stored in ./.git/config
+
+`git config --list --show-scope` shows config parameters and at which level they are set.
 
 
-Repo settings (origin, location, etc.) are stored in `.git/config`
 
 
 ## Authentication
@@ -32,25 +36,25 @@ Repo settings (origin, location, etc.) are stored in `.git/config`
 
 ## Basics
 
-Initialize git tracking in a repository:  `git init`
+Initialize git in a repository:  `git init`
 
-Check status of files in a repository:  `git status`	
+Check status of files in repository:  `git status`	
 
-Include files to be tracked in repository:  `git add {file1} {file2}`	
+Include new files to be tracked in repository:  `git add {file1} {file2}`	
 
-Add changes in specific files to staging area:  `git add {file1} {file2}`
+Add modified file(s) to staging area:  `git add {file1} {file2}`
 
 Add all changes into staging area:  `git add .`		
 
 Remove a modified file from staging area: `git restore --staged {file}` 
 
-Adds staged changes to commit described by a short description:  `git commit -m “Commit message here”`	
+Adds staged changes to a commit with a short description:  `git commit -m “Commit message here”`	
 
 Revert to most recent commit:  `git reset HEAD~1`
 
-Rever to a previous commit definied by a commit hash:  `git checkout {COMMIT_HASH}` or `git revert {COMMIT_HASH}`
+Revert to a previous commit definied by a commit hash:  `git checkout {COMMIT_HASH}` or `git revert {COMMIT_HASH}`
 
-(A commit hash is generally a long string of alphanumeric characters.)
+(A commit hash is a long string of alphanumeric characters.)
 
 View history of commits:  `git log`		
 
@@ -71,7 +75,7 @@ Move to different branch:  `git checkout <branch-name>`
 
 
 
-## Connect local repository to remote location such as Github 
+## Connect local repository to remote host (i.e. Github)
 
 ### Github  
 https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
@@ -80,7 +84,7 @@ Summary:
 * Initialize tracking, add all files, commit
 * Create empty repository on Github (do not create README, LICENSE, or .gitignore)
 * Set location where local repository will be pushed:  `git remote add origin {REMOTE-URL}`
-* Push changes to remote via `git push origin main`
+* Push changes to remote `git push origin main`
 
 Alternatively:
 * Create new repo on Github
@@ -136,7 +140,7 @@ Request remote branch to download code from you.
 
 
 ## Remove git tracking
-Delete .git folder:  `rm -rf .git`
+Simply Delete .git folder  `rm -rf .git`
 
 
 
@@ -151,7 +155,7 @@ To use ssh key rather than password validation, clone using SSH method.
 
 
 
-## Miscellanehous
+## Miscellaneous
 
 
 
