@@ -29,6 +29,7 @@
 * vlc
 * minicom (serial communication)
 * lf (terminal file manager)
+* thunar (file manager)
 
 
 
@@ -69,5 +70,5 @@
 
 ## System mods
 * Changed capslock to escape in hyprland.conf via `kb_options = caps:escape` in input section
-* Creating $HOSTNAME environment variable.  Make ~/.config/systemd/user/environment.d/hostname.conf and includ `HOSTNAME=firebird`.  Trying ~/.config/environment.d as well
-* Try theming sddm login screen.  Set `theme` in /usr/lib/sddm/sddm.conf.d/default.conf.  Themes stored in /usr/share/sddm/themes/
+* Creating $HOSTNAME environment variable.  Make ~/.config/systemd/user/environment.d/hostname.conf and include `HOSTNAME=firebird`.  Trying ~/.config/environment.d as well
+* Try theming sddm login screen.  Set `theme` in /usr/lib/sddm/sddm.conf.d/default.conf.  Available themes stored in /usr/share/sddm/themes/.  Added cloned theme into dotfile repo.  Apparently can not soft link from user home directory to /usr/share/sddm/theme so must to recursively copy the directory.
